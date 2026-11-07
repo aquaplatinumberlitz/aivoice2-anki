@@ -1,0 +1,17 @@
+[
+  {
+    "source": "src/daemon/build/voice_identity_probe.c",
+    "retained_source": "src/research/voice_identity_probe.c",
+    "sha256": "b71954088141282e03cb5d8e0afddf15f387b6e8140febf86e21f9c305a4c046"
+  },
+  {
+    "source": "notes/evidence/voice-identity/gui-trace-proxy.c",
+    "retained_source": "src/research/gui-trace-proxy.c",
+    "sha256": "0810831d7fe2707f09fd9b33261aa96786327be2644f945634647666ba9dceb4"
+  },
+  {
+    "source": "notes/evidence/voice-identity/gui-trace-proxy.def",
+    "retained_source": "src/research/gui-trace-proxy.def",
+    "sha256": "535f1b6f8249b5753e9cc6be120d55d269f43b194bb9b66171ca1b01a49dfb2e"
+  }
+]

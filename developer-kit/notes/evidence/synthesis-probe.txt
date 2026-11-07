@@ -1,0 +1,23 @@
+engine=Z:\home\admin\aivoice2-re\AIVoice2Editor\aitalk_engine.dll
+license=Z:\home\admin\aivoice2-re\AIVoice2Editor\Lib\AITalk\aitalk.lic
+initialize=0
+authenticate=0
+talker=0000000003A09E50
+loadLangDic=0
+selectLangDic=0
+loadVoiceDic=0
+selectVoiceDic=0
+sampleRate=48000
+setSink=0
+talk=0 pcmBytes=246420
+event[0]=1
+event[1]=1
+event[2]=1
+event[3]=4
+event[4]=4
+event[5]=0
+event[6]=1
+event[7]=1
+terminate=0
+
+process_exit=0

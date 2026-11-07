@@ -1,0 +1,42 @@
+[
+  {
+    "dialect": "standard",
+    "voice": "KotonohaAkane_ns_48",
+    "status": [
+      0,
+      115200
+    ],
+    "bytes": 115200,
+    "sha256": "606c04ae7db8c4c22a696bf5e58836c0e1f3ac3af9e52fa76ce90d28121fbfae"
+  },
+  {
+    "dialect": "standard",
+    "voice": "KotonohaAoi_ns_48",
+    "status": [
+      0,
+      115200
+    ],
+    "bytes": 115200,
+    "sha256": "606c04ae7db8c4c22a696bf5e58836c0e1f3ac3af9e52fa76ce90d28121fbfae"
+  },
+  {
+    "dialect": "kansai",
+    "voice": "KotonohaAkane_ns_48",
+    "status": [
+      0,
+      123840
+    ],
+    "bytes": 123840,
+    "sha256": "1587295ca9c7ccd8f8cdb5a760e779ea4a06e84dc14f225a032379de14964396"
+  },
+  {
+    "dialect": "kansai",
+    "voice": "KotonohaAoi_ns_48",
+    "status": [
+      0,
+      123840
+    ],
+    "bytes": 123840,
+    "sha256": "1587295ca9c7ccd8f8cdb5a760e779ea4a06e84dc14f225a032379de14964396"
+  }
+]

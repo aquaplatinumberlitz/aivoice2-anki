@@ -1,0 +1,72 @@
+[
+  {
+    "voice": "akane_west_emo_48",
+    "text": "です。あ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=kansai"
+    ],
+    "log_offset": 8703
+  },
+  {
+    "voice": "akane_west_syou_48",
+    "text": "です。ああ",
+    "language_calls": [],
+    "log_offset": 8749
+  },
+  {
+    "voice": "akane_west_mini_48",
+    "text": "です。あああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=kansai"
+    ],
+    "log_offset": 8749
+  },
+  {
+    "voice": "aoi_emo_48",
+    "text": "です。ああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=standard"
+    ],
+    "log_offset": 8795
+  },
+  {
+    "voice": "aoi_syou_48",
+    "text": "です。あああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=standard"
+    ],
+    "log_offset": 8843
+  },
+  {
+    "voice": "aoi_mini_48",
+    "text": "です。ああああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=standard"
+    ],
+    "log_offset": 8891
+  },
+  {
+    "voice": "galaco_48",
+    "text": "です。あああああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=standard"
+    ],
+    "log_offset": 8939
+  },
+  {
+    "voice": "KotonohaAkane_ns_48",
+    "text": "です。ああああああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=kansai"
+    ],
+    "log_offset": 8987
+  },
+  {
+    "voice": "KotonohaAoi_ns_48",
+    "text": "です。あああああああああ",
+    "language_calls": [
+      "selectLangDic obj=000000000C6065B0 key=standard"
+    ],
+    "log_offset": 9033
+  }
+]

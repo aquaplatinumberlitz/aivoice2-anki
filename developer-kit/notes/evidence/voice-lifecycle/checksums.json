@@ -1,0 +1,9 @@
+{
+  "result.json": "c0c1e0456af8a43bfd8fa13040d4031249f920ef04f92cc1ee16420c04fe1b3c",
+  "server.log": "fb9d0d086739825bef12934604d14bdf1b6b3cee967cc4526acdf22d7191e1df",
+  "lifecycle-server.log": "93cd4c01a5d3070ae72914f4d049e19a8032e53bd0edaad2047b213b455bb33a",
+  "shared-gui-license.png": "649511713f82d1afd5ed561868f963c257cb221563c39375499a2da8bfee9fe8",
+  "gui-after-remove.png": "ad430ec685099802c4d2a30e0798eb1508f0f5f759d7ed98200ff408d352e985",
+  "gui-license-after-remove.png": "8d49ee88a7cdf5d5ff2712ad48e9eaaf894dc7badbfb8d4db3b69e76163679ea",
+  "isolation-command.json": "a39e9f23caa3ad93f006aa54a27068bf23732226c386ed55a0d9a01cac950614"
+}

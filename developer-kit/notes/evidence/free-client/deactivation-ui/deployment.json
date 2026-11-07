@@ -1,0 +1,30 @@
+{
+  "patch_version": "2.14.1-free-ui.1",
+  "original_sha256": "1cecf26ccecf3d6e89a6ae7a0962284fbe242cfffe3959f6a9eb052e432d5db6",
+  "sha256": "99f898840c21ccc20d50d3390ed21e93aafecb99f40456dc9d361784f9ae3e82",
+  "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/data/app.so",
+  "output": "[WORKSPACE]/src/free-client/build/app.so",
+  "patches": [
+    {
+      "name": "hide-deactivation-instructions-and-button",
+      "offset": "0x9e515d",
+      "before": "488b45d048894df0488941174d8b9fa7a402004c89591f488b45e848894127",
+      "after": "48894df0498b873f720000488941174889411f488941279090909090909090",
+      "bytes": 31
+    },
+    {
+      "name": "neutralize-deactivate-onpressed-closure",
+      "offset": "0x9e52b0",
+      "before": "554889e54883ec18",
+      "after": "498b86d0000000c3",
+      "bytes": 8
+    }
+  ],
+  "voicebank_list": "preserved",
+  "native_engine_authentication": "unchanged",
+  "deployed_at_utc": "2026-11-06T02:32:06.520622+00:00",
+  "deployed_to": "[WORKSPACE]/cache/free-client-review/app/data/app.so",
+  "previous_sha256": "1cecf26ccecf3d6e89a6ae7a0962284fbe242cfffe3959f6a9eb052e432d5db6",
+  "stock_backup": "[WORKSPACE]/cache/free-client-review/gui-backups/app.stock-2.14.1.so",
+  "deployment": "atomic replacement; running user GUI left open"
+}

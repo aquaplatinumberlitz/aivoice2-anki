@@ -1,0 +1,62 @@
+[
+  {
+    "path": "voicebanks/KotonohaAkane_ns_48/KotonohaAkane_ns_48.aivdic",
+    "company_sha256": "1f52a2ef6e0d5c6252b5fcdc5f1f6a7b4bacb733fe7db49ef68e7bdc65b35d8d",
+    "installed_sha256": "1f52a2ef6e0d5c6252b5fcdc5f1f6a7b4bacb733fe7db49ef68e7bdc65b35d8d",
+    "matches_installed": true
+  },
+  {
+    "path": "voicebanks/KotonohaAkane_ns_48/voice.lic",
+    "company_sha256": "e2ddef0e7119cb80c0354f90f2c6b84aeddefb7e2d3ef5837ab1d444355da9dd",
+    "installed_sha256": "e2ddef0e7119cb80c0354f90f2c6b84aeddefb7e2d3ef5837ab1d444355da9dd",
+    "matches_installed": true
+  },
+  {
+    "path": "voicebanks/KotonohaAoi_ns_48/KotonohaAoi_ns_48.aivdic",
+    "company_sha256": "67560bee425bee062ab232e10e9725bb26efa548ca02ebc3a44a226281f426dd",
+    "installed_sha256": "67560bee425bee062ab232e10e9725bb26efa548ca02ebc3a44a226281f426dd",
+    "matches_installed": true
+  },
+  {
+    "path": "voicebanks/KotonohaAoi_ns_48/voice.lic",
+    "company_sha256": "b692b3e19f9a16eeaf6df9bffd3a5e0204e2bcbe67d4c8674c9956041487f25a",
+    "installed_sha256": "b692b3e19f9a16eeaf6df9bffd3a5e0204e2bcbe67d4c8674c9956041487f25a",
+    "matches_installed": true
+  },
+  {
+    "path": "voicebanks/MeikaHime_ns_48/MeikaHime_ns_48.aivdic",
+    "company_sha256": "dc1c2a8a50bf2de6ca140fdf1a0ad86fa9097f49e812d3187c1ce61de8dbda66",
+    "installed_sha256": null,
+    "matches_installed": null
+  },
+  {
+    "path": "voicebanks/MeikaHime_ns_48/voice.lic",
+    "company_sha256": "15b220c1c7dcccd7292b5a541db3cb2e046969a3b19821de6ec60d5d6245a56d",
+    "installed_sha256": null,
+    "matches_installed": null
+  },
+  {
+    "path": "voicebanks/MeikaMikoto_ns_48/MeikaMikoto_ns_48.aivdic",
+    "company_sha256": "a1ae12030e96dde139ebc92f6b8ad5752cd710d38417a348d710c3db9914ce45",
+    "installed_sha256": null,
+    "matches_installed": null
+  },
+  {
+    "path": "voicebanks/MeikaMikoto_ns_48/voice.lic",
+    "company_sha256": "fb19925429df592e99104b0ea75c5e83ffa12853138592640cad5627694d46a7",
+    "installed_sha256": null,
+    "matches_installed": null
+  },
+  {
+    "path": "Lang/standard/standard.aildic",
+    "company_sha256": "3dfabe85bc9e69c8c12a994e7285605ff49e4931470a919486b9ecae72929c8d",
+    "installed_sha256": "3dfabe85bc9e69c8c12a994e7285605ff49e4931470a919486b9ecae72929c8d",
+    "matches_installed": true
+  },
+  {
+    "path": "Lang/kansai/kansai.aildic",
+    "company_sha256": "572ac8dce88e3059cad7ff490c0eb8e3ce87265fce021379dbd6c5fa6ba7b678",
+    "installed_sha256": "572ac8dce88e3059cad7ff490c0eb8e3ce87265fce021379dbd6c5fa6ba7b678",
+    "matches_installed": true
+  }
+]

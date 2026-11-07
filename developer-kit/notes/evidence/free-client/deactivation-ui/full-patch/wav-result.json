@@ -1,0 +1,10 @@
+{
+  "channels": 1,
+  "rate": 48000,
+  "sample_width": 2,
+  "frames": 61920,
+  "seconds": 1.29,
+  "rms": 1027.7118709287797,
+  "peak": 9448,
+  "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032"
+}

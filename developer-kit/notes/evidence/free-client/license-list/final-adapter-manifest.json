@@ -1,0 +1,12 @@
+{
+  "client": "A.I.VOICE2 free client",
+  "editor_version": "2.14.1",
+  "adapter_version": "1.0.7-free-client.2",
+  "sha256": "b088177fa2d68072ffbc8d3b6fadc3c461ae3e08c683e9b31b9c77210c6bc5f4",
+  "requires_original_license_dll_sha256": "10d3493f360ca6a8a8fc6138081b3e79469485197689614c2b2581f772602797",
+  "replaces": "ailm.dll",
+  "original_ailm_sha256": "0684ea23898fdea645cdf6b15b4b50c7d475bd9adf785748d35360459df38a87",
+  "source_sha256": "7b92f3a54d0f8a809d7ae7574c8a5f288dc5b8157df1e1a05770092dba63d365",
+  "runtime_authentication": "unchanged",
+  "personal_activation_required": false
+}

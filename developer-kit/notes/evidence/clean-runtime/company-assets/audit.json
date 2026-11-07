@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "voicebanks": [
+    "KotonohaAkane_ns_48",
+    "KotonohaAoi_ns_48",
+    "MeikaHime_ns_48",
+    "MeikaMikoto_ns_48"
+  ],
+  "requests": 8,
+  "all_assets_from_company_or_original_msi": true,
+  "installed_assets_used": false,
+  "license_manager_in_runtime": false,
+  "total_input_bytes": 1060226461,
+  "total_input_files": 52,
+  "new_prefix_location": "[WORKSPACE]/cache/clean-runtime-c_vlf5gg/work/prefix"
+}

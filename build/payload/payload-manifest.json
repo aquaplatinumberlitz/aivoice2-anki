@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "baseline_id": "aivoice2-2.14.1-company-nv-20261106",
+  "files": {
+    "anki/aivoice2-local.ankiaddon": "85612e9082c1729ebfb8e643f09268f915d9b348256353a6a5edb70d37469875",
+    "gui/ailm.dll": "f2476c10be34b815d34cd111c07a82f996adb8a114c3ff60971e0029b8b612b3",
+    "gui/app.patch.json": "c5237dbaa45aa2d60b14c915bc793bb9fe5b58b4e22280843a494f0a38bfb907",
+    "gui/gui_patch.py": "ca53953be5d40edd41e3cad8d5d319fc72845acf6cacea003b8165b00f500b3f",
+    "gui/manifest.json": "913273903d027d22ff9f5610c854d3b4e955691ea083f1c4e3a6e96d447e8f03",
+    "runtime/engine_worker.exe": "9c3a1c2b3e28a33b4caf93d93c7e66599bd0bcd2c28be44e6db29b5966be30c4",
+    "runtime/run_auth_probe.py": "49bb495b0216150e20c69eb931fdeacdb70efa588c6827801fdca606fa33f4e4",
+    "runtime/runtime_cli.py": "61d0befc5a2cfdce12a13f379a07501660059fea21a02fe28d073a433f7ff24a",
+    "runtime/runtime_config.py": "f53a6a805cf2aa7f0f63a86090be344ac162a4f7938f64e1012f058df5ae23c2",
+    "runtime/server.py": "57bc288e566fbad961488ea21d93e643ac3cb1ec3b07a348fb0eafd276cdca87",
+    "runtime/voice_registry.json": "c791e9067f10089feaeb5dbb8b3b73f74d25bce7577d916490aa182eb5c52498",
+    "runtime/worker-manifest.json": "b0edd5f6d21a9777c6c29a6ce47abe4845b86863bde0e8067f0128f3c0f270a8"
+  }
+}

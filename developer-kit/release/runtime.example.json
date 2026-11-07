@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "app_dir": "../app",
+  "runtime_dir": "../runtime",
+  "engine_prefix": "../prefixes/engine",
+  "gui_prefix": "../prefixes/gui",
+  "voice_registry": "../runtime/voice_registry.json",
+  "port": 17862,
+  "default_voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48"
+}

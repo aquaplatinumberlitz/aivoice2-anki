@@ -1,0 +1,23 @@
+{
+  "encoding": 0,
+  "konnichiwa": {
+    "text": "こんにちは",
+    "kana": "<S>コ^ンニチワ<F>",
+    "duration": 1.645
+  },
+  "other_cases": [
+    {
+      "text": "さようなら",
+      "duration": 1.7460833333333334
+    },
+    {
+      "text": "おはようございます",
+      "duration": 2.0707708333333334
+    },
+    {
+      "text": "あいうえお",
+      "duration": 1.73425
+    }
+  ],
+  "kana_trace": "AIKANA: <S>サ^ヨーナラ<F>\r\nAIKANA: <S>オ^ハヨー/1ゴ^ザイマ!ス<F>\r\nAIKANA: <S>ア^イウ!エオ<N>\r\n"
+}

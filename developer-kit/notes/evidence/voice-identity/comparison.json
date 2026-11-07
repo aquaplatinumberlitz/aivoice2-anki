@@ -1,0 +1,36 @@
+{
+  "akane_west_emo_48": {
+    "api_pcm_bytes": 200168,
+    "api_sha256": "d177ab1d165168182017d6bfdf39b25c27d6156533f6de7d1dab6b8e67ac80b0",
+    "gui_pcm_bytes": 200168,
+    "gui_sha256": "23ec39e46f6c1af061fd8dc86062ad70e40864a18953360e92a32615669d66c2",
+    "gain_1_06_rmse": 0.07832526239182255,
+    "max_delta": 1
+  },
+  "aoi_emo_48": {
+    "api_pcm_bytes": 192442,
+    "api_sha256": "cd1aa105c217179788224a302634cc62c72ce93f07d0be42aba0921516b66f53",
+    "gui_pcm_bytes": 192442,
+    "gui_sha256": "d886f82c2918e34d2433d426957c9421f212b01f432e9bae7b6983b19b3106da",
+    "gain_1_06_rmse": 0.07484442384876493,
+    "max_delta": 1
+  },
+  "KotonohaAkane_ns_48": {
+    "api_pcm_bytes": 205582,
+    "api_sha256": "11ba925443e04cca11f47c2ad36035481ff25349f2e2ca7f287369b8a4859ad4",
+    "gui_pcm_bytes": 205582,
+    "gui_sha256": "2e7c8acaf2e12d8b329c5745054023fa479d4d1978b9b2b40917eadeb597d15f",
+    "gain_1_06_rmse": 0.07446631828733548,
+    "max_delta": 1
+  },
+  "KotonohaAoi_ns_48": {
+    "api_pcm_bytes": 205582,
+    "api_sha256": "11ba925443e04cca11f47c2ad36035481ff25349f2e2ca7f287369b8a4859ad4",
+    "gui_pcm_bytes": 205582,
+    "gui_sha256": "2e7c8acaf2e12d8b329c5745054023fa479d4d1978b9b2b40917eadeb597d15f",
+    "gain_1_06_rmse": 0.07446631828733548,
+    "max_delta": 1
+  },
+  "gui_ns_identical": true,
+  "text": "hello world"
+}

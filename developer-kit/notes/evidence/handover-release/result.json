@@ -1,0 +1,55 @@
+{
+  "fresh_offline_install": true,
+  "selected_initial_voice": "KotonohaAoi_ns_48",
+  "steps": [
+    {
+      "case": "wizard-install-aoi-and-connect-isolated-anki",
+      "passed": true
+    },
+    {
+      "case": "add-akane",
+      "passed": true
+    },
+    {
+      "case": "remove-default-akane",
+      "passed": true
+    },
+    {
+      "case": "restore-akane",
+      "passed": true
+    },
+    {
+      "case": "refuse-maintenance-while-engine-running",
+      "passed": true
+    },
+    {
+      "case": "integrate-anki-files",
+      "passed": true
+    },
+    {
+      "case": "anki-new",
+      "passed": true
+    },
+    {
+      "case": "anki-legacy",
+      "passed": true
+    },
+    {
+      "case": "installed-manifest-and-support-export",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "physical_audio_checked": false,
+  "scope": "Installer core/wizard when enabled, real voice lifecycle and installed Anki addon; real user service tested separately",
+  "archive_name": "aivoice2-anki-0.1.0-candidate.tar.gz",
+  "archive_sha256": "799456c3d44da28c4add6abac7271d263d46cb5d126e17bddbbcbcaef27680fd",
+  "archive_bytes": 2422114,
+  "tested_from_extracted_archive": true,
+  "unit_tests_passed": 23,
+  "stale_preview_checked": [
+    "NewEditor",
+    "Editor legacy"
+  ],
+  "qualified_for": "local review candidate; independent machine and real speaker acceptance remain"
+}

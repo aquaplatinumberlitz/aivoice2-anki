@@ -1,0 +1,12 @@
+{
+  "reproduced": true,
+  "empty_key_hides_voicebanks": true,
+  "nonempty_caption_shows_four_voicebanks": true,
+  "free_license_caption": "Free client",
+  "final_version": "1.0.7-free-client.2",
+  "final_sha256": "b088177fa2d68072ffbc8d3b6fadc3c461ae3e08c683e9b31b9c77210c6bc5f4",
+  "review_deployed": true,
+  "review_restart_required": true,
+  "previous_helper_sha256": "929afc880986fc7b25fd7de2187de2da0fb044648899a1a530628ff81fa0808f",
+  "original_framework_unchanged": true
+}

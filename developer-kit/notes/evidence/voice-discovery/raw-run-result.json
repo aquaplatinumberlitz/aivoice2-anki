@@ -1,0 +1,25 @@
+{
+  "fresh_offline_install": true,
+  "selected_initial_voice": "KotonohaAoi_ns_48",
+  "steps": [
+    {
+      "case": "install-bank-outside-original-baseline",
+      "passed": true
+    },
+    {
+      "case": "remove-new-bank",
+      "passed": true
+    },
+    {
+      "case": "restore-new-bank",
+      "passed": true
+    },
+    {
+      "case": "synthesize-both-restored-banks",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "physical_audio_checked": false,
+  "scope": "Actual install/init/remove/restore for a legacy known bank and a new explicitly configured bank outside the original four-voice baseline"
+}

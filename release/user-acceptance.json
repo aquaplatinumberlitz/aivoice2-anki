@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "release_version": "0.2.0",
+  "original_approval_version": "0.1.0",
+  "patch_scope": "0.2.0 modernizes the manager UI and adds direct playback/application launch; original acceptance waivers remain recorded.",
+  "status": "approved-for-handover",
+  "authorization": "User explicitly approved proceeding without the remaining customer-machine/speaker tests and update/uninstall completion for this handover.",
+  "waived_acceptance_checks": [
+    "Independent customer machine or VM qualification",
+    "Physical speaker playback confirmation"
+  ],
+  "deferred_features": [
+    "Complete in-place MSI/runtime updater",
+    "Complete integration uninstaller"
+  ],
+  "recording_rule": "Approval is a scope and acceptance decision, not evidence that waived tests passed or deferred features were implemented.",
+  "vntext": "Deferred until after the Anki handover; roadmap only"
+}

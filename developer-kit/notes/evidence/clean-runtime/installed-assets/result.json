@@ -1,0 +1,158 @@
+{
+  "fresh_prefix": true,
+  "network_namespace": true,
+  "personal_home_visible": false,
+  "controls": [
+    {
+      "name": "missing-engine-license",
+      "exit": 5,
+      "stdout": "engine=Z:\\input\\runtime\\aitalk_engine.dll\r\nlicense=Z:\\work\\absent.lic\r\ninitialize=0\r\nauthenticate=-7\r\n"
+    },
+    {
+      "name": "missing-voice-license",
+      "exit": 6,
+      "stdout": "engine=Z:\\input\\runtime\\aitalk_engine.dll\r\nlicense=Z:\\input\\runtime\\aitalk.lic\r\ninitialize=0\r\nauthenticate=0\r\ntalker=0000000000243460\r\nloadLangDic=0\r\nselectLangDic=0\r\nloadVoiceDic=-7\r\nterminate=0\r\n"
+    },
+    {
+      "name": "original-msi-auth",
+      "exit": 0,
+      "stdout": "engine=Z:\\input\\runtime\\aitalk_engine.dll\r\nlicense=Z:\\input\\runtime\\aitalk.lic\r\ninitialize=0\r\nauthenticate=0\r\ntalker=0000000000243370\r\nterminate=0\r\n"
+    }
+  ],
+  "voices": [
+    {
+      "voice": "KotonohaAkane_ns_48",
+      "dialect": "kansai",
+      "text": "です。",
+      "pcm_bytes": 123840,
+      "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032"
+    },
+    {
+      "voice": "KotonohaAkane_ns_48",
+      "dialect": "kansai",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 401890,
+      "pcm_sha256": "82d686cddb2783d3d4800b84c4a2aec993a631d55ba853b04da870616779e83e"
+    },
+    {
+      "voice": "KotonohaAoi_ns_48",
+      "dialect": "standard",
+      "text": "です。",
+      "pcm_bytes": 115200,
+      "pcm_sha256": "2ed71b4ca9bce10cb447cd7c8fbbee9d6554bdb90126fa68f56dca62cc0c7182"
+    },
+    {
+      "voice": "KotonohaAoi_ns_48",
+      "dialect": "standard",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 401734,
+      "pcm_sha256": "ea317d08179a0f9c3e89ffbf52a64397b06baf759a840b39d4e9680bdf1d5d37"
+    },
+    {
+      "voice": "akane_west_emo_48",
+      "dialect": "kansai",
+      "text": "です。",
+      "pcm_bytes": 124954,
+      "pcm_sha256": "fd807a013a65a38af296e9a9a8639d4028a031855af4515d362a6a64a6e91f03"
+    },
+    {
+      "voice": "akane_west_emo_48",
+      "dialect": "kansai",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 381118,
+      "pcm_sha256": "ebe8fc20faf142833efc68874c46b9c7400ad7021135b3415597a2ad5ba03450"
+    },
+    {
+      "voice": "akane_west_mini_48",
+      "dialect": "kansai",
+      "text": "です。",
+      "pcm_bytes": 117172,
+      "pcm_sha256": "83a03e43947eeb0159c06d2658431ac6bd729569b8f87a7990db4407c7ad2225"
+    },
+    {
+      "voice": "akane_west_mini_48",
+      "dialect": "kansai",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 397104,
+      "pcm_sha256": "2dbf6844e59132991bfe6c1cfc5a506db1763e8a9cb26549e58f973a6075b538"
+    },
+    {
+      "voice": "akane_west_syou_48",
+      "dialect": "kansai",
+      "text": "です。",
+      "pcm_bytes": 122098,
+      "pcm_sha256": "f9b4632b3bd56f657b9a3694f7651a8e3c195a4c9cbf245ba7e555a3b0900adb"
+    },
+    {
+      "voice": "akane_west_syou_48",
+      "dialect": "kansai",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 422418,
+      "pcm_sha256": "8621c9275237986a74e8ec24c84431dd4be1cede17dcfe4cc0f4abe8b05498a9"
+    },
+    {
+      "voice": "aoi_emo_48",
+      "dialect": "standard",
+      "text": "です。",
+      "pcm_bytes": 110110,
+      "pcm_sha256": "2c13d12816e462bb3e4952c86faf50f10cf2e87b77f30c8e6ea14a92909351c1"
+    },
+    {
+      "voice": "aoi_emo_48",
+      "dialect": "standard",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 385782,
+      "pcm_sha256": "8d487b6d3cfe6b6a3c4ac4ff0b1fb61005a79a8b4fad9ae254fe5b64ffe8fc68"
+    },
+    {
+      "voice": "aoi_mini_48",
+      "dialect": "standard",
+      "text": "です。",
+      "pcm_bytes": 109592,
+      "pcm_sha256": "6c19341501041037eec740a362ccb3c0872dfa5e24299a20a7417c0e15e0c5ac"
+    },
+    {
+      "voice": "aoi_mini_48",
+      "dialect": "standard",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 409464,
+      "pcm_sha256": "3aaffa9bb6aef8cc76146ececc2b56a0606d3be0ff3c9a974095a0f80a9f056c"
+    },
+    {
+      "voice": "aoi_syou_48",
+      "dialect": "standard",
+      "text": "です。",
+      "pcm_bytes": 110252,
+      "pcm_sha256": "cc0da8f406c5b12a6654c1ff24b251670fefc0c007081afc3b5fe79e8edc4c5c"
+    },
+    {
+      "voice": "aoi_syou_48",
+      "dialect": "standard",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 425286,
+      "pcm_sha256": "e998e800539ca8c46d53129c73aa55ba8b576f647e7634eb633fc51570fbb059"
+    },
+    {
+      "voice": "galaco_48",
+      "dialect": "standard",
+      "text": "です。",
+      "pcm_bytes": 119384,
+      "pcm_sha256": "3a44105cb3fee9cfda9e299df228832f269f1aa53d54c937717fc55938425c90"
+    },
+    {
+      "voice": "galaco_48",
+      "dialect": "standard",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "pcm_bytes": 341596,
+      "pcm_sha256": "fa7a0394aa185f8e60f10c915c2fcd5daa1466b3b421ecddb157fb91c6f7e6fe"
+    }
+  ],
+  "wineboot_exit": 0,
+  "initial_registry": {
+    "system.reg": "8dcf5a87aaa6252e956c506d7dfcc5ad5d3a5c4e06a841a45d4bb1c8445e4c90",
+    "userdef.reg": "55cc18da5adbd748189bb883cd2624aa2305eb82d79a2327482f8f2b230bed1b",
+    "user.reg": "2364e08e12d64ed7d5a9289042de07a38c683ba2d20ae600957e4e8a3b97c699"
+  },
+  "worker_exit": 0,
+  "passed": true
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "path": "CLEAN_RUNTIME.md",
+    "original_sha256": "e3805da87286a91bed7e1d54e257306693d2a00eb919088d8f47908acdb8b058",
+    "export_sha256": "a26320788bd98d2e8c0290ccc691ef4b5c4c76fd627abd53acba28b9c4d8ea94",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "FREE_CLIENT_GUIDE_VI.md",
+    "original_sha256": "8c8202ccadc9ec2a02050ff3fa9cb799cd06aa89abfb81247ccba533e06ed521",
+    "export_sha256": "9b061aedf3e6ec96814a832be8a3602a013b139f64b901b1598851e79665ce3f",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "GUI_HEADLESS_LICENSE.md",
+    "original_sha256": "863a88954759809cefdb1f25cf5d0a41b114ea1a5eb4c93c12b979245a2d9767",
+    "export_sha256": "29d5a289b0c0efc107c1a728453f0232b8838f02d4ada276c1e8825926012dd9",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "POC_UNBLOCKED.md",
+    "original_sha256": "1a06192c1613fb9186145de94764784ba264c59379e105bba558e0943d566fdc",
+    "export_sha256": "cab99e0b5cb83a7bf3f20efc252ea88e365b18ba4be07989a2c8c03e0feb7f18",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "VOICE_IDENTITY.md",
+    "original_sha256": "b6de0a95cae93a145c9f45610d6aac787248100e97cda9d2e9eea248b315a73e",
+    "export_sha256": "e5c667f527c4b3888272200a0db9a7093b45548117dcec899f1d8afad3eafc00",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/anki-gui-legacy.jsonl",
+    "original_sha256": "ff8b6b95a7519f033214c3dbed8c1897f6da95cec601772f2f321002ba770af5",
+    "export_sha256": "b53106c042786e3cd5b24d412d3fe5254a722bff540764c57d5d4e3cc77ef304",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/anki-gui-smoke.jsonl",
+    "original_sha256": "23321ac4373d8fe0bc02946be2efcb784c5d094475d284480627457cc78d3ff1",
+    "export_sha256": "05c1cfb6a5f895da0216d02fb7ebe97974d267f9eb0fc652e01f4528d7ca3086",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/auth-probe-loader.txt",
+    "original_sha256": "938e0a3bc0b66d2ba549afb814a1762888c27efe92a83ebfd0100896e6e7d35b",
+    "export_sha256": "fe902b645b9d745a059dad4da261d3486dc6b1a718f601f79f01f91584cd069e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/company-assets/audit.json",
+    "original_sha256": "80adfa313cd1f5d2cb60f334090d6a348393baf0966a89047cd473dfb52a8a5c",
+    "export_sha256": "2b4850253fecbc7a0cc917846c0252a739cf97b24fd189c20098214b193dc7b3",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/company-assets/isolation-command.json",
+    "original_sha256": "6a3f85055b5f828305dafd32a00c15cbd582fb32dd1cd1c84b6573d32d3853e7",
+    "export_sha256": "429de8d23957348af6f063de33404e2c820167cf130c64c0f27b9b273f722280",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/company-assets/manifest.json",
+    "original_sha256": "64a88497cfcac532ccc2eff93b0f77e1418f840d2c5b96782f0e77aa50189192",
+    "export_sha256": "a089be8bde012aab1c34fac0f9808a13bcf41ea3f77759da8bcfeecc6a1573a6",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/gui-headless/gui-no-lic/isolation-command.json",
+    "original_sha256": "e45e1f375f76fe75eec48097e847f6846489d0ce7ec56ead53dea43cb213b34b",
+    "export_sha256": "8a06adfc77960a046b52d333bab827f7bac21afda603dcc2ffae0c7254e36bf3",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/gui-headless/gui-stock-files/isolation-command.json",
+    "original_sha256": "23f4b6e4428898ef1cdc8eb638c516fa695f417630f1e66a445fab79dfc5dc2d",
+    "export_sha256": "561950ab5417aee33192d9dd462a7066875b52e5b40065015759225a8cd09ea9",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/gui-headless/headless-matrix/isolation-command.json",
+    "original_sha256": "ac470389a77cd468bf466dea8b613dae650d1be65d6474cee0d63dbb50d7ad1a",
+    "export_sha256": "4b1510c226e69592f5028f58870b6be0ae4b6e08ad4dca52ff8d2f94d43b55c1",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/gui-headless-rea.json",
+    "original_sha256": "16a9ff51e8c7404141c266455dfe5038148d9908fc7b3c18283728c781750120",
+    "export_sha256": "2ebdbe53c920935485642c4e79789b82bbc7c37000df08941898edd5b8186f50",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/installed-assets/isolation-command.json",
+    "original_sha256": "b558d00852fc9d637d0d5ad4d88a7abe54037b45a9eed8c1960043a7edbdacad",
+    "export_sha256": "da57785d75eaa86e3110cb230331f7181863f9030217ee473cce25252b43b35e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/installed-assets/manifest.json",
+    "original_sha256": "7249e3d5881c55fa7de75cd961977003f7e2f2c5733a49534a96104a46b6e5cc",
+    "export_sha256": "e850fc863275f57ab445d99cb6f8f1756cdb759fa531b6e4a6c7e64f9a09ce0b",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/installer-comparison.json",
+    "original_sha256": "761b8b2dfab2e702e65a04ba0a1a44bbaca884c7373109e139b4a199114ba063",
+    "export_sha256": "79d8d37cdb7a03e35933b8fdf68f164094664549cae19b1111c94b1b81eec440",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/isolation-command.json",
+    "original_sha256": "b558d00852fc9d637d0d5ad4d88a7abe54037b45a9eed8c1960043a7edbdacad",
+    "export_sha256": "da57785d75eaa86e3110cb230331f7181863f9030217ee473cce25252b43b35e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/manifest.json",
+    "original_sha256": "7249e3d5881c55fa7de75cd961977003f7e2f2c5733a49534a96104a46b6e5cc",
+    "export_sha256": "e850fc863275f57ab445d99cb6f8f1756cdb759fa531b6e4a6c7e64f9a09ce0b",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/clean-runtime/rea-auth-evidence.json",
+    "original_sha256": "7a49bcd3c92b85c5b6eafb0880b68eee7567000a921fc63375c62b415c9e6476",
+    "export_sha256": "768bb721f3e34b11d9d93a91174ce7556fcad6ff6d4ef91265920b90ca605930",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/delivery-p1/isolation-command.json",
+    "original_sha256": "7ab0dc0bf54ad2f77f960015fc63dc00767330af942a4d26f481cb9d4954df90",
+    "export_sha256": "ad11830f977e4d841396bdeb4be9e6aa7ba111d852a12fb41fb138475b0a05e0",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation/isolation-command.json",
+    "original_sha256": "dcedf99ca850df8b6a09835a8f02c9075cf6afc7483f08c95de2d60b35ac925f",
+    "export_sha256": "909c4b314ba993fdd63c515e78ea43d7fb5c865666a9301321df6dcacaab2856",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation/rea-investigation.json",
+    "original_sha256": "27c60d1d72fa93ff8f6e441a6e2fa290ecc3c2d5553da4624c97aba0c8e8b1a7",
+    "export_sha256": "d54c4b6e7ad80fabc507e064244c9af59a9964048803e9975a9e9318c2e70306",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation-ui/app.patch.json",
+    "original_sha256": "e801f41a16801b1775d6454eaff2230e7de9478dd70ca8428f8be5b38c22c388",
+    "export_sha256": "896ed5c7ba09d15052cf7a662d1ced8ec84ca242948cae8d93f127e2a7186f19",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation-ui/callback-only/isolation-command.json",
+    "original_sha256": "f1eb35b972685a6ce00450838e1856f1f9412bb7031edb625b737c71f4deb71d",
+    "export_sha256": "028ff8a7c937aa7482482c2d1f482930db20cd600b5cb68e97eb8dc8d69e7e6e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation-ui/deployment.json",
+    "original_sha256": "77b58a26f7f9528a7ab218c917ebcdd7cfe77fd0f1d3557bf8838930a9f898bf",
+    "export_sha256": "5952792b3c806ebeff3d7d90ca3f020832a07b71ced260578b7ae54a056c44e0",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/deactivation-ui/full-patch/isolation-command.json",
+    "original_sha256": "7198e45d51b01d5d25979e8e6efa7dbcd1ad42f34c28cc65a1a6429c711c4627",
+    "export_sha256": "461a74a3b4abe1678f60805432fc1d3b4ee3c5390e2a4a73bd8ced8b132a8c83",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/free-helper/isolation-command.json",
+    "original_sha256": "83e83358eff030111297cc1a5c09ef836e1f1328fdbf79889c9fb0050989a3bb",
+    "export_sha256": "f95dc708ae03c8dcb4324770fd513ad02f0d8e88c412be61bed5ee2f3b35ab41",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/license-list/after/isolation-command.json",
+    "original_sha256": "104cc28ae85b91ef2d32f45211982777041a9834a5830c582578ca6080b6870e",
+    "export_sha256": "9f200cb33604b9843fc89bcdea92b6db16b4275d9b3de7fb1f807e3dccd163c0",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/license-list/before/isolation-command.json",
+    "original_sha256": "13577610b13da9f5cb2c6a3632552c23c07ff4e14ebcf985b5d62bec852b3a51",
+    "export_sha256": "aa72dbc3ced7ec2b6bb3aea9ec4278dbb9b56e86f8f3801ed11941bc32b9a297",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/license-list/rea-gui-activation-field.json",
+    "original_sha256": "d71003cfeb8e71391b9fb08bd82bce2a9a213e8298acfb669e6b7c923b981e0e",
+    "export_sha256": "66975e662baac1499beda31653e48936afc1a3b335dd9020c2eb55feffa2f22f",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/msi-lang-inventory/result.json",
+    "original_sha256": "022a05b355f5fba2c45daf5be662b8c12bf704fbcbc42aaf563972a8645429d9",
+    "export_sha256": "c24b05fe5514d672756f49117e6bbe4f886319ac7d4d99c552e9922ce99f96cf",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-client/user-patch/isolation-command.json",
+    "original_sha256": "cb303662fc4798fb16778ea6d3f71f8d259ff8fbe500a7f6a9937a1068cd2e45",
+    "export_sha256": "956f37971d0fadba2ec3b564128574433622bf2abedfaa9cf6b3b3aef6dd2ca0",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/free-license/rea-free-license.json",
+    "original_sha256": "d61fb216a1da92a6b0d7998b56c8fe4f863a30dbfb6b6c0067679293a8b3fb42",
+    "export_sha256": "52d04c7a70a371218c4b88e88ddf642200f640a1d178f273ed204a3d8e7b3a79",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/new-editor-enabled.json",
+    "original_sha256": "6da9cc2068b6dc33ca75594b892b33cb0d42768d29582a2a904f67a1d13c10d3",
+    "export_sha256": "58a3723ae0d0397ef36fc9d8c37f2018199ebff629df27edfcf820a769e50167",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/rea-encoding-20261105.json",
+    "original_sha256": "8438edfc80fd40cdd3835ad3fdce1e02f95d235e7b238009a8f73c3270e92034",
+    "export_sha256": "03684a92d280d0c05f0fef905cf6d7053ba4a5fb151677544a74e88a30a3e557",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/rea-engine-20261105.json",
+    "original_sha256": "24cfbc1c81142d720ca8c298b549f032148b09e00b11bf9f4eb4c047327c0ead",
+    "export_sha256": "8bdf9a4e3b3e2a7dd9f8cfb320f0b4762a6a2c80355aaa8f888c6dae5111279e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/setup-clean/isolation-command.json",
+    "original_sha256": "b48eacc63701c19ee3fb84382874ceacc58b63198bb1b7ee39b72f9e746a02a0",
+    "export_sha256": "7cccf1ab869344fbb5873904c9fedb6949fc3e7cb8242d423ed873b47f59c329",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/voice-identity/gui-trace-proxy.c",
+    "original_sha256": "0810831d7fe2707f09fd9b33261aa96786327be2644f945634647666ba9dceb4",
+    "export_sha256": "112dcbc7257cdc4e6a43f9cca4e271f544292059887c1103835014de2d607174",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/voice-identity/rea-analysis-snapshot.json",
+    "original_sha256": "ceeb84bcb12332d6d94aa9a564e505a526e3f59ccb706c72af82a9852ab63717",
+    "export_sha256": "ebaa679e236eb19e2c226ce912328496c8b4ca750534700d7f5d0dad52c5ae2a",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/voice-identity/rea-final-evidence.json",
+    "original_sha256": "f4c8f3963d9a4cccb79205358975cb2bb79a3dc77ec396dfe319e1e41bcfe081",
+    "export_sha256": "2bd333eb95bffc8fde863d34959cdfb662b7decc95dd69504bfb435ee881a639",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/voice-identity/rea-voice-style.json",
+    "original_sha256": "f4c8f3963d9a4cccb79205358975cb2bb79a3dc77ec396dfe319e1e41bcfe081",
+    "export_sha256": "2bd333eb95bffc8fde863d34959cdfb662b7decc95dd69504bfb435ee881a639",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/voice-lifecycle/isolation-command.json",
+    "original_sha256": "a39e9f23caa3ad93f006aa54a27068bf23732226c386ed55a0d9a01cac950614",
+    "export_sha256": "49314f8647048b399f975861486327feefaf1df39f6786358e351d60362f03ef",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  },
+  {
+    "path": "evidence/wav-validation.json",
+    "original_sha256": "f2ed4d29aba259a161bc88d37d9e474ceb248a3cf929c9a82a5081bfe8ed9723",
+    "export_sha256": "897fd7d3dd1ede7127ec51105de5a276a636d6c50b8e135f86ece6240fc5804e",
+    "derived_export": true,
+    "edits": "author-path/key-like-string redaction and/or archive-link rewrite"
+  }
+]

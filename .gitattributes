@@ -1,0 +1,2 @@
+# Preserve exact release bytes and the original SHA256SUMS on every platform.
+* -text

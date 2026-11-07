@@ -1,0 +1,366 @@
+[
+  {
+    "path": "runtime/aitalk_engine.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/Lib/AITalk/aitalk_engine.dll",
+    "origin": "original-editor-msi",
+    "bytes": 3932160,
+    "sha256": "711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-environment-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-environment-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "00f84c438aab40500a2f2df22c7a4ec147a50509c8d0cdac6a83e4269e387478"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-filesystem-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-filesystem-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "30bcf934cbcc9ed72ff364b6e352a70a9e2afa46eceadea5c47183cb46cfd16e"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-utility-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-utility-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "cfb2ee4e426bb00b76163c1a66cf8cfef8d7450cbf9bbce3bc9eb2053f51e0e5"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-math-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-math-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 29144,
+    "sha256": "f7c5d7394643c95fe14c07773a8a206e74a28db125f9b3976f9e1c8c599f2af1"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-string-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-string-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 25040,
+    "sha256": "44ddab31c182235ac5405d31c1cba048316cc230698e392a732ac941ec683bad"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-convert-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-convert-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 25056,
+    "sha256": "14694879f9c3c52fbd7dde96bf5d67b9768b067c80d5567be55b37262e9dbd54"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-stdio-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-stdio-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 25040,
+    "sha256": "3b59a50457f6b6eaa6d35e42722d4562e88bcd716bae113be1271ead0feb7af3"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-runtime-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-runtime-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 25040,
+    "sha256": "315ded39d9e157cec05d83711c09858c23602857c9d8c88beef121c24c43be84"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-heap-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-heap-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "6c0e0d22b65329f4948fcf36c8048a54ccccbf6c05b330b2c1a686f3e686eed0"
+  },
+  {
+    "path": "runtime/vcruntime140_1.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/vcruntime140_1.dll",
+    "origin": "original-editor-msi",
+    "bytes": 49488,
+    "sha256": "e0b66601cc28ecb171c3d4b7ac690c667f47da6b6183bff80604c84c00d265ab"
+  },
+  {
+    "path": "runtime/vcruntime140.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/vcruntime140.dll",
+    "origin": "original-editor-msi",
+    "bytes": 109392,
+    "sha256": "76fdb83fde238226b5bebaf3392ee562e2cb7ca8d3ef75983bf5f9d6c7119644"
+  },
+  {
+    "path": "runtime/msvcp140.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/msvcp140.dll",
+    "origin": "original-editor-msi",
+    "bytes": 579920,
+    "sha256": "cb3c74d6fcc091f4eb7c67ee5eb5f76c1c973dea8b1c6b851fcca62c2a9d8aa8"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-time-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-time-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "a409e25a9d3c252cc0a5af9df85d3733e946087b06cd1fb2cf1bf640eb0d49ba"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-locale-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-locale-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "c048a3d7ab951dce1d6d3f5f497b50353f640a1787c6c65677a13c55c8e99983"
+  },
+  {
+    "path": "runtime/onnxruntime.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/onnxruntime.dll",
+    "origin": "original-editor-msi",
+    "bytes": 10951200,
+    "sha256": "b9dba35ec85d49c0186332c19a01601ae598ede701b79dcc70de50d4dba36fa6"
+  },
+  {
+    "path": "runtime/api-ms-win-core-handle-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-handle-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "625667ea50b2bd0bae1d6eb3c7e732e9e3a0dea21b2f9eac3a94c71c5e57f537"
+  },
+  {
+    "path": "runtime/api-ms-win-core-localization-l1-2-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-localization-l1-2-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20960,
+    "sha256": "e9539fce90ad8be582b25ab2d5645772c2a5fb195e602ecdbf12b980656e436a"
+  },
+  {
+    "path": "runtime/api-ms-win-core-file-l1-2-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-file-l1-2-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20960,
+    "sha256": "03bd3217eae0ef68521b39556e7491292db540f615da873dd8da538693b81862"
+  },
+  {
+    "path": "runtime/api-ms-win-core-heap-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-heap-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20960,
+    "sha256": "e36b72eafffffb09b3f3a615678a72d561b9469a09f3b4891aba9d809da937a5"
+  },
+  {
+    "path": "runtime/api-ms-win-core-memory-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-memory-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "ef77b3e4fdff944f92908b6feb9256a902588f0cf1c19eb9bf063bb6542abfff"
+  },
+  {
+    "path": "runtime/api-ms-win-core-debug-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-debug-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "092b72832c47f9c4edcde61f1a111c20eb73452984e0a6109482de74eb03c34d"
+  },
+  {
+    "path": "runtime/api-ms-win-core-interlocked-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-interlocked-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "fbb9032835d0d564f2f53bbc4192f8a732131b8a89f52f5ef3ff0daa2f71465f"
+  },
+  {
+    "path": "runtime/api-ms-win-core-sysinfo-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-sysinfo-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "45d4f1e398e4cc73fd1aaad80219d2a9d3205a228167c819eb6787d7b01fc186"
+  },
+  {
+    "path": "runtime/api-ms-win-core-profile-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-profile-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "5e6ad9502c8411f29bc072efd08c4fcd09bc3367814269deda74a78536fb8375"
+  },
+  {
+    "path": "runtime/api-ms-win-core-processthreads-l1-1-1.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-processthreads-l1-1-1.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "a8e2fc077d9a7d2faa85e1e6833047c90b22c6086487b98fc0e6a86b7bf8bf09"
+  },
+  {
+    "path": "runtime/api-ms-win-core-processthreads-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-processthreads-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "0d22ce9d987efd6886a8de66a6a678c287d29b15963b4373f73d79dde42c9827"
+  },
+  {
+    "path": "runtime/api-ms-win-core-rtlsupport-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-rtlsupport-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20960,
+    "sha256": "40eb38d84dfd13c8a58211b8273c4b4965148742f08eb6fe8b0830392c37abc1"
+  },
+  {
+    "path": "runtime/api-ms-win-core-synch-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-synch-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "e050e1bfbb75a278412380c912266225c3dee15031468dae2f6b77ff0617aa91"
+  },
+  {
+    "path": "runtime/api-ms-win-core-synch-l1-2-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-synch-l1-2-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "9dfd114e4182662a669a3b9054dd2a24d96dd66ed96a8b2ac05601928b2084d5"
+  },
+  {
+    "path": "runtime/api-ms-win-core-processenvironment-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-processenvironment-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "25af1bc31c4a3fb9f1036c9aa51cb0ae8899c499b3eef4cf7281515c1ea27b47"
+  },
+  {
+    "path": "runtime/api-ms-win-core-string-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-string-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20960,
+    "sha256": "285a481d7ba9859cc28bededd8f05a90bd648a34d66b8c797118920b40e15e4e"
+  },
+  {
+    "path": "runtime/api-ms-win-core-errorhandling-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-errorhandling-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "13bc8b3f90da149030897b8f9f08d71e5d1561e3ae604472a82f58dab2b103f9"
+  },
+  {
+    "path": "runtime/api-ms-win-core-file-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-core-file-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 25048,
+    "sha256": "f353b6c2df7aadb457263a02bce59c44bbab55f98ae6509674cfbc3751f761b9"
+  },
+  {
+    "path": "runtime/torch_cpu.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/torch_cpu.dll",
+    "origin": "original-editor-msi",
+    "bytes": 248984064,
+    "sha256": "00ca5c937940a94d052dbe52ec5fb0909db11ffbfccfd6e65e19b468169ff5e5"
+  },
+  {
+    "path": "runtime/api-ms-win-crt-process-l1-1-0.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/api-ms-win-crt-process-l1-1-0.dll",
+    "origin": "original-editor-msi",
+    "bytes": 20944,
+    "sha256": "4166a32551989f960dac7c0e296ffb28092f45f6539e7c450fa04bf17612be73"
+  },
+  {
+    "path": "runtime/uv.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/uv.dll",
+    "origin": "original-editor-msi",
+    "bytes": 195072,
+    "sha256": "d6e517084425092066d4b26678320eb60edf2c79ade855bd67b829113f999da6"
+  },
+  {
+    "path": "runtime/libiomp5md.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/libiomp5md.dll",
+    "origin": "original-editor-msi",
+    "bytes": 2047000,
+    "sha256": "0ad71f466d115d353dce94ba32b63e288f48198e89f551d46dcce461fedbd195"
+  },
+  {
+    "path": "runtime/fbgemm.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/fbgemm.dll",
+    "origin": "original-editor-msi",
+    "bytes": 4883968,
+    "sha256": "feb7096ecda19a7161e61fdf250fc4e09abfa53c18aa08cf96fd529524d75df2"
+  },
+  {
+    "path": "runtime/asmjit.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/asmjit.dll",
+    "origin": "original-editor-msi",
+    "bytes": 358912,
+    "sha256": "fd9af23f8ee0892bde8a9cdc73a9611e4aa6518a890f753586da071530215b11"
+  },
+  {
+    "path": "runtime/c10.dll",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/c10.dll",
+    "origin": "original-editor-msi",
+    "bytes": 558080,
+    "sha256": "f1f61b24f52f58082cb2d0b63be78f89b06bc699b338c048615b62b548be5b66"
+  },
+  {
+    "path": "runtime/aitalk.lic",
+    "source": "[WORKSPACE]/cache/clean-msi-extract/ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor/Lib/AITalk/aitalk.lic",
+    "origin": "original-editor-msi",
+    "bytes": 261,
+    "sha256": "c7a013e6dabbc143b1fe5352ad38b5f9bd117b7b22abe46911c21b49bfe7004b"
+  },
+  {
+    "path": "Lang/kansai/kansai.aildic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/Lang/kansai/kansai.aildic",
+    "origin": "company-supplied-language-package",
+    "bytes": 230710784,
+    "sha256": "572ac8dce88e3059cad7ff490c0eb8e3ce87265fce021379dbd6c5fa6ba7b678"
+  },
+  {
+    "path": "Lang/standard/standard.aildic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/Lang/standard/standard.aildic",
+    "origin": "company-supplied-language-package",
+    "bytes": 228650496,
+    "sha256": "3dfabe85bc9e69c8c12a994e7285605ff49e4931470a919486b9ecae72929c8d"
+  },
+  {
+    "path": "Voice/KotonohaAkane_ns_48/KotonohaAkane_ns_48.aivdic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/KotonohaAkane_ns_48/KotonohaAkane_ns_48.aivdic",
+    "origin": "company-supplied-voice-package",
+    "bytes": 82526208,
+    "sha256": "1f52a2ef6e0d5c6252b5fcdc5f1f6a7b4bacb733fe7db49ef68e7bdc65b35d8d"
+  },
+  {
+    "path": "Voice/KotonohaAkane_ns_48/voice.lic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/KotonohaAkane_ns_48/voice.lic",
+    "origin": "company-supplied-voice-license",
+    "bytes": 108,
+    "sha256": "e2ddef0e7119cb80c0354f90f2c6b84aeddefb7e2d3ef5837ab1d444355da9dd"
+  },
+  {
+    "path": "Voice/KotonohaAoi_ns_48/KotonohaAoi_ns_48.aivdic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/KotonohaAoi_ns_48/KotonohaAoi_ns_48.aivdic",
+    "origin": "company-supplied-voice-package",
+    "bytes": 82526208,
+    "sha256": "67560bee425bee062ab232e10e9725bb26efa548ca02ebc3a44a226281f426dd"
+  },
+  {
+    "path": "Voice/KotonohaAoi_ns_48/voice.lic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/KotonohaAoi_ns_48/voice.lic",
+    "origin": "company-supplied-voice-license",
+    "bytes": 104,
+    "sha256": "b692b3e19f9a16eeaf6df9bffd3a5e0204e2bcbe67d4c8674c9956041487f25a"
+  },
+  {
+    "path": "Voice/MeikaHime_ns_48/MeikaHime_ns_48.aivdic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/MeikaHime_ns_48/MeikaHime_ns_48.aivdic",
+    "origin": "company-supplied-voice-package",
+    "bytes": 81252864,
+    "sha256": "dc1c2a8a50bf2de6ca140fdf1a0ad86fa9097f49e812d3187c1ce61de8dbda66"
+  },
+  {
+    "path": "Voice/MeikaHime_ns_48/voice.lic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/MeikaHime_ns_48/voice.lic",
+    "origin": "company-supplied-voice-license",
+    "bytes": 100,
+    "sha256": "15b220c1c7dcccd7292b5a541db3cb2e046969a3b19821de6ec60d5d6245a56d"
+  },
+  {
+    "path": "Voice/MeikaMikoto_ns_48/MeikaMikoto_ns_48.aivdic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/MeikaMikoto_ns_48/MeikaMikoto_ns_48.aivdic",
+    "origin": "company-supplied-voice-package",
+    "bytes": 81252864,
+    "sha256": "a1ae12030e96dde139ebc92f6b8ad5752cd710d38417a348d710c3db9914ce45"
+  },
+  {
+    "path": "Voice/MeikaMikoto_ns_48/voice.lic",
+    "source": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/voicebanks/MeikaMikoto_ns_48/voice.lic",
+    "origin": "company-supplied-voice-license",
+    "bytes": 104,
+    "sha256": "fb19925429df592e99104b0ea75c5e83ffa12853138592640cad5627694d46a7"
+  }
+]

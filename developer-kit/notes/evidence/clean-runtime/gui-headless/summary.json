@@ -1,0 +1,56 @@
+{
+  "headless_matrix": [
+    {
+      "case": "skip-auth",
+      "exit": 5,
+      "stdout": "initialize=0\r\nauthenticate=SKIPPED\r\ntalker=0000000000000000\r\n"
+    },
+    {
+      "case": "null-auth",
+      "exit": 5,
+      "stdout": "initialize=0\r\nauthenticate=-3\r\ntalker=0000000000000000\r\n"
+    },
+    {
+      "case": "missing-engine-license",
+      "exit": 5,
+      "stdout": "initialize=0\r\nauthenticate=-7\r\ntalker=0000000000000000\r\n"
+    },
+    {
+      "case": "null-voice-license",
+      "exit": 6,
+      "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437B0\r\nloadLangDic=0\r\nloadVoiceDic=-3\r\n"
+    },
+    {
+      "case": "empty-voice-license",
+      "exit": 6,
+      "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437B0\r\nloadLangDic=0\r\nloadVoiceDic=-3\r\n"
+    },
+    {
+      "case": "missing-voice-license",
+      "exit": 6,
+      "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437D0\r\nloadLangDic=0\r\nloadVoiceDic=-7\r\n"
+    },
+    {
+      "case": "stock-files",
+      "exit": 0,
+      "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=0000000000243800\r\nloadLangDic=0\r\nloadVoiceDic=0\r\ntalk=0 pcmBytes=115200\r\n"
+    }
+  ],
+  "gui_with_runtime_license_files": {
+    "no_personal_activation": true,
+    "original_msi_license_manager_sha256": "10d3493f360ca6a8a8fc6138081b3e79469485197689614c2b2581f772602797",
+    "runtime_license_files": 5,
+    "observed": "Attempts provisional license, fails BrokenWMI, shows Failed Authentication dialog",
+    "screenshot": "gui-stock-files/gui-start.png"
+  },
+  "gui_without_any_lic": {
+    "runtime_license_files": 0,
+    "observed": "License not authenticated in Talker constructor; loading screen",
+    "screenshot": "gui-no-lic/gui-no-lic.png"
+  },
+  "limits": [
+    "Wine-only offline trial; no Windows VM or successful licensed GUI control",
+    "BrokenWMI prevents concluding whether a stock Windows GUI accepts a provisional/trial license without paid activation",
+    "No headless API path tested here worked without shipped runtime license files; no universal absence claim about all alternate builds/APIs"
+  ]
+}

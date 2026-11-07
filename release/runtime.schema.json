@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A.I.VOICE2 Local runtime config version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "app_dir", "runtime_dir"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "app_dir": {"$ref": "#/$defs/path"},
+    "runtime_dir": {"$ref": "#/$defs/path"},
+    "engine_prefix": {"$ref": "#/$defs/path"},
+    "gui_prefix": {"$ref": "#/$defs/path"},
+    "cache_dir": {"$ref": "#/$defs/path"},
+    "log_dir": {"$ref": "#/$defs/path"},
+    "voice_registry": {"$ref": "#/$defs/path"},
+    "port": {"type": "integer", "minimum": 1024, "maximum": 65535},
+    "default_voice": {"type": "string", "pattern": "^[^/\\\\]+/[^/\\\\]+$"}
+  },
+  "$defs": {"path": {"type": "string", "minLength": 1}}
+}

@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-06T02:55:53.753792+00:00",
+  "msi": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/AIVoice2Editor.msi",
+  "msi_sha256": "81a5d80ada94d6646373b9ab54dcfe4ddd824c45a66c7f071648a54838c92d90",
+  "inventory_command": [
+    "msiextract",
+    "--list",
+    "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/AIVoice2Editor.msi"
+  ],
+  "entries": 326,
+  "lang_entries": [],
+  "voice_entries": [],
+  "external_lang_files": [
+    "Lang/kansai/kansai.aildic",
+    "Lang/standard/standard.aildic"
+  ],
+  "conclusion": "This MSI has no Lang or .aildic payload. Lang data exists separately beside it."
+}

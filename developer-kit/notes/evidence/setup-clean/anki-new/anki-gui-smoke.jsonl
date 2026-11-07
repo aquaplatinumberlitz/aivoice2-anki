@@ -1,0 +1,15 @@
+{"event": "test_profile_ready", "profile": "/work/aivoice2-anki-test-gvbzllvx", "note_id": 1793937996104}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "/work/home/.cache/aivoice2-anki/aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav"}
+{"event": "preview_wav_valid", "sha256": "d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4", "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48", "text": "こんにちは"}
+{"event": "changed_text_discarded_stale_preview"}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "/work/home/.cache/aivoice2-anki/aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav"}
+{"event": "preview_wav_valid", "sha256": "d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4", "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48", "text": "こんにちは"}
+{"event": "preview_did_not_modify_note_or_media"}
+{"event": "explicit_insert_saved_audio", "tag": "[sound:aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav]"}
+{"event": "duplicate_insert_did_not_duplicate_tag"}
+{"event": "editor_created", "editor": "NewEditor", "legacy": false}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "/work/home/.cache/aivoice2-anki/aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav"}
+{"event": "editor_insert_preserved_other_fields", "fields": ["今日はいい天気ですね。", "Kyou wa ii tenki desu ne.", "Hôm nay trời đẹp nhỉ.", "[sound:aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav]"]}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "/work/home/.cache/aivoice2-anki/aivoice2_d3464159d80cd6c2a5e049f55e6c9bfaa3eb661a04b1e89acedda709ce1877f4.wav"}
+{"event": "existing_editor_persisted_audio", "legacy": false}
+{"event": "passed"}

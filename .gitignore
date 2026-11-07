@@ -1,0 +1,16 @@
+# Keep the release's build/payload: it contains the shipped runtime.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+cache/
+wineprefix/
+prefixes/
+logs/
+*.log
+*.tmp
+*.swp
+.DS_Store

@@ -1,0 +1,45 @@
+{
+  "fresh_offline_install": true,
+  "selected_initial_voice": "KotonohaAoi_ns_48",
+  "steps": [
+    {
+      "case": "wizard-install-aoi-and-connect-isolated-anki",
+      "passed": true
+    },
+    {
+      "case": "add-akane",
+      "passed": true
+    },
+    {
+      "case": "remove-default-akane",
+      "passed": true
+    },
+    {
+      "case": "restore-akane",
+      "passed": true
+    },
+    {
+      "case": "refuse-maintenance-while-engine-running",
+      "passed": true
+    },
+    {
+      "case": "integrate-anki-files",
+      "passed": true
+    },
+    {
+      "case": "anki-new",
+      "passed": true
+    },
+    {
+      "case": "anki-legacy",
+      "passed": true
+    },
+    {
+      "case": "installed-manifest-and-support-export",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "physical_audio_checked": false,
+  "scope": "Installer core/wizard when enabled, real voice lifecycle and installed Anki addon; real user service tested separately"
+}

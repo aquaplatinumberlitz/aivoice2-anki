@@ -1,0 +1,13 @@
+{
+  "path": "[WORKSPACE]/cache/probe.wav",
+  "encoding": 0,
+  "sha256": "d6e910683ae0a1a741282cce0d8a38f4811a9ae3e8056ef9af60d7a40dd00e10",
+  "channels": 1,
+  "sample_width_bytes": 2,
+  "sample_rate": 48000,
+  "frames": 123210,
+  "duration_seconds": 2.566875,
+  "pcm_bytes": 246420,
+  "peak": 10408,
+  "rms": 1663.1143178831278
+}

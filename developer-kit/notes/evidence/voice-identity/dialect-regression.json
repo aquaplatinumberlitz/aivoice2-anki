@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "requests": [
+    {
+      "text": "です。",
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "pcm_bytes": 115200,
+      "sha256": "606c04ae7db8c4c22a696bf5e58836c0e1f3ac3af9e52fa76ce90d28121fbfae",
+      "filename": "aivoice2_b412b79bfd6a55bcce68cff3954ef82236751c42405e662d051d5fa61d3777b2.wav",
+      "cache": "miss",
+      "gui_gain": 1.06,
+      "gui_max_delta": 1,
+      "gui_rmse": 0.054326686710022075
+    },
+    {
+      "text": "です。",
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "pcm_bytes": 123840,
+      "sha256": "1587295ca9c7ccd8f8cdb5a760e779ea4a06e84dc14f225a032379de14964396",
+      "filename": "aivoice2_255dd52b803c89b1ac29a05470cda9fd69ffdc43fbf27ec189901546dd8dc1d9.wav",
+      "cache": "miss",
+      "gui_gain": 1.06,
+      "gui_max_delta": 1,
+      "gui_rmse": 0.0606808910830721
+    },
+    {
+      "text": "です。です。",
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "pcm_bytes": 230400,
+      "sha256": "ea86ff9d26c119524c556046ba8e21bb782d63f775e8c4bc8feec591c27b793a",
+      "filename": "aivoice2_4d548fc21a575861afe92e1dce420ed075cf16ab06cfc6eed467c5e3ee3561f5.wav",
+      "cache": "miss"
+    },
+    {
+      "text": "です。です。",
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "pcm_bytes": 247680,
+      "sha256": "b454feea205894054e5d3694bbdecc143cbd3ad4d695ca75b0b97a7b8aa0c1be",
+      "filename": "aivoice2_7c7349da40132ca59415e234c88b402d6078a260bbb531d5a8ba22438c23ebeb.wav",
+      "cache": "miss"
+    },
+    {
+      "text": "こんにちは。今日はいい天気ですね。",
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "pcm_bytes": 401734,
+      "sha256": "26c9558f8cf0ac3a7f41481e1060c7530b0672bcad6401bc358d6cbbaf782abe",
+      "filename": "aivoice2_24b164949db85d6d8258be4f422483b6a598e107989238d26b12d97636837a94.wav",
+      "cache": "miss"
+    },
+    {
+      "text": "こんにちは。今日はいい天気ですね。",
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "pcm_bytes": 401890,
+      "sha256": "1d4fb9c2499336ffb04115ee0b81a19238ded9186a4c12506dd176e0d80b1e94",
+      "filename": "aivoice2_cd9036d600bc8e27ce1581e7c760366737c4329e4a7211bd4a729dcbae50d152.wav",
+      "cache": "miss"
+    },
+    {
+      "text": "です。",
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "pcm_bytes": 123840,
+      "sha256": "1587295ca9c7ccd8f8cdb5a760e779ea4a06e84dc14f225a032379de14964396",
+      "filename": "aivoice2_255dd52b803c89b1ac29a05470cda9fd69ffdc43fbf27ec189901546dd8dc1d9.wav",
+      "cache": "hit",
+      "language": "kansai"
+    },
+    {
+      "text": "です。",
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "pcm_bytes": 115200,
+      "sha256": "606c04ae7db8c4c22a696bf5e58836c0e1f3ac3af9e52fa76ce90d28121fbfae",
+      "filename": "aivoice2_b412b79bfd6a55bcce68cff3954ef82236751c42405e662d051d5fa61d3777b2.wav",
+      "cache": "hit",
+      "language": "standard"
+    },
+    {
+      "text": "です。",
+      "voice": "akane_west_emo_48/akane_west_emo_48",
+      "pcm_bytes": 124954,
+      "sha256": "fd807a013a65a38af296e9a9a8639d4028a031855af4515d362a6a64a6e91f03",
+      "filename": "aivoice2_6ea300a26e185a5d82f555f609cb274e5f7d9c401986e2e922916f8ae62692ef.wav",
+      "cache": "miss",
+      "language": "kansai"
+    },
+    {
+      "text": "です。",
+      "voice": "akane_west_mini_48/akane_west_mini_48",
+      "pcm_bytes": 117172,
+      "sha256": "83a03e43947eeb0159c06d2658431ac6bd729569b8f87a7990db4407c7ad2225",
+      "filename": "aivoice2_5bdd714553cb301d30d67ed949ad9985d16aac288046b49735407b3b47f0ed37.wav",
+      "cache": "miss",
+      "language": "kansai"
+    },
+    {
+      "text": "です。",
+      "voice": "akane_west_syou_48/akane_west_syou_48",
+      "pcm_bytes": 122098,
+      "sha256": "f9b4632b3bd56f657b9a3694f7651a8e3c195a4c9cbf245ba7e555a3b0900adb",
+      "filename": "aivoice2_02e45c17750fe6e8e2a95af21ccad73952231f12f6443d80f237953070f704a1.wav",
+      "cache": "miss",
+      "language": "kansai"
+    },
+    {
+      "text": "です。",
+      "voice": "aoi_emo_48/aoi_emo_48",
+      "pcm_bytes": 110110,
+      "sha256": "2c13d12816e462bb3e4952c86faf50f10cf2e87b77f30c8e6ea14a92909351c1",
+      "filename": "aivoice2_6e4bb3c909ffb006e0d4e9042ef7ddfd80abe0f171b0cb53cdb44849c08da8e5.wav",
+      "cache": "miss",
+      "language": "standard"
+    },
+    {
+      "text": "です。",
+      "voice": "aoi_mini_48/aoi_mini_48",
+      "pcm_bytes": 109592,
+      "sha256": "6c19341501041037eec740a362ccb3c0872dfa5e24299a20a7417c0e15e0c5ac",
+      "filename": "aivoice2_0afca0fcced47acca0f2708aefcf268078abc7a840570b52a0403c32573bad86.wav",
+      "cache": "miss",
+      "language": "standard"
+    },
+    {
+      "text": "です。",
+      "voice": "aoi_syou_48/aoi_syou_48",
+      "pcm_bytes": 110252,
+      "sha256": "cc0da8f406c5b12a6654c1ff24b251670fefc0c007081afc3b5fe79e8edc4c5c",
+      "filename": "aivoice2_948b4b3b965479d2216418c9719804351ebdc59ec2eb65686f8ff21e58bb5007.wav",
+      "cache": "miss",
+      "language": "standard"
+    },
+    {
+      "text": "です。",
+      "voice": "galaco_48/galaco_48",
+      "pcm_bytes": 119384,
+      "sha256": "3a44105cb3fee9cfda9e299df228832f269f1aa53d54c937717fc55938425c90",
+      "filename": "aivoice2_600efcd6a91085ea1bc68266b270987dc995dad6daba8beca59e8f25c330be1a.wav",
+      "cache": "miss",
+      "language": "standard"
+    },
+    {
+      "text": "です。",
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "pcm_bytes": 115200,
+      "sha256": "606c04ae7db8c4c22a696bf5e58836c0e1f3ac3af9e52fa76ce90d28121fbfae",
+      "filename": "aivoice2_b412b79bfd6a55bcce68cff3954ef82236751c42405e662d051d5fa61d3777b2.wav",
+      "cache": "hit"
+    },
+    {
+      "text": "です。",
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "pcm_bytes": 123840,
+      "sha256": "1587295ca9c7ccd8f8cdb5a760e779ea4a06e84dc14f225a032379de14964396",
+      "filename": "aivoice2_255dd52b803c89b1ac29a05470cda9fd69ffdc43fbf27ec189901546dd8dc1d9.wav",
+      "cache": "hit"
+    }
+  ]
+}

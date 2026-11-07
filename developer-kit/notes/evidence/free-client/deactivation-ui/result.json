@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-06",
+  "status": "passed-and-deployed-to-review",
+  "patch_version": "2.14.1-free-ui.1",
+  "helper_sha256": "f2476c10be34b815d34cd111c07a82f996adb8a114c3ff60971e0029b8b612b3",
+  "snapshot_sha256": "99f898840c21ccc20d50d3390ed21e93aafecb99f40456dc9d361784f9ae3e82",
+  "callback_only_sha256": "878aad0929758ef1637faa88ef2a35cc73f683e40ddb848784094f20fc6307ef",
+  "runs": {
+    "full_patch": "cache/gui-license-hjf_fjki",
+    "callback_only": "cache/gui-license-sf__s713"
+  },
+  "observations": {
+    "button_hidden": true,
+    "instructions_hidden": true,
+    "full_version_cards": [
+      "Akane NV",
+      "Aoi NV",
+      "Meika Hime NV",
+      "Meika Mikoto NV"
+    ],
+    "callback_mouse_clicks": 4,
+    "callback_space": true,
+    "callback_confirmation_dialog": false,
+    "callback_deactivation_calls": 0,
+    "license_page_reentered": true,
+    "wav": {
+      "channels": 1,
+      "rate": 48000,
+      "sample_width": 2,
+      "frames": 61920,
+      "seconds": 1.29,
+      "rms": 1027.7118709287797,
+      "peak": 9448,
+      "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032"
+    },
+    "restart_license_page_passed": true
+  },
+  "build_checks": [
+    "reproducible SHA-256",
+    "only declared spans differ",
+    "rejects unsupported/already-patched input",
+    "rejects overwriting source"
+  ],
+  "limitations": [
+    "Xvfb file output checked; physical speaker playback not tested",
+    "Windows VM not tested",
+    "Other activation menus outside this change"
+  ],
+  "deployment_manifest": "deployment.json"
+}

@@ -1,0 +1,78 @@
+{
+  "gui_opens_offline_with_fresh_prefix": true,
+  "original_framework_preserved": true,
+  "adapter": "src/free-client/build/ailm.dll",
+  "files": [
+    {
+      "file": "akane-default.wav",
+      "frames": 61920,
+      "rate": 48000,
+      "seconds": 1.29,
+      "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032",
+      "rms": 1027.7118709287797
+    },
+    {
+      "file": "akane-speed150.wav",
+      "frames": 54960,
+      "rate": 48000,
+      "seconds": 1.145,
+      "pcm_sha256": "f3f2f07f667eaa1f68665024753db601c46a70120f88eb5050bfaf47ea0ee9ea",
+      "rms": 875.7526367980894
+    },
+    {
+      "file": "akane-pitch120.wav",
+      "frames": 61920,
+      "rate": 48000,
+      "seconds": 1.29,
+      "pcm_sha256": "d8c804cd179159f79a9da366d60f35f580d1b4ddcdb58a033b357233ccc10235",
+      "rms": 1027.1496090933367
+    },
+    {
+      "file": "akane-volume050.wav",
+      "frames": 61920,
+      "rate": 48000,
+      "seconds": 1.29,
+      "pcm_sha256": "393f3ba5844b2b58753886f0571a7be51cddda4034552ae7d56f7a37e58295b1",
+      "rms": 535.8567877671459
+    },
+    {
+      "file": "aoi-default.wav",
+      "frames": 61920,
+      "rate": 48000,
+      "seconds": 1.29,
+      "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032",
+      "rms": 1027.7118709287797
+    },
+    {
+      "file": "hime-default.wav",
+      "frames": 58560,
+      "rate": 48000,
+      "seconds": 1.22,
+      "pcm_sha256": "757c9decd57783b202e7b568c01c40e0ede7b5d9f6722e60e9acf5c0591ff578",
+      "rms": 1011.2682085468159
+    },
+    {
+      "file": "mikoto-default.wav",
+      "frames": 56400,
+      "rate": 48000,
+      "seconds": 1.175,
+      "pcm_sha256": "9b1c342792b88c0c001bcc619c5407a121fe6afc27af380381a468e08e111749",
+      "rms": 964.2383448380532
+    },
+    {
+      "file": "aoi-fresh.wav",
+      "frames": 57600,
+      "rate": 48000,
+      "seconds": 1.2,
+      "pcm_sha256": "2ed71b4ca9bce10cb447cd7c8fbbee9d6554bdb90126fa68f56dca62cc0c7182",
+      "rms": 1120.4657971594522
+    }
+  ],
+  "user_patch_clean_prefix": "Failed Authentication / BrokenWMI",
+  "limits": [
+    "No Windows VM test yet",
+    "Physical playback not verified in isolated container; WAV synthesis/export verified",
+    "First Aoi export reused old block kana; fresh block confirmed Aoi output",
+    "Not every GUI feature or unsupported voicebank tested"
+  ]
+}

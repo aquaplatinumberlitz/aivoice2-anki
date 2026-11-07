@@ -1,0 +1,116 @@
+{
+  "manager": "AI.Framework.License.FreeLicenseManager",
+  "assemblyMvid": "67cbd2d0-3929-4c2e-b548-361d82825f06",
+  "observations": [
+    {
+      "requestedFeatureID": 0,
+      "values": {
+        "ID": 0,
+        "IsAuthenticated": true,
+        "Name": "probe",
+        "DisplayName": "",
+        "IsEnabled": true,
+        "IsExpired": false,
+        "Type": "Product",
+        "LimitType": "Perpetual",
+        "MaximumExecutionCount": 2147483647,
+        "CurrentExecutionCount": 0,
+        "RemainingExecutionCount": 2147483647,
+        "StartDateTime": "01/01/0001 00:00:00",
+        "ExpirationDateTime": "12/31/9999 23:59:59",
+        "TotalTimeSpan": "10675199.02:48:05.4775807",
+        "RemainingTimeSpan": "10675199.02:48:05.4775807",
+        "IsAuthenticatedAfterDeauthenticate": true,
+        "IsAuthenticatedAfterAuthenticate": true
+      }
+    },
+    {
+      "requestedFeatureID": 1,
+      "values": {
+        "ID": 0,
+        "IsAuthenticated": true,
+        "Name": "probe",
+        "DisplayName": "",
+        "IsEnabled": true,
+        "IsExpired": false,
+        "Type": "Product",
+        "LimitType": "Perpetual",
+        "MaximumExecutionCount": 2147483647,
+        "CurrentExecutionCount": 0,
+        "RemainingExecutionCount": 2147483647,
+        "StartDateTime": "01/01/0001 00:00:00",
+        "ExpirationDateTime": "12/31/9999 23:59:59",
+        "TotalTimeSpan": "10675199.02:48:05.4775807",
+        "RemainingTimeSpan": "10675199.02:48:05.4775807",
+        "IsAuthenticatedAfterDeauthenticate": true,
+        "IsAuthenticatedAfterAuthenticate": true
+      }
+    },
+    {
+      "requestedFeatureID": 42,
+      "values": {
+        "ID": 0,
+        "IsAuthenticated": true,
+        "Name": "probe",
+        "DisplayName": "",
+        "IsEnabled": true,
+        "IsExpired": false,
+        "Type": "Product",
+        "LimitType": "Perpetual",
+        "MaximumExecutionCount": 2147483647,
+        "CurrentExecutionCount": 0,
+        "RemainingExecutionCount": 2147483647,
+        "StartDateTime": "01/01/0001 00:00:00",
+        "ExpirationDateTime": "12/31/9999 23:59:59",
+        "TotalTimeSpan": "10675199.02:48:05.4775807",
+        "RemainingTimeSpan": "10675199.02:48:05.4775807",
+        "IsAuthenticatedAfterDeauthenticate": true,
+        "IsAuthenticatedAfterAuthenticate": true
+      }
+    },
+    {
+      "requestedFeatureID": 2147483647,
+      "values": {
+        "ID": 0,
+        "IsAuthenticated": true,
+        "Name": "probe",
+        "DisplayName": "",
+        "IsEnabled": true,
+        "IsExpired": false,
+        "Type": "Product",
+        "LimitType": "Perpetual",
+        "MaximumExecutionCount": 2147483647,
+        "CurrentExecutionCount": 0,
+        "RemainingExecutionCount": 2147483647,
+        "StartDateTime": "01/01/0001 00:00:00",
+        "ExpirationDateTime": "12/31/9999 23:59:59",
+        "TotalTimeSpan": "10675199.02:48:05.4775807",
+        "RemainingTimeSpan": "10675199.02:48:05.4775807",
+        "IsAuthenticatedAfterDeauthenticate": true,
+        "IsAuthenticatedAfterAuthenticate": true
+      }
+    },
+    {
+      "requestedFeatureID": -1,
+      "values": {
+        "ID": 0,
+        "IsAuthenticated": true,
+        "Name": "probe",
+        "DisplayName": "",
+        "IsEnabled": true,
+        "IsExpired": false,
+        "Type": "Product",
+        "LimitType": "Perpetual",
+        "MaximumExecutionCount": 2147483647,
+        "CurrentExecutionCount": 0,
+        "RemainingExecutionCount": 2147483647,
+        "StartDateTime": "01/01/0001 00:00:00",
+        "ExpirationDateTime": "12/31/9999 23:59:59",
+        "TotalTimeSpan": "10675199.02:48:05.4775807",
+        "RemainingTimeSpan": "10675199.02:48:05.4775807",
+        "IsAuthenticatedAfterDeauthenticate": true,
+        "IsAuthenticatedAfterAuthenticate": true
+      }
+    }
+  ]
+}

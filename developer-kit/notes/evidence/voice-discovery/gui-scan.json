@@ -1,0 +1,7 @@
+{
+  "count": 28,
+  "all_selectable": true,
+  "kansai": 4,
+  "standard": 24,
+  "policy": "Akane=Kansai, others=Standard"
+}

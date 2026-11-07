@@ -1,0 +1,11 @@
+{"event": "test_profile_ready", "profile": "/tmp/aivoice2-anki-test-39_9tdt5", "note_id": 1793879786732}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "[AUTHOR_HOME]/.cache/aivoice2-anki/aivoice2_d22ec328e5937a17f1f8159db0d6381d4e81826ffe57e712ff977c6f6539ff93.wav"}
+{"event": "preview_did_not_modify_note_or_media"}
+{"event": "explicit_insert_saved_audio", "tag": "[sound:aivoice2_d22ec328e5937a17f1f8159db0d6381d4e81826ffe57e712ff977c6f6539ff93.wav]"}
+{"event": "duplicate_insert_did_not_duplicate_tag"}
+{"event": "editor_created", "editor": "Editor", "legacy": true}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "[AUTHOR_HOME]/.cache/aivoice2-anki/aivoice2_d22ec328e5937a17f1f8159db0d6381d4e81826ffe57e712ff977c6f6539ff93.wav"}
+{"event": "editor_insert_preserved_other_fields", "fields": ["今日はいい天気ですね。", "Kyou wa ii tenki desu ne.", "Hôm nay trời đẹp nhỉ.", "[sound:aivoice2_d22ec328e5937a17f1f8159db0d6381d4e81826ffe57e712ff977c6f6539ff93.wav]"]}
+{"event": "anki_playback_started", "player": "MpvManager", "path": "[AUTHOR_HOME]/.cache/aivoice2-anki/aivoice2_d22ec328e5937a17f1f8159db0d6381d4e81826ffe57e712ff977c6f6539ff93.wav"}
+{"event": "existing_editor_persisted_audio", "legacy": true}
+{"event": "passed"}

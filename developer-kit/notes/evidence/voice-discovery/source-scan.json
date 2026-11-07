@@ -1,0 +1,226 @@
+[
+  {
+    "folder": "Galaco_ns_st_48",
+    "label": "Galaco_ns_st_48",
+    "package": "Galaco_ns_st_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "IoriYuzuru_ns_48",
+    "label": "IoriYuzuru_ns_48",
+    "package": "IoriYuzuru_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "KizunaAkari_Moe_48",
+    "label": "KizunaAkari_Moe_48",
+    "package": "KizunaAkari_Moe_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "KizunaAkari_ns_48",
+    "label": "KizunaAkari_ns_48",
+    "package": "KizunaAkari_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "KotonohaAkane_ns_48",
+    "label": "Akane (NV)",
+    "package": "KotonohaAkane_ns_48.aivdic",
+    "language": "kansai",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "KotonohaAoi_ns_48",
+    "label": "Aoi (NV)",
+    "package": "KotonohaAoi_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "MeikaHime_ns_48",
+    "label": "Meika Hime (NV)",
+    "package": "MeikaHime_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "MeikaMikoto_ns_48",
+    "label": "Meika Mikoto (NV)",
+    "package": "MeikaMikoto_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "OtomachiUna_ns_48",
+    "label": "OtomachiUna_ns_48",
+    "package": "OtomachiUna_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "Unoka_ns_48",
+    "label": "Unoka_ns_48",
+    "package": "Unoka_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "YuzukiYukari_Nagi_emo_48",
+    "label": "YuzukiYukari_Nagi_emo_48",
+    "package": "YuzukiYukari_Nagi_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "YuzukiYukari_ns_48",
+    "label": "YuzukiYukari_ns_48",
+    "package": "YuzukiYukari_ns_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "YuzukiYukari_syou_48",
+    "label": "YuzukiYukari_syou_48",
+    "package": "YuzukiYukari_syou_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "akane_west_emo_48",
+    "label": "akane_west_emo_48",
+    "package": "akane_west_emo_48.aivdic",
+    "language": "kansai",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "akane_west_mini_48",
+    "label": "akane_west_mini_48",
+    "package": "akane_west_mini_48.aivdic",
+    "language": "kansai",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "akane_west_syou_48",
+    "label": "akane_west_syou_48",
+    "package": "akane_west_syou_48.aivdic",
+    "language": "kansai",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "akari_emo_48",
+    "label": "akari_emo_48",
+    "package": "akari_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "akari_mini_48",
+    "label": "akari_mini_48",
+    "package": "akari_mini_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "aoi_emo_48",
+    "label": "aoi_emo_48",
+    "package": "aoi_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "aoi_mini_48",
+    "label": "aoi_mini_48",
+    "package": "aoi_mini_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "aoi_syou_48",
+    "label": "aoi_syou_48",
+    "package": "aoi_syou_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "galaco_48",
+    "label": "galaco_48",
+    "package": "galaco_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "unoka_emo_48",
+    "label": "unoka_emo_48",
+    "package": "unoka_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "unoka_mini_48",
+    "label": "unoka_mini_48",
+    "package": "unoka_mini_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "yukari_emo_48",
+    "label": "yukari_emo_48",
+    "package": "yukari_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "yukari_mini_48",
+    "label": "yukari_mini_48",
+    "package": "yukari_mini_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "yuzuru_dark_48",
+    "label": "yuzuru_dark_48",
+    "package": "yuzuru_dark_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  },
+  {
+    "folder": "yuzuru_emo_48",
+    "label": "yuzuru_emo_48",
+    "package": "yuzuru_emo_48.aivdic",
+    "language": "standard",
+    "issues": [],
+    "files_ready": true
+  }
+]

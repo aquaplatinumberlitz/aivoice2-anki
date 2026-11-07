@@ -1,0 +1,14 @@
+[
+  {
+    "report": "notes/GUI_HEADLESS_LICENSE.md",
+    "excluded_target": "evidence/clean-runtime/gui-headless/gui-stock-files/gui-start.png"
+  },
+  {
+    "report": "notes/GUI_HEADLESS_LICENSE.md",
+    "excluded_target": "evidence/clean-runtime/gui-headless/gui-no-lic/gui-no-lic.png"
+  },
+  {
+    "report": "notes/VOICE_IDENTITY.md",
+    "excluded_target": "evidence/voice-identity/user-gui.png"
+  }
+]

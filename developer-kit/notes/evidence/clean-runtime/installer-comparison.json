@@ -1,0 +1,25 @@
+{
+  "msi": "[AUTHOR_HOME]/Downloads/A.I.VOICE2 2.14.1/AIVoice2Editor.msi",
+  "msi_sha256": "81a5d80ada94d6646373b9ab54dcfe4ddd824c45a66c7f071648a54838c92d90",
+  "files": [
+    {
+      "path": "Lib/AITalk/aitalk.lic",
+      "msi_sha256": "c7a013e6dabbc143b1fe5352ad38b5f9bd117b7b22abe46911c21b49bfe7004b",
+      "installed_sha256": "c7a013e6dabbc143b1fe5352ad38b5f9bd117b7b22abe46911c21b49bfe7004b",
+      "equal": true
+    },
+    {
+      "path": "Lib/AITalk/aitalk_engine.dll",
+      "msi_sha256": "711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17",
+      "installed_sha256": "711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17",
+      "equal": true
+    },
+    {
+      "path": "AI.Framework.License.dll",
+      "msi_sha256": "10d3493f360ca6a8a8fc6138081b3e79469485197689614c2b2581f772602797",
+      "installed_sha256": "83aeee33c39917b94984c3b65abd65d87f09c2e2a2cbc474e955b0504bacfd2e",
+      "equal": false
+    }
+  ],
+  "voice_and_language_packages_in_editor_msi": false
+}

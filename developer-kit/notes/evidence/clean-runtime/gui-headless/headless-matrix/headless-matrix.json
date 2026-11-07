@@ -1,0 +1,37 @@
+[
+  {
+    "case": "skip-auth",
+    "exit": 5,
+    "stdout": "initialize=0\r\nauthenticate=SKIPPED\r\ntalker=0000000000000000\r\n"
+  },
+  {
+    "case": "null-auth",
+    "exit": 5,
+    "stdout": "initialize=0\r\nauthenticate=-3\r\ntalker=0000000000000000\r\n"
+  },
+  {
+    "case": "missing-engine-license",
+    "exit": 5,
+    "stdout": "initialize=0\r\nauthenticate=-7\r\ntalker=0000000000000000\r\n"
+  },
+  {
+    "case": "null-voice-license",
+    "exit": 6,
+    "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437B0\r\nloadLangDic=0\r\nloadVoiceDic=-3\r\n"
+  },
+  {
+    "case": "empty-voice-license",
+    "exit": 6,
+    "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437B0\r\nloadLangDic=0\r\nloadVoiceDic=-3\r\n"
+  },
+  {
+    "case": "missing-voice-license",
+    "exit": 6,
+    "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=00000000002437D0\r\nloadLangDic=0\r\nloadVoiceDic=-7\r\n"
+  },
+  {
+    "case": "stock-files",
+    "exit": 0,
+    "stdout": "initialize=0\r\nauthenticate=0\r\ntalker=0000000000243800\r\nloadLangDic=0\r\nloadVoiceDic=0\r\ntalk=0 pcmBytes=115200\r\n"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "add-akane.log": "9735a1d4670cae64ba5779b1fb93e634807b263e87b91298471805fdc2d74b46",
+  "anki-legacy/anki-dialog.png": "47880a4e3998b49014599a972689fa9342d6e46f06214bd74a3f61dd747d21b9",
+  "anki-legacy/anki-gui-legacy.jsonl": "21d57f44c21989ff7724add6159f6a7d2d7d4d5f5f0dbb8b2a5b217ca596d0c5",
+  "anki-legacy.log": "83759cad0d33a6cf5189ef6b4fe8bed98ef1a718783808843293e6108928b13f",
+  "anki-new/anki-dialog.png": "47880a4e3998b49014599a972689fa9342d6e46f06214bd74a3f61dd747d21b9",
+  "anki-new/anki-gui-smoke.jsonl": "54d9f4879a816a39038ff2a467546a39eecbf2b70ab569683999f9f4afd18767",
+  "anki-new.log": "b16a895c382fc95a382a0e39fa41cb7918c810eed3d3a79e63c61a5be8853750",
+  "installed-gui.png": "e470544e438d260d45713b84d52f206927190b8b1650c3359d8a46e985a983be",
+  "integrate-anki-files.log": "45cefda4226a116b8ff0d890f756df0956d4205e993dacdfb4a62cdb8c978ae8",
+  "isolation-command.json": "b48eacc63701c19ee3fb84382874ceacc58b63198bb1b7ee39b72f9e746a02a0",
+  "refuse-active-runtime.log": "3cb11e4410e61e45911b6ad7e2a5d59c1b34f32899e58b472a9f0d8a39503c89",
+  "remove-default-akane.log": "6c04cbcacd7077cd71f8940dea1cbd938f8733dd341553434396bd2f52f1716f",
+  "restore-akane.log": "40fc6807cba63e5b48ce965be68f6312f031ef632e0e8fbe635a79376ce85f51",
+  "result.json": "5b184139e7a3e02048ec5c461d5ff741f05204cc7293d5c93296fad6d544e460",
+  "server.log": "fedf4b910aa163692364cd0843bf961c71027809755efda18c2fc8fd3f960fea",
+  "setup-wizard-complete.png": "b85ed64412eccd3de15e0cceac73f7c8fdecc32bb45b619edfcd482d3f250758",
+  "verify-files.json": "0ad2a19b4ba5a5b65331c241e67ba6d8a5a97413c3b43072635b26a6fa98da29"
+}

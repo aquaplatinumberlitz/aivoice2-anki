@@ -1,0 +1,93 @@
+{
+  "fresh_prefixes": true,
+  "offline_namespace": true,
+  "relocated_unicode_paths": true,
+  "shared_app_dir": "/work/Người mới có dấu và khoảng trắng/app",
+  "requests": [
+    {
+      "voice": "KotonohaAkane_ns_48/KotonohaAkane_ns_48",
+      "language": "kansai",
+      "frames": 61920,
+      "pcm_sha256": "69f5f03c844431d3bc4260a1f84ea82da2495d5d19add51794287a0b310a8032",
+      "cache": "miss"
+    },
+    {
+      "voice": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "language": "standard",
+      "frames": 57600,
+      "pcm_sha256": "2ed71b4ca9bce10cb447cd7c8fbbee9d6554bdb90126fa68f56dca62cc0c7182",
+      "cache": "miss"
+    },
+    {
+      "voice": "MeikaHime_ns_48/MeikaHime_ns_48",
+      "language": "standard",
+      "frames": 55680,
+      "pcm_sha256": "3813c96ee0ef45ac91af2accc363a2cd30e222ea0edc3c9df55de76aefa1b21c",
+      "cache": "miss"
+    },
+    {
+      "voice": "MeikaMikoto_ns_48/MeikaMikoto_ns_48",
+      "language": "standard",
+      "frames": 55200,
+      "pcm_sha256": "8cb3d820d49287a36717d6dd570bccdc7332699f8f2455fc34d1c28b52600854",
+      "cache": "miss"
+    }
+  ],
+  "voice_lifecycle": [
+    {
+      "case": "switch-four-voices-twice-with-fresh-text",
+      "passed": true
+    },
+    {
+      "case": "remove-selected-mikoto",
+      "voices": 3,
+      "removed_request_status": 400,
+      "passed": true
+    },
+    {
+      "case": "add-bank-without-dialect-registration",
+      "listed": false,
+      "passed": true
+    },
+    {
+      "case": "register-dialect-and-synthesize",
+      "voices": 4,
+      "pcm_sha256": "8cb3d820d49287a36717d6dd570bccdc7332699f8f2455fc34d1c28b52600854",
+      "passed": true
+    },
+    {
+      "case": "remove-default-akane",
+      "fallback": "KotonohaAoi_ns_48/KotonohaAoi_ns_48",
+      "passed": true
+    },
+    {
+      "case": "restore-akane",
+      "voices": 4,
+      "passed": true
+    },
+    {
+      "case": "missing-voice-license",
+      "listed": false,
+      "passed": true
+    },
+    {
+      "case": "restore-license",
+      "voices": 4,
+      "passed": true
+    }
+  ],
+  "voice_management_scope": "Backend/config/file lifecycle on disposable copies; customer manager not implemented; GUI removal screenshots need visual review",
+  "passed": true,
+  "cache_hit_checked": true,
+  "gui_and_engine_concurrent": true,
+  "gui_visual_review": {
+    "removed_akane_absent": true,
+    "remaining_voices": [
+      "Aoi NV",
+      "Hime NV",
+      "Mikoto NV"
+    ],
+    "default_gui_character": "Aoi NV",
+    "full_version_cards": 3
+  }
+}

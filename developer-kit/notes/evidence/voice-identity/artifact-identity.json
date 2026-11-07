@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Lib/AITalk/aitalk_engine.dll",
+    "copy_sha256": "711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17",
+    "original_sha256": "711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17",
+    "equal": true
+  },
+  {
+    "path": "Voice/KotonohaAkane_ns_48/KotonohaAkane_ns_48.aivdic",
+    "copy_sha256": "1f52a2ef6e0d5c6252b5fcdc5f1f6a7b4bacb733fe7db49ef68e7bdc65b35d8d",
+    "original_sha256": "1f52a2ef6e0d5c6252b5fcdc5f1f6a7b4bacb733fe7db49ef68e7bdc65b35d8d",
+    "equal": true
+  },
+  {
+    "path": "Voice/KotonohaAoi_ns_48/KotonohaAoi_ns_48.aivdic",
+    "copy_sha256": "67560bee425bee062ab232e10e9725bb26efa548ca02ebc3a44a226281f426dd",
+    "original_sha256": "67560bee425bee062ab232e10e9725bb26efa548ca02ebc3a44a226281f426dd",
+    "equal": true
+  },
+  {
+    "path": "Lang/kansai/kansai.aildic",
+    "copy_sha256": "572ac8dce88e3059cad7ff490c0eb8e3ce87265fce021379dbd6c5fa6ba7b678",
+    "original_sha256": "572ac8dce88e3059cad7ff490c0eb8e3ce87265fce021379dbd6c5fa6ba7b678",
+    "equal": true
+  },
+  {
+    "path": "Lang/standard/standard.aildic",
+    "copy_sha256": "3dfabe85bc9e69c8c12a994e7285605ff49e4931470a919486b9ecae72929c8d",
+    "original_sha256": "3dfabe85bc9e69c8c12a994e7285605ff49e4931470a919486b9ecae72929c8d",
+    "equal": true
+  }
+]

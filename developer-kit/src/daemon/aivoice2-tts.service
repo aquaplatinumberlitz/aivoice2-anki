@@ -1,0 +1,16 @@
+[Unit]
+Description=A.I.VOICE2 local TTS for Anki
+After=default.target
+
+[Service]
+Type=simple
+# Example for the default managed layout; setup renders an exact unit from
+# runtime_cli.py render-service when using a custom installation directory.
+ExecStart=/usr/bin/python3 "%h/.local/share/aivoice2-local/runtime/server.py" --config "%h/.config/aivoice2-local/runtime.json"
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

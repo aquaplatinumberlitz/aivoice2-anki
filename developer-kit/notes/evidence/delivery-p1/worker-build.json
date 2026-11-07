@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "worker_protocol": 7,
+  "compiler": "x86_64-w64-mingw32-gcc (GCC) 16.2.0",
+  "files": {
+    "engine_worker.c": "1d380aea11adbc32be88b31bf4e673dbfb503e8ee2cbebe434ba4c04383a2bc2",
+    "engine_api.h": "2464d92347e2d5ad21e88e0aca3078109d95a4be8809a875c58230a4edb1a0c1"
+  },
+  "worker_sha256": "9c3a1c2b3e28a33b4caf93d93c7e66599bd0bcd2c28be44e6db29b5966be30c4"
+}

@@ -1,0 +1,258 @@
+"""Transactional first-install foundation. Operates only on explicit inputs.
+
+No personal installation is discovered or modified. Existing destinations are
+refused. External desktop/service/addon activation is a separate step.
+"""
+import hashlib
+import ctypes
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/'src/daemon'))
+from runtime_config import load_config, install_drive_aliases,xdg
+
+
+def sha(path):
+    with Path(path).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+
+
+def atomic_json(path, data):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    fd,temporary=tempfile.mkstemp(prefix='.'+path.name,dir=path.parent)
+    try:
+        with os.fdopen(fd,'w') as f:
+            json.dump(data,f,ensure_ascii=False,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+        os.replace(temporary,path)
+    finally:
+        if os.path.exists(temporary):os.unlink(temporary)
+
+
+def commit_directory(stage,destination):
+    """Linux atomic no-replace rename; never replace even an empty raced-in dir."""
+    libc=ctypes.CDLL(None,use_errno=True)
+    rename=getattr(libc,'renameat2',None)
+    if rename is None:raise RuntimeError('Atomic no-replace directory commit is unavailable')
+    rename.argtypes=[ctypes.c_int,ctypes.c_char_p,ctypes.c_int,ctypes.c_char_p,ctypes.c_uint]
+    rename.restype=ctypes.c_int
+    if rename(-100,os.fsencode(stage),-100,os.fsencode(destination),1)!=0:
+        error=ctypes.get_errno()
+        raise OSError(error,os.strerror(error),str(destination))
+
+
+def safe_file(root,relative):
+    """Reject path escapes/symlinked components even for externally selected sources."""
+    root=Path(root).resolve();part=Path(relative)
+    if part.is_absolute() or any(p in ('..','') for p in part.parts):
+        raise ValueError(f'Invalid input relative path: {relative}')
+    current=root
+    for item in part.parts:
+        current=current/item
+        if current.is_symlink():raise ValueError(f'Symlinked input is not supported: {relative}')
+    if not current.is_file():raise ValueError(f'Thiếu file: {relative}')
+    return current
+
+
+def verified_files(root, records, report=lambda message:None):
+    for record in records:
+        path=safe_file(root,record['path'])
+        if path.stat().st_size!=record['bytes'] or sha(path)!=record['sha256']:
+            raise ValueError(f'File không khớp bản đã kiểm chứng: {record["path"]}')
+    report(f'Đã kiểm tra {len(records)} file.')
+
+
+def verify_payload(payload):
+    payload=Path(payload)
+    manifest=json.loads((payload/'payload-manifest.json').read_text())
+    if manifest.get('schema_version')!=1 or not isinstance(manifest.get('files'),dict):
+        raise ValueError('Invalid payload manifest')
+    actual=set()
+    for path in payload.rglob('*'):
+        if path.is_symlink():raise ValueError('Symlink in payload')
+        if path.is_file():actual.add(path.relative_to(payload).as_posix())
+    if actual!=set(manifest['files'])|{'payload-manifest.json'}:
+        raise ValueError('Payload has unlisted or missing files')
+    for relative,expected in manifest['files'].items():
+        if sha(safe_file(payload,relative))!=expected:
+            raise ValueError(f'Payload file changed: {relative}')
+    required={'runtime/engine_worker.exe','runtime/server.py','runtime/runtime_config.py',
+              'runtime/runtime_cli.py','runtime/run_auth_probe.py','runtime/voice_registry.json',
+              'gui/ailm.dll','gui/gui_patch.py','anki/aivoice2-local.ankiaddon'}
+    if not required.issubset(manifest['files']):raise ValueError('Incomplete installer payload')
+    return manifest
+
+
+def dependency_report():
+    return {name:shutil.which(name) for name in ['wine','wineboot','wineserver','msiextract']}
+
+
+def install_files(msi, languages, voicebanks, selected, destination, payload,
+                  baseline=None, report=lambda message:None,cancelled=lambda:False,dialects=None,
+                  progress=lambda value,message:None):
+    """Validate → extract/stage → verify → patch → atomic directory commit.
+
+    No Wine process is started and no external service/profile is changed here.
+    On pre-commit failure only the newly created staging directory is removed.
+    """
+    baseline=Path(baseline or ROOT/'release/release-inputs.json')
+    data=json.loads(baseline.read_text())
+    def checkpoint():
+        if cancelled():raise InterruptedError('Đã hủy trước bước tiếp theo; file nguồn/bản cài khác được giữ nguyên.')
+    checkpoint()
+    progress(0,'Kiểm tra bộ cài và thư mục đích')
+    msi=Path(msi).resolve();languages=Path(languages).resolve();voicebanks=Path(voicebanks).resolve()
+    destination=Path(destination).expanduser().absolute();payload=Path(payload).resolve()
+    if os.path.lexists(destination):
+        raise ValueError('Thư mục đích đã tồn tại. Chọn thư mục mới; không ghi đè bản đang dùng.')
+    selected=sorted(set(selected))
+    missing=[name for name,path in dependency_report().items() if not path]
+    if missing:raise ValueError('Thiếu dependency: '+', '.join(missing))
+    if sha(msi)!=data['sources']['original-msi']['sha256']:
+        raise ValueError('MSI không đúng phiên bản 2.14.1 đã hỗ trợ')
+    payload_info=verify_payload(payload)
+    if payload_info['baseline_id']!=data['baseline_id']:raise ValueError('Payload/baseline mismatch')
+    registry=json.loads((payload/'runtime/voice_registry.json').read_text())['voices']
+    progress(8,'Kiểm tra dữ liệu giọng và ngôn ngữ')
+    from voice_sources import prepare_voice_import
+    voice_files,lang_files,registry,catalog=prepare_voice_import(voicebanks,languages,selected,registry,dialects)
+    verified_files(languages,lang_files,report);verified_files(voicebanks,voice_files,report)
+    stock=[item for item in data['files'] if item['source']=='msi-extracted-app']
+    required_bytes=sum(item['bytes'] for item in stock+lang_files+voice_files)+256*1024*1024
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    if shutil.disk_usage(destination.parent).free<required_bytes:
+        raise ValueError('Không đủ dung lượng để stage bản cài và sao lưu patch')
+    stage=Path(tempfile.mkdtemp(prefix='.aivoice2-install-',dir=destination.parent))
+    try:
+        atomic_json(stage/'transaction.json',{'schema_version':1,'phase':'staging','selected_voices':selected})
+        report('Đang trích MSI gốc vào vùng tạm…')
+        progress(18,'Trích xuất A.I.VOICE2 từ bộ cài gốc')
+        extraction=stage/'extracted';extraction.mkdir()
+        with (stage/'extraction.log').open('wb') as log:
+            subprocess.run(['msiextract','-C',str(extraction),str(msi)],stdout=log,stderr=subprocess.STDOUT,
+                           timeout=240,check=True)
+        extracted=extraction/'ProgramFiles64Folder/AI/AIVoice2/AIVoice2Editor'
+        verified_files(extracted,stock,report)
+        progress(35,'Đã kiểm tra ứng dụng gốc; đang chép dữ liệu')
+        checkpoint()
+        shutil.move(str(extracted),str(stage/'app'));shutil.rmtree(extraction)
+        app=stage/'app'
+        total_copy=sum(item['bytes'] for item in lang_files+voice_files) or 1
+        copied=0
+        for source,records,subdir in [(languages,lang_files,'Lang'),(voicebanks,voice_files,'Voice')]:
+            for record in records:
+                checkpoint()
+                dest=app/subdir/record['path'];dest.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copy2(safe_file(source,record['path']),dest)
+                copied+=record['bytes']
+                progress(35+int(38*copied/total_copy),'Chép '+subdir+'/'+record['path'])
+        # Match the native dependency layout established by clean runtime tests.
+        shutil.copy2(app/'Lib/AITalk/aitalk_engine.dll',app/'aitalk_engine.dll')
+        backup=stage/'backups/stock';backup.mkdir(parents=True)
+        for source,name in [(app/'ailm.dll','ailm.dll'),(app/'data/app.so','app.so')]:
+            shutil.copy2(source,backup/name)
+        shutil.copy2(payload/'gui/ailm.dll',app/'ailm.dll')
+        report('Đang áp patch GUI đúng phiên bản…')
+        progress(76,'Chuẩn bị giao diện và chế độ sử dụng')
+        subprocess.run([sys.executable,str(payload/'gui/gui_patch.py'),str(backup/'app.so'),str(app/'data/app.so')],
+                       stdout=subprocess.DEVNULL,check=True,timeout=30)
+        patch_path=app/'data/app.patch.json'
+        patch=json.loads(patch_path.read_text())
+        patch.update(source='backups/stock/app.so',output='app/data/app.so')
+        atomic_json(patch_path,patch)
+        shutil.copytree(payload/'runtime',stage/'runtime')
+        atomic_json(stage/'runtime/voice_registry.json',{'schema_version':1,'voices':registry})
+        atomic_json(stage/'voice-imports.json',{'schema_version':1,'voices':catalog})
+        shutil.copytree(payload/'anki',stage/'anki')
+        # Retain a small, readable manager for maintenance after the downloaded
+        # installer folder has been moved/deleted. No binary app/data duplication.
+        for name in ['manager.py','install_core.py','voice_manager.py','integrations.py','voice_sources.py','desktop_ui.py','qt_compat.py']:
+            dest=stage/'manager/src/setup'/name;dest.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(ROOT/'src/setup'/name,dest)
+        shutil.copytree(stage/'runtime',stage/'manager/src/daemon',
+                        ignore=shutil.ignore_patterns('*.exe','*manifest.json'))
+        (stage/'manager/release').mkdir(parents=True)
+        shutil.copy2(baseline,stage/'manager/release/release-inputs.json')
+        atomic_json(stage/'config/runtime.json',dict(schema_version=1,app_dir='../app',runtime_dir='../runtime',
+            engine_prefix='../prefixes/engine',gui_prefix='../prefixes/gui',voice_registry='../runtime/voice_registry.json',
+            cache_dir=str(xdg('XDG_CACHE_HOME','.cache')/'aivoice2-local/tts'),
+            log_dir=str(xdg('XDG_STATE_HOME','.local/state')/'aivoice2-local/logs'),
+            default_voice=selected[0]+'/'+Path(catalog[selected[0]]['package']).stem,port=17862))
+        # Retain baselines and payload inventories for support/repair.
+        shutil.copy2(baseline,stage/'release-inputs.json')
+        shutil.copy2(payload/'payload-manifest.json',stage/'payload-manifest.json')
+        installed={p.relative_to(stage).as_posix():sha(p) for p in sorted(stage.rglob('*'))
+                   if p.is_file() and p.name not in ['transaction.json','extraction.log']}
+        progress(94,'Lưu bản sao khôi phục và thông tin cài đặt')
+        atomic_json(stage/'install-manifest.json',{'schema_version':1,'baseline_id':data['baseline_id'],
+            'selected_voices':selected,'status':'files-committed-prefixes-pending','files':installed})
+        atomic_json(stage/'transaction.json',{'schema_version':1,'phase':'ready-to-commit','selected_voices':selected})
+        # Destination must still be absent; a user-created directory is never removed.
+        if os.path.lexists(destination):raise ValueError('Đích vừa được tạo bởi tác vụ khác; hủy cài đặt')
+        checkpoint()
+        commit_directory(stage,destination)
+    finally:
+        if stage.exists():shutil.rmtree(stage)
+    report('Đã cài file. Tiếp theo tạo prefix mới và kiểm tra tổng hợp.')
+    progress(100,'Đã cài đủ file ứng dụng')
+    return destination/'config/runtime.json'
+
+
+def initialize_runtime(config_file, report=lambda message:None,progress=lambda value,message:None):
+    config_file=Path(config_file).resolve();managed=config_file.parent.parent
+    manifest_path=managed/'install-manifest.json'
+    manifest=json.loads(manifest_path.read_text())
+    if manifest.get('schema_version')!=1:raise ValueError('Not a managed installation')
+    config=load_config(config_file)
+    progress(0,'Chuẩn bị môi trường chạy')
+    for index,(label,prefix) in enumerate([('GUI',config.gui_prefix),('engine',config.engine_prefix)]):
+        progress(index*25,'Chuẩn bị môi trường '+label)
+        if prefix.parent.resolve()!=managed/'prefixes':
+            raise ValueError('Setup chỉ tạo prefix thuộc bản cài đang quản lý')
+        if not (prefix/'system.reg').exists():
+            prefix.parent.mkdir(parents=True,exist_ok=True)
+            report(f'Đang tạo Wine prefix mới cho {label}…')
+            config.log_dir.mkdir(parents=True,exist_ok=True)
+            env=dict(os.environ,WINEPREFIX=str(prefix),WINEDEBUG='-all',WINEDLLOVERRIDES='mscoree,mshtml=')
+            with (config.log_dir/('setup-'+label.lower()+'.log')).open('ab') as log:
+                subprocess.run(['wineboot','--init'],env=env,stdout=log,stderr=subprocess.STDOUT,
+                               timeout=120,check=True)
+                # Fresh-prefix wineboot can return before wineserver flushes
+                # system.reg. Shut down only this newly created prefix, then
+                # wait for its registry before creating drive aliases.
+                subprocess.run(['wineboot','--shutdown'],env=env,stdout=log,stderr=subprocess.STDOUT,
+                               timeout=60,check=True)
+                subprocess.run(['wineserver','-w'],env=env,stdout=log,stderr=subprocess.STDOUT,
+                               timeout=90,check=True)
+    config.cache_dir.mkdir(parents=True,exist_ok=True)
+    for prefix in [config.gui_prefix,config.engine_prefix]:install_drive_aliases(config,prefix)
+    from server import Engine,voices
+    available=voices(config)
+    if config.default_voice not in available:raise ValueError('Default voice unavailable after installation')
+    report('Đang kiểm tra tổng hợp các giọng đã chọn…')
+    progress(55,'Kiểm tra tạo âm thanh')
+    engine=Engine(config)
+    checks=[]
+    try:
+        for folder in manifest['selected_voices']:
+            voice_id=next((identity for identity,item in available.items() if item['folder']==folder),None)
+            if voice_id is None:raise ValueError(f'{folder}: thiếu dữ liệu hoặc cấu hình ngôn ngữ')
+            report('Đang kiểm tra giọng '+folder+'…')
+            wav,_=engine.speak('こんにちは。',voice_id)
+            checks.append({'voice':voice_id,'synthesis':'passed'})
+            progress(55+int(40*len(checks)/len(manifest['selected_voices'])),'Đã kiểm tra '+folder)
+    except Exception:
+        manifest.update(status='native-check-failed',voice_checks=checks,failed_voice=folder)
+        atomic_json(manifest_path,manifest)
+        raise
+    finally:engine.stop()
+    manifest.update(status='native-checked',voice_checks=checks);manifest.pop('failed_voice',None)
+    atomic_json(manifest_path,manifest)
+    atomic_json(managed/'transaction.json',{'schema_version':1,'phase':'native-checked'})
+    report('Tổng hợp WAV thành công. Có thể mở GUI và kết nối Anki.')
+    progress(100,'Tất cả giọng đã tạo được âm thanh')
+    return wav

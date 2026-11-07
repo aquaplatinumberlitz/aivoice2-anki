@@ -1,0 +1,20 @@
+[
+  {
+    "voice": "KotonohaAkane_ns_48",
+    "dialect": "kansai",
+    "samples": 61920,
+    "gui_samples": 61920,
+    "gain": 1.06,
+    "max_delta": 1.0,
+    "rmse": 0.0606808910830721
+  },
+  {
+    "voice": "KotonohaAoi_ns_48",
+    "dialect": "standard",
+    "samples": 57600,
+    "gui_samples": 57600,
+    "gain": 1.06,
+    "max_delta": 1.0,
+    "rmse": 0.054326686710022075
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "anki-legacy/anki-dialog.png": "47880a4e3998b49014599a972689fa9342d6e46f06214bd74a3f61dd747d21b9",
+  "anki-legacy/anki-gui-legacy.jsonl": "3ebe7a3a68a375e15d7b6ec98ee96dcf07bf0046c183b52434e24facfc8e0a39",
+  "anki-legacy.log": "858b642fbfa62a3e96fa2f16cd8c980dfbbcd49c4ffa51b7f0fd70445e565219",
+  "anki-new/anki-dialog.png": "d828da295ffe69e3a90a9d0d30e6c98e3bf923092a968e23e752019bf68f2153",
+  "anki-new/anki-gui-smoke.jsonl": "c8e5627e389ee4b8ff250798b4160eee045231723b013d8599921b8127bf0cb4",
+  "anki-new.log": "bcc4ca85e5a80743045804147368a870b37bb4956f0988a48cb39c153768c948",
+  "gui.log": "e27f7ca8ffea76bd30dce3effb0212b92f8236ce8345801e7c53aeaf5d0cde98",
+  "helper-build.json": "913273903d027d22ff9f5610c854d3b4e955691ea083f1c4e3a6e96d447e8f03",
+  "isolation-command.json": "7ab0dc0bf54ad2f77f960015fc63dc00767330af942a4d26f481cb9d4954df90",
+  "result.json": "1d142b8ffe364201b682e8daefba83823c59cdb8376cf46afb6240f02e1c7a54",
+  "server.log": "86d95d9c384f5c1cc94d9a1b477237f73a388360538d92b5e45e0b09b26b53b1",
+  "shared-gui-license.png": "649511713f82d1afd5ed561868f963c257cb221563c39375499a2da8bfee9fe8",
+  "wineboot-engine.log": "1f51717b80d1f9aedf32a55776c5f87eb44df4d8dfb96039e594472b9eecee0c",
+  "wineboot-gui.log": "dd34e7f946199de6110da783670356bdb0460d51230330564cc9bce575b461fa",
+  "worker-build.json": "b0edd5f6d21a9777c6c29a6ce47abe4845b86863bde0e8067f0128f3c0f270a8",
+  "xvfb.log": "afcbf5d47ff2491c31d3c6bf5a0e16c2512e3b72c2b8b91963fb6646d72ae334"
+}

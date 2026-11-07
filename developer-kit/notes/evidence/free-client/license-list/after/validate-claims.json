@@ -1,0 +1,58 @@
+[
+  {
+    "feature_id": "2319",
+    "claim": {
+      "iat": "2026-11-06T01:39:30.8496832Z",
+      "product": "A.I.VOICE2 Editor",
+      "activation_key": "Free client",
+      "trial_version": false,
+      "license_type": "perpetual",
+      "expired_date": "9999-12-31T23:59:59.9999999Z",
+      "usable_period": "0",
+      "start_date": "0001-01-01T00:00:00.0000000Z"
+    },
+    "exit": 0
+  },
+  {
+    "feature_id": "2320",
+    "claim": {
+      "iat": "2026-11-06T01:39:31.0363117Z",
+      "product": "A.I.VOICE2 Editor",
+      "activation_key": "Free client",
+      "trial_version": false,
+      "license_type": "perpetual",
+      "expired_date": "9999-12-31T23:59:59.9999999Z",
+      "usable_period": "0",
+      "start_date": "0001-01-01T00:00:00.0000000Z"
+    },
+    "exit": 0
+  },
+  {
+    "feature_id": "2514",
+    "claim": {
+      "iat": "2026-11-06T01:39:31.2366523Z",
+      "product": "A.I.VOICE2 Editor",
+      "activation_key": "Free client",
+      "trial_version": false,
+      "license_type": "perpetual",
+      "expired_date": "9999-12-31T23:59:59.9999999Z",
+      "usable_period": "0",
+      "start_date": "0001-01-01T00:00:00.0000000Z"
+    },
+    "exit": 0
+  },
+  {
+    "feature_id": "2515",
+    "claim": {
+      "iat": "2026-11-06T01:39:31.4238704Z",
+      "product": "A.I.VOICE2 Editor",
+      "activation_key": "Free client",
+      "trial_version": false,
+      "license_type": "perpetual",
+      "expired_date": "9999-12-31T23:59:59.9999999Z",
+      "usable_period": "0",
+      "start_date": "0001-01-01T00:00:00.0000000Z"
+    },
+    "exit": 0
+  }
+]

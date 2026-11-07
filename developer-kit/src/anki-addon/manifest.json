@@ -1,0 +1,6 @@
+{
+  "package": "aivoice2_local",
+  "name": "A.I.VOICE2 Local TTS",
+  "min_point_version": 260900,
+  "conflicts": []
+}

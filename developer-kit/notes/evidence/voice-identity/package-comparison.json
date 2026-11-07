@@ -1,0 +1,25 @@
+{
+  "same_members": [
+    "METADATA",
+    "voice/db.cfg",
+    "voice/featnet.ai",
+    "voice/meta.json",
+    "voice/postprocessor.ai",
+    "voice/token.json",
+    "voice/vocoder.ai"
+  ],
+  "different_members": [
+    "voice/dbconf.xml",
+    "voice/lk",
+    "voice/speaker.json",
+    "voice/style.json",
+    "voice/stylecfg.json"
+  ],
+  "equal_styles": {
+    "C": false,
+    "D": true,
+    "J": false,
+    "S": false,
+    "A": false
+  }
+}

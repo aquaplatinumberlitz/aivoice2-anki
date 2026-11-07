@@ -1,0 +1,130 @@
+{
+  "comparisons": [
+    {
+      "voice": "KotonohaAkane_ns_48",
+      "text": "です。",
+      "exact_sha_match": false,
+      "prior_bytes": 123840,
+      "clean_bytes": 123840,
+      "max_delta": 1,
+      "changed_samples": 233,
+      "rmse": 0.0613426433783288,
+      "snr_db": 84.48218143323234
+    },
+    {
+      "voice": "KotonohaAkane_ns_48",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "exact_sha_match": false,
+      "prior_bytes": 401890,
+      "clean_bytes": 401890,
+      "max_delta": 279,
+      "changed_samples": 56532,
+      "rmse": 3.8112023210140267,
+      "snr_db": 54.67749127096031
+    },
+    {
+      "voice": "KotonohaAoi_ns_48",
+      "text": "です。",
+      "exact_sha_match": false,
+      "prior_bytes": 115200,
+      "clean_bytes": 115200,
+      "max_delta": 1,
+      "changed_samples": 355,
+      "rmse": 0.07850601533923655,
+      "snr_db": 83.0899212593715
+    },
+    {
+      "voice": "KotonohaAoi_ns_48",
+      "text": "こんにちは。今日はいい天気ですね。",
+      "exact_sha_match": false,
+      "prior_bytes": 401734,
+      "clean_bytes": 401734,
+      "max_delta": 33,
+      "changed_samples": 62876,
+      "rmse": 2.047895152054723,
+      "snr_db": 60.033885943231056
+    },
+    {
+      "voice": "akane_west_emo_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 124954,
+      "clean_bytes": 124954,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "akane_west_mini_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 117172,
+      "clean_bytes": 117172,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "akane_west_syou_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 122098,
+      "clean_bytes": 122098,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "aoi_emo_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 110110,
+      "clean_bytes": 110110,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "aoi_mini_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 109592,
+      "clean_bytes": 109592,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "aoi_syou_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 110252,
+      "clean_bytes": 110252,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    },
+    {
+      "voice": "galaco_48",
+      "text": "です。",
+      "exact_sha_match": true,
+      "prior_bytes": 119384,
+      "clean_bytes": 119384,
+      "max_delta": 0,
+      "changed_samples": 0,
+      "rmse": 0.0,
+      "snr_db": null
+    }
+  ],
+  "runtime_files": 42,
+  "total_input_files": 62,
+  "total_input_bytes": 4434809219,
+  "license_manager_in_runtime": false,
+  "voice_license_origin_verified": false
+}

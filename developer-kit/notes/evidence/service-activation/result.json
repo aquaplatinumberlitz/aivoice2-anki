@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "Real owned user service; no Anki/desktop changes",
+  "port": 17863,
+  "production_17862_untouched": true,
+  "health": {
+    "ready": true,
+    "engine": "A.I.VOICE2",
+    "instance_id": "716f9d022f83"
+  },
+  "voices": 1
+}

@@ -1,0 +1,28 @@
+{
+  "fresh_offline_install": true,
+  "steps": [
+    {
+      "case": "install-bank-outside-original-baseline",
+      "passed": true
+    },
+    {
+      "case": "remove-new-bank",
+      "passed": true
+    },
+    {
+      "case": "restore-new-bank",
+      "passed": true
+    },
+    {
+      "case": "synthesize-both-restored-banks",
+      "passed": true
+    }
+  ],
+  "selected_initial_voices": [
+    "KizunaAkari_ns_48",
+    "akane_west_emo_48"
+  ],
+  "passed": true,
+  "physical_audio_checked": false,
+  "scope": "Actual install/init/remove/restore outside four-voice baseline; Akane/Kizuna dialects selected automatically by publisher policy"
+}
