@@ -1,10 +1,10 @@
 # Chỉ mục tài liệu và RE lịch sử
 
-Các file bên dưới giữ nguyên byte từ bundle 0.2.0 để SHA256SUMS và provenance
-còn kiểm chứng được. Đây là hồ sơ theo thời điểm, không phải kiến trúc hoặc
-runbook hiện hành. Bắt đầu bằng [docs/README](README.md), sau đó đọc hồ sơ
-đúng binary/commit cần điều tra. Không chạy lệnh đường dẫn workspace cũ lên
-prefix đang dùng của khách.
+Hồ sơ dưới đây phản ánh 0.2.0 và các mốc RE trước đó. Backend WAV/source
+cũ đã gỡ khỏi main; bộ đầy đủ còn tại tag v0.2.0. Hướng dẫn cài mới và
+checksum trên main thuộc 0.3.0. Một số link source lịch sử trỏ về tag cũ.
+Bắt đầu bằng [docs/README](README.md) và không chạy lệnh workspace cũ lên
+prefix khách. Finding/evidence vẫn được giữ để tra cứu đúng binary/commit.
 
 Backend hiện hành: [aivoice2api](https://github.com/aquaplatinumberlitz/aivoice2api/tree/main/docs).
 Các kết luận về ABI/dialect cần đối chiếu source mới và hash engine; những
@@ -68,11 +68,11 @@ không phải giới hạn backend hiện tại. Mọi phần chưa QA vẫn ph�
 
 ## Source, test và dữ liệu ngoài Markdown
 
-- `developer-kit/src/daemon/`, `src/daemon/`: backend lịch sử; source chính chuyển sang aivoice2api.
-- `developer-kit/tests/`: unit test snapshot và probe GUI/engine; đọc prerequisites trước, không tự chạy probe live.
+- Daemon WAV cũ và bản sao setup đã gỡ; tra source tại tag v0.2.0, phát triển backend ở aivoice2api.
+- `tests/`: unit test hiện hành. `developer-kit/tests/`: probe GUI/engine lịch sử; đọc prerequisites trước, không tự chạy probe live.
 - `developer-kit/notes/evidence/`: manifest, trace, JSON, WAV/screenshot đã chọn để bàn giao; giữ hash và phạm vi quan sát.
-- `release/*.json`, `release-manifest.json`, `SHA256SUMS`: baseline, toolchain, phạm vi được duyệt và hash file gốc.
-- `build/payload/`, `anki/`: artifact bundle cũ; dùng compose để kết hợp backend mới, không sửa trực tiếp.
+- `release/`: baseline/QA gốc. release-manifest.json và SHA256SUMS trên main: file/checksum bản 0.3.0; hash 0.2.0 tại tag cũ.
+- `build/payload/runtime/`: artifact backend mới theo lock; GUI/addon giữ bản đã kiểm chứng. Dùng tools/build_release.py để kiểm/đóng gói.
 
 Đường dẫn tới dữ liệu lớn/cache/worktree nằm ngoài archive có thể không còn.
 Đối chiếu INVENTORY/hash thực tế thay vì tạo bằng chứng giả hoặc sao chép

@@ -1,52 +1,63 @@
-# Bộ cài dùng aivoice2api
+# Bộ cài 0.3.0 dùng aivoice2api mặc định
 
-Bộ cài vẫn thuộc repo Anki. Repo backend cung cấp artifact runtime theo
-`aivoice2api.lock.json`; không cần clone source vntext để dựng bộ cài.
-
-## Tạo setup mới
-
-Tại gốc repo Anki, tải archive đúng tag và compose:
+Tại gốc repo hoặc thư mục giải nén bộ bàn giao:
 
 ```bash
-gh release download v0.1.0 --repo aquaplatinumberlitz/aivoice2api   --pattern aivoice2api-0.1.0.tar.gz --dir ./build/backend-download
-python3 tools/prepare_setup.py   --backend-archive ./build/backend-download/aivoice2api-0.1.0.tar.gz   --output ./build/setup-aivoice2api-0.1.0
-bash ./build/setup-aivoice2api-0.1.0/start-setup.sh
+bash start-setup.sh
 ```
 
-Dev vừa build backend có thể trỏ --backend-archive tới file dist tương ứng;
-archive phải đúng SHA-256 trong lock, không lấy file build khác commit/compiler.
-Download/output đã có sẵn thì dùng thư mục mới, không chép đè để thử.
-Khách được nhận cả thư mục setup đã compose và hướng dẫn input; không bắt
-khách cài git/gh/MinGW. Chưa tự publish một bundle Anki 0.3.0 trong bước tách repo.
+Backend mới đã có trong build/payload/runtime, đúng version/commit/checksum
+ở aivoice2api.lock.json. Máy khách không cần GitHub, compiler, tải backend
+hoặc bước compose. Wizard/CLI gốc không còn cài backend WAV cũ.
 
-Compose kiểm checksum archive, version/commit, đường dẫn và hash từng file;
-không chạy Wine, không đọc bản cài cá nhân, không đổi service hoặc addon.
-Hai call site Python cũ được thích nghi để dùng kết quả Engine.speak mới;
-GUI helper/patch và addon được giữ theo template bundle 0.2.0.
+## Input và cài lần đầu
 
-## Wizard và dữ liệu đầu vào
-
-Cần MSI Editor 2.14.1 đúng baseline, Lang và voicebanks được cấp riêng;
+MSI Editor 2.14.1 đúng baseline, Lang/voicebanks cung cấp riêng; máy có
 Python 3/Qt6, Wine/msitools và Anki native nếu cài addon. Chọn root mới,
-giọng cần cài và đúng addons21; đóng Anki khi cài addon. Không clone prefix
-hoặc chuyển activation cá nhân cho khách. Lang/Voice nằm trong app của root,
-GUI và backend dùng chung dữ liệu, hai prefix riêng.
+giọng và đúng addons21; đóng Anki khi cài addon. GUI và backend dùng
+app/Voice + app/Lang chung, hai prefix riêng. Không clone prefix/activation.
 
-Xem [CONNECT_VI](https://github.com/aquaplatinumberlitz/aivoice2api/blob/main/docs/CONNECT_VI.md)
-để kiểm port/service thực tế, WAV mẫu, cấu hình Anki/vntext và định nghĩa
-hoàn tất. Backend chạy độc lập với Editor và các client.
+Sau cài, kiểm đúng URL/service và WAV theo [CONNECT_VI](https://github.com/aquaplatinumberlitz/aivoice2api/blob/main/docs/CONNECT_VI.md).
+Anki giữ API WAV; vntext dùng streaming nếu health công bố capability.
 
-## Bản 0.2.0 và bản đã cài
+## Kiểm tra và đóng gói cho khách
 
-`bash start-setup.sh` tại gốc repo chạy bundle 0.2.0 WAV lịch sử. Các file
-hash gốc giữ nguyên, kiểm bằng `sha256sum -c SHA256SUMS`. Setup compose là
-thư mục mới có payload-manifest riêng; không sửa hash bundle cũ để nâng cấp.
+```bash
+python3 -m unittest discover -s tests -v
+python3 tools/build_release.py
+python3 tools/build_release.py --output ./dist
+```
 
-Output compose dùng để cài vào root mới. Nó không nâng cấp root đang tồn
-tại; nâng backend đã cài phải backup và triển khai có receipt theo guide
-chung. Manager snapshot 0.2.0 không tương thích đầy đủ kết quả Python
-Engine.speak mới; khi cần initialize/demo hãy dùng manager từ setup compose.
-Không dùng manager cũ “Tiếp tục khởi tạo” để cập nhật backend.
+Lệnh cuối tạo aivoice2-anki-0.3.0.tar.gz và checksum. Gói gồm addon/setup,
+runtime mới đã build, docs và dev-kit/RE; không mang MSI, dữ liệu giọng,
+license cá nhân hoặc prefix. Output có sẵn thì dùng thư mục mới.
 
-Chưa coi updater/uninstall toàn bộ hoặc mọi ca mất điện là đã hoàn thiện.
-Đọc [hỗ trợ](SUPPORT_VI.md) và phạm vi nghiệm thu gốc trước khi hứa với khách.
+Sau thay đổi source/artifact có chủ đích, chạy `python3 tools/build_release.py
+--refresh` để tạo lại payload/release manifest và SHA256SUMS của **phiên bản
+mới** rồi kiểm tra. Không dùng refresh để che corruption. Tag v0.2.0 giữ
+nguyên checksum cũ; SHA256SUMS trên main nay thuộc 0.3.0.
+
+## Dev cập nhật dependency backend
+
+Phát hành backend ở repo aivoice2api; cập nhật lock cùng phiên bản vntext.
+Tải đúng artifact, dùng tools/prepare_setup.py tạo output mới để kiểm tra:
+
+```bash
+gh release download v0.1.0 --repo aquaplatinumberlitz/aivoice2api --pattern aivoice2api-0.1.0.tar.gz --dir ./build/backend-download
+python3 tools/prepare_setup.py --backend-archive ./build/backend-download/aivoice2api-0.1.0.tar.gz --output ./build/setup-new
+```
+
+Tool kiểm archive theo lock, manifest/từng file; không chạy Wine hoặc đổi
+service/addon. Đưa runtime đã kiểm vào build/payload/runtime cùng manifest,
+chạy test và refresh checksum bản phát hành mới. Không build worker tại
+repo Anki hoặc sửa source của runtime đã đóng gói để tạo fork.
+
+## Bản đang cài và lịch sử
+
+Setup từ chối cài đè root hiện có. Nâng backend đã cài theo backup/verify/
+receipt trong guide chung; cập nhật manager cùng lúc nếu manager còn 0.2.0.
+Nút Tiếp tục khởi tạo dùng để kiểm bản cài, không là updater tự động.
+Updater/uninstall toàn bộ và khả năng chịu mọi ca mất điện chưa hoàn thiện.
+
+Bản 0.2.0 chỉ còn trong Git/tag v0.2.0; docs/RE cũ ghi đường dẫn snapshot
+phải đối chiếu phiên bản. Không dùng tool build cũ để tạo backend cho khách.

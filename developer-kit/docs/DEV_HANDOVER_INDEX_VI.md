@@ -1,5 +1,7 @@
 # Bắt đầu đọc kỹ thuật: A.I.VOICE2 + Anki
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Giao diện Qt mới và các luồng thao tác: [MODERN_UI_VI.md](MODERN_UI_VI.md).
 
 2026-11-06. Đây là chỉ mục tài liệu/source **đang có trong workspace**, giúp
@@ -33,10 +35,10 @@ tại; `src/daemon/poc.c` là PoC lỗi lịch sử, không phải entry point c
 
 | Source | Vai trò | Chú ý |
 | --- | --- | --- |
-| [server.py](../src/daemon/server.py) | HTTP loopback, danh sách giọng, queue/cache và worker | Dùng runtime config; registry dialect tách riêng, giữ fallback dev |
-| [engine_worker.c](../src/daemon/engine_worker.c) | Process Wine giữ engine, chọn giọng/Lang, nhận text, ghi WAV | Không thread-safe tùy tiện; server tuần tự hóa tổng hợp |
-| [engine_api.h](../src/daemon/engine_api.h) | Khai báo API/prototype đã dùng | Gắn với engine đã kiểm chứng, không suy rộng ABI |
-| [run_auth_probe.py](../src/daemon/run_auth_probe.py), [auth_probe.c](../src/daemon/auth_probe.c) | Probe init/auth/load/synthesize và kiểm tra input | Tool dev, không thay cho setup khách; không in credential |
+| [server.py](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/server.py) | HTTP loopback, danh sách giọng, queue/cache và worker | Dùng runtime config; registry dialect tách riêng, giữ fallback dev |
+| [engine_worker.c](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/engine_worker.c) | Process Wine giữ engine, chọn giọng/Lang, nhận text, ghi WAV | Không thread-safe tùy tiện; server tuần tự hóa tổng hợp |
+| [engine_api.h](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/engine_api.h) | Khai báo API/prototype đã dùng | Gắn với engine đã kiểm chứng, không suy rộng ABI |
+| [run_auth_probe.py](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/run_auth_probe.py), [auth_probe.c](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/auth_probe.c) | Probe init/auth/load/synthesize và kiểm tra input | Tool dev, không thay cho setup khách; không in credential |
 | [LicenseAdapter.cs](../src/free-client/LicenseAdapter.cs) | Helper chạy qua ailm.exe, chọn FreeLicenseManager | Giữ framework stock; caption Full version không phải key |
 | [gui_patch.py](../src/free-client/gui_patch.py) | Patch UI snapshot đúng hash | Không sửa native engine; bản khác phải nghiên cứu lại |
 | [build.py](../src/free-client/build.py) | Build helper và patch GUI cùng manifest | CLI input/output và tự tìm .NET 8; xem hướng dẫn build |

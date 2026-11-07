@@ -1,0 +1,18 @@
+{
+  "bundle": "0.3.0",
+  "backend": "0.1.0",
+  "scope": "Fresh isolated Wine prefixes and API checks; no GUI activation, speaker playback or customer machine QA",
+  "passed": true,
+  "voices_tested": 2,
+  "akane_aoi_pcm_different": true,
+  "wav_format": "PCM16 mono 48000 Hz",
+  "cached_stream_matches_wav": true,
+  "installed_manager_shares_runtime": true,
+  "capabilities": [
+    "prepare-v1",
+    "warm-v1",
+    "timing-v1",
+    "pcm-stream-v1"
+  ],
+  "wav_cache_limit_bytes": 536870912
+}

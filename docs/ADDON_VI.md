@@ -28,8 +28,8 @@ voicebank không xóa audio đã chèn. Mở Editor GUI không bắt buộc.
 | `config.json`, `config.md` | Default config và mô tả field |
 | `install.py` | Build/cài .ankiaddon; xem --help trước khi dùng profile thật |
 
-`anki/aivoice2-local.ankiaddon` và bản trong build/payload là artifact
-0.2.0. Sửa source chưa tự rebuild hai file này hoặc addon trên máy khách.
+`anki/aivoice2-local.ankiaddon` và bản trong build/payload vẫn là addon
+đã kiểm chứng từ 0.2.0; bộ cài 0.3.0 nâng backend, không đổi addon. Sửa source chưa tự rebuild hai file này hoặc addon trên máy khách.
 Khi release addon mới cần tạo artifact và manifest mới thay vì sửa checksum
 bản cũ. Hồ sơ editor/UTF-8 và smoke test ở [chỉ mục RE](ARCHIVE_INDEX_VI.md).
 

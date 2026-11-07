@@ -1,5 +1,7 @@
 # Kiến trúc bản tích hợp
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 ```mermaid
 flowchart LR
   GUI[Editor GUI] --> Helper[ailm.exe và helper ailm.dll]

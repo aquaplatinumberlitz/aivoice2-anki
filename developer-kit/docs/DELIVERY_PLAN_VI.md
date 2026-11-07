@@ -1,5 +1,7 @@
 # Kế hoạch bàn giao A.I.VOICE2 + Anki
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Ngày lập: 2026-11-06. Trạng thái: **đã duyệt bàn giao 0.1.0 với các giới hạn
 được ghi nhận**. Tài liệu này điều phối công việc bàn
 giao tiếp theo; `../PLAN.md` giữ lịch sử PoC/backend/addon trước đó.

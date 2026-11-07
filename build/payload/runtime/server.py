@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import hashlib
 import argparse
+from dataclasses import replace
+from scheduler import Scheduler, Busy
+from wav_cache import WavCache
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
@@ -15,6 +18,8 @@ import threading
 import time
 import uuid
 import wave
+import queue
+import signal
 
 from run_auth_probe import ENGINE_SHA256, credentials
 from runtime_config import load_config, load_voice_registry, install_drive_aliases, acquire_runtime_lease
@@ -59,19 +64,32 @@ class Engine:
         self.log = None
         self.version = ''
         self.lease = None
+        self.metrics = {}
+        self.cache = WavCache(config.cache_dir) if config else None
 
-    def read_reply(self, timeout=120):
+    def read_exact(self, length, timeout=120):
         deadline = time.monotonic() + timeout
         data = bytearray()
-        while len(data) < 8:
+        while len(data) < length:
             remaining = deadline - time.monotonic()
             if remaining <= 0 or not select.select([self.process.stdout], [], [], remaining)[0]:
                 raise TimeoutError('Engine timed out; retry to restart it')
-            part = os.read(self.process.stdout.fileno(), 8 - len(data))
+            part = os.read(self.process.stdout.fileno(), length - len(data))
             if not part:
-                raise RuntimeError('Engine stopped; check journalctl --user -u aivoice2-tts')
+                raise RuntimeError('Engine stopped; check the journal of this runtime service')
             data.extend(part)
-        return struct.unpack('<iI', data)
+        return bytes(data)
+
+    def read_reply(self, timeout=120, on_chunk=None):
+        while True:
+            status, count = struct.unpack('<iI', self.read_exact(8, timeout))
+            if status != -2000:
+                return status, count
+            if not 0 < count <= 65536 or count % 2:
+                raise RuntimeError('Invalid worker audio frame')
+            data = self.read_exact(count, timeout)
+            if on_chunk:
+                on_chunk(data)
 
     def stop(self):
         self.ready = False
@@ -95,6 +113,8 @@ class Engine:
         self.stop()
         config = self.config or CONFIG or load_config()
         self.config = config
+        if self.cache is None:
+            self.cache = WavCache(config.cache_dir)
         engine_path = config.app_dir / 'aitalk_engine.dll'
         if hashlib.sha256(engine_path.read_bytes()).hexdigest() != ENGINE_SHA256:
             raise ValueError('Engine differs from the inspected artifact')
@@ -106,7 +126,7 @@ class Engine:
         product, code = credentials(license_path)
         env = os.environ.copy()
         env.update(WINEPREFIX=str(config.engine_prefix), WINEDEBUG='-all',
-                   AITALK_PRODUCT_NAME=product, AITALK_LICENSE_CODE=code)
+                   AITALK_PRODUCT_NAME=product, AITALK_LICENSE_CODE=code, AIVOICE2_WORKER_METRICS='1')
         config.cache_dir.mkdir(parents=True, exist_ok=True)
         config.log_dir.mkdir(parents=True, exist_ok=True)
         self.lease = acquire_runtime_lease(config)
@@ -127,7 +147,7 @@ class Engine:
             self.stop()
             raise
 
-    def speak(self, text, voice_id):
+    def request(self, text, voice_id):
         if not isinstance(text, str) or not text.strip() or '\x00' in text:
             raise ValueError('Text is required')
         text = text.strip()
@@ -137,25 +157,39 @@ class Engine:
         if not isinstance(voice_id, str) or voice_id not in available:
             raise ValueError('Unknown voice; refresh the voice list')
         voice = available[voice_id]
-        with self.lock:
+        version = self.version or hashlib.sha256(self.config.worker.read_bytes()).hexdigest()
+        signature = [text, voice_id, ENGINE_SHA256, version,
+                     voice['package'].stat().st_mtime_ns,
+                     voice['license'].stat().st_mtime_ns,
+                     voice['language'], voice['language_package'].stat().st_mtime_ns]
+        digest = hashlib.sha256(json.dumps(signature, ensure_ascii=False).encode()).hexdigest()
+        return text, voice, self.config.cache_dir / f'aivoice2_{digest}.wav'
+
+    def metrics_reply(self):
+        data = bytearray()
+        deadline = time.monotonic() + 5
+        while len(data) < 16:
+            if not select.select([self.process.stdout], [], [], max(0, deadline-time.monotonic()))[0]:
+                raise TimeoutError('Worker timing reply missing')
+            part = os.read(self.process.stdout.fileno(), 16-len(data))
+            if not part:
+                raise BrokenPipeError('Worker timing channel closed')
+            data.extend(part)
+        return dict(zip(('load_ms', 'first_pcm_ms', 'synth_ms', 'native_ms'), struct.unpack('<4I', data)))
+
+    def perform(self, text, voice, output, warm=False, queue_ms=0, on_chunk=None):
+        with self.lock, self.cache.hold(output):
             if not self.ready or self.process.poll() is not None:
                 self.start()
-            signature = [text, voice_id, ENGINE_SHA256, self.version,
-                         voice['package'].stat().st_mtime_ns,
-                         voice['license'].stat().st_mtime_ns,
-                         voice['language'], voice['language_package'].stat().st_mtime_ns]
-            digest = hashlib.sha256(json.dumps(signature, ensure_ascii=False).encode()).hexdigest()
-            output = self.config.cache_dir / f'aivoice2_{digest}.wav'
-            if output.is_file():
-                return output, True
+            if not warm and self.cache.hit(output):
+                return output, True, {'queue_ms': queue_ms}
             temporary = self.config.cache_dir / f'{uuid.uuid4().hex}.wav'
             fields = [text, voice['name'], self.config.wine_path(voice['package']),
-                      self.config.wine_path(voice['license']), self.config.wine_path(temporary),
+                      self.config.wine_path(voice['license']), '@warm' if warm else self.config.wine_path(temporary),
                       voice['language'], self.config.wine_path(voice['language_package'])]
             encoded = [f.encode('utf-8') for f in fields]
             try:
                 packet = struct.pack('<7I', *(len(f) for f in encoded)) + b''.join(encoded)
-                # FileIO writes can be partial for packets above PIPE_BUF.
                 view = memoryview(packet)
                 while view:
                     count = self.process.stdin.write(view)
@@ -163,26 +197,99 @@ class Engine:
                         raise BrokenPipeError('Engine input closed')
                     view = view[count:]
                 self.process.stdin.flush()
-                status, count = self.read_reply()
+                status, count = self.read_reply(on_chunk=on_chunk)
+                timings = self.metrics_reply()
+                timings['queue_ms'] = round(queue_ms, 2)
+                self.metrics = timings
                 if status:
-                    raise RuntimeError(f'Synthesis failed ({status}) for {voice["name"]}')
-                with wave.open(str(temporary), 'rb') as wav:
-                    if (wav.getnchannels() != 1 or wav.getsampwidth() != 2
-                            or not wav.getnframes() or wav.getnframes() * 2 != count):
-                        raise RuntimeError('Engine returned invalid audio')
-                temporary.replace(output)
-                return output, False
-            except (OSError, TimeoutError):
+                    raise RuntimeError(f'Synthesis failed ({status})')
+                if not warm:
+                    with wave.open(str(temporary), 'rb') as wav:
+                        if (wav.getnchannels() != 1 or wav.getsampwidth() != 2 or wav.getframerate() != 48000
+                                or not wav.getnframes() or wav.getnframes()*2 != count):
+                            raise RuntimeError('Engine returned invalid audio')
+                    self.cache.publish(temporary, output)
+                print(json.dumps({'tts_timing': timings, 'warm': warm}), flush=True)
+                return output, False, timings
+            except (OSError, TimeoutError, RuntimeError):
                 self.stop()
                 raise
             finally:
                 temporary.unlink(missing_ok=True)
 
+    def speak(self, text, voice_id, session='', revision=0, on_chunk=None):
+        text, voice, output = self.request(text, voice_id)
+        # The filename is immutable and published by rename: hits never wait on synthesis.
+        if self.cache.hit(output):
+            return output, True, {'queue_ms': 0}
+        return scheduler.submit(lambda wait: self.perform(text, voice, output, queue_ms=wait, on_chunk=on_chunk), session, revision)
+
+    def prepare(self, text, voice_id, session, revision, warm=False):
+        text, voice, output = self.request('。' if warm else text, voice_id)
+        if not warm and self.cache.hit(output):
+            return True
+        if not warm and len(text) > 160:
+            raise ValueError('Preparation is limited to 160 characters')
+        return scheduler.prepare(session, revision,
+            lambda wait: self.perform(text, voice, output, warm=warm, queue_ms=wait))
+
 
 engine = Engine()
+scheduler = Scheduler()
 
 
 class Handler(BaseHTTPRequestHandler):
+    def stream(self, body, default):
+        # Native synthesis must never wait on a slow/disconnected HTTP consumer.
+        frames = queue.Queue(maxsize=256)  # 16 MiB of PCM at most.
+        abandoned, finished = threading.Event(), threading.Event()
+        outcome = {}
+
+        def chunk(data):
+            if not abandoned.is_set():
+                try:
+                    frames.put_nowait(data)
+                except queue.Full:
+                    abandoned.set()
+
+        def synthesize():
+            try:
+                _, _, output = engine.request(body.get('text'), body.get('voice', default))
+                with engine.cache.hold(output):
+                    path, cached, timings = engine.speak(body.get('text'), body.get('voice', default),
+                        body.get('session', ''), body.get('revision', 0), chunk)
+                    if cached:
+                        with wave.open(str(path), 'rb') as audio:
+                            while data := audio.readframes(32768):
+                                chunk(data)
+                outcome.update(cache=cached, timing=timings)
+            except Exception:
+                outcome['error'] = 'Synthesis failed or queue deadline exceeded'
+            finally:
+                finished.set()
+
+        threading.Thread(target=synthesize, daemon=True).start()
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/x-aivoice2-pcm')
+        self.send_header('Connection', 'close')
+        self.end_headers()
+        self.close_connection = True
+        def frame(kind, data):
+            self.wfile.write(struct.pack('<BI', kind, len(data)) + data)
+            self.wfile.flush()
+        try:
+            self.wfile.write(b'AVS1')  # PCM s16 mono 48 kHz; final frame confirms success.
+            while not finished.is_set() or not frames.empty():
+                try:
+                    frame(1, frames.get(timeout=.1))
+                except queue.Empty:
+                    continue
+            if abandoned.is_set():
+                outcome['error'] = 'Audio exceeded the delivery buffer'
+            frame(3 if 'error' in outcome else 2, json.dumps(outcome).encode())
+        except (OSError, TimeoutError):
+            abandoned.set()
+
     def send(self, status, body, content_type='application/json', **headers):
         if not isinstance(body, bytes):
             body = json.dumps(body, ensure_ascii=False).encode('utf-8')
@@ -201,7 +308,8 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == '/healthz':
             ready = bool(engine.ready and engine.process and engine.process.poll() is None)
             self.send(200 if ready else 503, {'ready': ready, 'engine': 'A.I.VOICE2',
-                                            'instance_id': CONFIG.instance_id})
+                                            'wav_cache': engine.cache.summary() if engine.cache else None,
+                                            'instance_id': CONFIG.instance_id, 'capabilities': ['prepare-v1', 'warm-v1', 'timing-v1', 'pcm-stream-v1']})
         elif self.path == '/v1/voices':
             items = [{k: v for k, v in item.items()
                       if k not in ('package', 'license', 'language_package')}
@@ -214,7 +322,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send(404, {'error': 'Not found'})
 
     def do_POST(self):
-        if self.path != '/v1/speak':
+        if self.path not in ('/v1/speak', '/v1/prepare', '/v1/cancel', '/v1/speak/stream'):
             self.send(404, {'error': 'Not found'})
             return
         self.connection.settimeout(15)
@@ -227,9 +335,34 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError('Expected a JSON object')
             available = voices(CONFIG)
             default = CONFIG.default_voice if CONFIG.default_voice in available else next(iter(available), None)
-            path, cached = engine.speak(body.get('text'), body.get('voice', default))
-            self.send(200, path.read_bytes(), 'audio/wav',
-                      X_Aivoice2_Filename=path.name, X_Aivoice2_Cache='hit' if cached else 'miss')
+            session = body.get('session', '')
+            revision = body.get('revision', 0)
+            if not isinstance(session, str) or len(session) > 96 or not session.isascii():
+                raise ValueError('Invalid session')
+            if type(revision) is not int or not 0 <= revision < 2**63:
+                raise ValueError('Invalid revision')
+            if self.path in ('/v1/prepare', '/v1/cancel') and not session:
+                raise ValueError('Session is required')
+            if self.path == '/v1/cancel':
+                self.send(200, {'cancelled': scheduler.cancel(session, revision)})
+                return
+            if self.path == '/v1/prepare':
+                mode = body.get('mode', 'text')
+                if mode not in ('warm', 'text'):
+                    raise ValueError('Unknown preparation mode')
+                accepted = engine.prepare(body.get('text'), body.get('voice', default), session, revision, mode == 'warm')
+                self.send(202, {'accepted': accepted})
+                return
+            if self.path == '/v1/speak/stream':
+                engine.request(body.get('text'), body.get('voice', default))
+                self.stream(body, default)
+                return
+            _, _, output = engine.request(body.get('text'), body.get('voice', default))
+            with engine.cache.hold(output):
+                path, cached, timings = engine.speak(body.get('text'), body.get('voice', default), session, revision)
+                self.send(200, path.read_bytes(), 'audio/wav',
+                          X_Aivoice2_Filename=path.name, X_Aivoice2_Cache='hit' if cached else 'miss',
+                          Server_Timing=', '.join(f'{key};dur={value}' for key, value in timings.items()))
         except (ValueError, UnicodeError) as error:
             self.send(400, {'error': str(error)})
         except Exception as error:
@@ -241,8 +374,11 @@ def main():
     global CONFIG, engine
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config')
+    parser.add_argument('--worker', type=Path)
     args = parser.parse_args()
     CONFIG = load_config(args.config)
+    if args.worker:
+        CONFIG = replace(CONFIG, runtime_dir=args.worker.resolve().parent)
     engine = Engine(CONFIG)
     if CONFIG.development_fallback:
         print('Development fallback: configure AIVOICE2_CONFIG for a managed installation.', flush=True)
@@ -251,12 +387,21 @@ def main():
     except OSError as error:
         raise SystemExit(f'Không mở được {CONFIG.api_url}; kiểm tra dịch vụ/cổng đang dùng: {error}')
     server.daemon_threads = True
+    stopped = threading.Event()
+    cleaner = threading.Thread(target=engine.cache.maintain, args=(stopped,), daemon=True)
     try:
+        engine.cache.clean()
         engine.start()
+        cleaner.start()
         print(f'A.I.VOICE2 ready at {CONFIG.api_url}', flush=True)
+        signal.signal(signal.SIGTERM, lambda *_: threading.Thread(target=server.shutdown, daemon=True).start())
         server.serve_forever()
     finally:
+        stopped.set()
+        if cleaner.is_alive():
+            cleaner.join(timeout=3)
         server.server_close()
+        scheduler.close()
         engine.stop()
 
 

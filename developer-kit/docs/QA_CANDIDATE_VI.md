@@ -1,5 +1,7 @@
 # Kết quả kỹ thuật và quyết định bàn giao 0.1.0
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Ngày: 2026-11-06. Kết luận: pipeline cài mới → GUI/backend → addon Anki đã
 đạt các ca tự động và tích hợp dưới đây. Người dùng đã duyệt bàn giao mà
 không cần thêm nghiệm thu máy khách/loa thật và không yêu cầu hoàn thiện

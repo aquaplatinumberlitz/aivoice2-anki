@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "worker_protocol": 7,
+  "backend": "aivoice2api",
+  "version": "0.1.0",
+  "source_commit": "b009c791f2b24b8b1fa75359dcfbb338fe495959",
+  "worker_protocol": "vntext-pcm-metrics-v1",
   "compiler": "x86_64-w64-mingw32-gcc (GCC) 16.2.0",
+  "worker_sha256": "8d390a6c661facc77c9861c7407cc22b4c3124743ff7e70928dccb8529e609c4",
   "files": {
-    "engine_worker.c": "1d380aea11adbc32be88b31bf4e673dbfb503e8ee2cbebe434ba4c04383a2bc2",
-    "engine_api.h": "2464d92347e2d5ad21e88e0aca3078109d95a4be8809a875c58230a4edb1a0c1"
-  },
-  "worker_sha256": "9c3a1c2b3e28a33b4caf93d93c7e66599bd0bcd2c28be44e6db29b5966be30c4"
+    "engine_worker.c": "b508f942451699c7313ab852d1970be1c17d3470af2651eb4ab1c1e5c9adfb41",
+    "engine_api.h": "61d91ec7d354a8b6739f7ad678e1ca8da7de896e905924c2b5281ea2e0b64c00"
+  }
 }

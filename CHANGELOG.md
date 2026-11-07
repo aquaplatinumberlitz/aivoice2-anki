@@ -1,3 +1,13 @@
+# 0.3.0 — backend chung mặc định
+
+- start-setup.sh và payload dùng aivoice2api 0.1.0 theo lock: WAV/PCM stream,
+  warm/prepare/cancel, quota WAV 512 MiB/7 ngày.
+- Gỡ daemon WAV cũ, bản sao setup và tool build worker cũ khỏi main.
+- Manager dùng cùng runtime với service; sửa synth/preview theo kết quả mới.
+- Test installer chuyển về tests; thêm quy trình checksum/archive hiện hành.
+- Bản 0.2.0 còn trong tag v0.2.0; hồ sơ RE giữ lại và dẫn về source đúng phiên bản.
+- Không thay đổi native engine/GUI patch hoặc phạm vi QA đã được ghi nhận.
+
 # Changelog
 
 ## 0.2.0 — 2026-11-06

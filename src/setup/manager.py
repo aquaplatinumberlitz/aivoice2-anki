@@ -7,7 +7,7 @@ import sys
 import shutil
 import subprocess
 
-from install_core import ROOT, dependency_report, initialize_runtime, install_files
+from install_core import ROOT,RUNTIME, dependency_report, initialize_runtime, install_files
 from voice_sources import scan_voicebanks,parse_dialects
 from runtime_config import load_voice_registry
 
@@ -55,7 +55,7 @@ def main():
     if args.command=='dependencies':print(json.dumps(dependency_report(),indent=2));return
     if args.command=='voices-scan':
         registry_path=args.payload/'runtime/voice_registry.json'
-        if not registry_path.is_file():registry_path=ROOT/'src/daemon/voice_registry.json'
+        if not registry_path.is_file():registry_path=RUNTIME/'voice_registry.json'
         print(json.dumps(scan_voicebanks(args.voicebanks,load_voice_registry(registry_path)),ensure_ascii=False,indent=2));return
     if args.command=='initialize':print(initialize_runtime(args.config,report=print));return
     if args.command=='activate':

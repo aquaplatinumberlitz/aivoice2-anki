@@ -12,7 +12,7 @@ import urllib.request
 import wave
 
 from qt_compat import QtCore,QtGui,QtWidgets as W,Qt,Signal,QT_BINDING
-from install_core import ROOT,install_files,initialize_runtime
+from install_core import RUNTIME,ROOT,install_files,initialize_runtime
 from runtime_config import load_config,load_voice_registry
 from voice_sources import scan_voicebanks,VOICE_LABELS
 
@@ -354,7 +354,7 @@ class PreviewDialog(W.QDialog):
                 output=folder/('demo_'+hashlib.sha256(data).hexdigest()+'.wav');output.write_bytes(data);return output
             from server import Engine
             engine=Engine(self.config)
-            try:output,_=engine.speak(text,voice);return output
+            try:output,_,_=engine.speak(text,voice);return output
             finally:engine.stop()
         self.task=Task(generate)
         def done(path):
@@ -381,7 +381,7 @@ class ManagerWindow(W.QMainWindow):
         self.busy=False;self.cancelled=threading.Event();self.install_complete=False;self.demo_dialog=None
         self.picker=Picker(self);self.setWindowTitle('A.I.VOICE2 + Anki');self.resize(1120,880);self.setMinimumSize(850,650)
         registry=self.payload/'runtime/voice_registry.json'
-        if not registry.is_file():registry=ROOT/'src/daemon/voice_registry.json'
+        if not registry.is_file():registry=RUNTIME/'voice_registry.json'
         self.registry=load_voice_registry(registry)
         central=W.QWidget();self.setCentralWidget(central)
         outer=W.QHBoxLayout(central);outer.setContentsMargins(0,0,0,0);outer.setSpacing(0)

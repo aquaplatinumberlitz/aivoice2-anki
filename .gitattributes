@@ -1,2 +1,2 @@
-# Preserve exact release bytes and the original SHA256SUMS on every platform.
+# Preserve binary and historical evidence bytes across platforms.
 * -text

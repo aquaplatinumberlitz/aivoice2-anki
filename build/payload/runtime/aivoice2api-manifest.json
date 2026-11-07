@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "backend": "aivoice2api",
+  "version": "0.1.0",
+  "source_commit": "b009c791f2b24b8b1fa75359dcfbb338fe495959",
+  "files": {
+    "runtime/auth_probe.c": "82825333e666c3ada01e627b96cca17c51d59fad80d335b398454d9a1777c45f",
+    "runtime/engine_api.h": "61d91ec7d354a8b6739f7ad678e1ca8da7de896e905924c2b5281ea2e0b64c00",
+    "runtime/engine_worker.c": "b508f942451699c7313ab852d1970be1c17d3470af2651eb4ab1c1e5c9adfb41",
+    "runtime/engine_worker.exe": "8d390a6c661facc77c9861c7407cc22b4c3124743ff7e70928dccb8529e609c4",
+    "runtime/run_auth_probe.py": "ce0ae94a94664de4eda9a5891036ca84077a6f67bef8caf46bab2ec5c9022f32",
+    "runtime/runtime_cli.py": "61d0befc5a2cfdce12a13f379a07501660059fea21a02fe28d073a433f7ff24a",
+    "runtime/runtime_config.py": "f53a6a805cf2aa7f0f63a86090be344ac162a4f7938f64e1012f058df5ae23c2",
+    "runtime/scheduler.py": "d5af00d6a039362dd18f63cf86baa20a400c2a898a567f714a0ca88ccd921511",
+    "runtime/server.py": "105b7bd32a05d5c30abe8bcd04db40867a74e7710aa9a030488269f5a04a3104",
+    "runtime/voice_registry.json": "c791e9067f10089feaeb5dbb8b3b73f74d25bce7577d916490aa182eb5c52498",
+    "runtime/wav_cache.py": "b9246ea5dcf40d0b1c96350527cdde010bee8b34c9f5a54348eaf9925eba714f",
+    "runtime/worker-manifest.json": "78c460f84f1c066d0fda3778d943d9e4d8325ab97bd3906e26411482d97ffab0"
+  }
+}

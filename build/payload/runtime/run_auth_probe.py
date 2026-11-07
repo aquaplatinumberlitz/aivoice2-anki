@@ -14,7 +14,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-DAEMON = ROOT / 'src' / 'daemon'
+DAEMON = Path(__file__).resolve().parent
 EDITOR = ROOT / 'AIVoice2Editor'
 ENGINE_SHA256 = '711aa449c58754bd89402093e077695e8e6175159623c8cf063b979aa3515c17'
 LICENSE_SHA256 = 'c7a013e6dabbc143b1fe5352ad38b5f9bd117b7b22abe46911c21b49bfe7004b'

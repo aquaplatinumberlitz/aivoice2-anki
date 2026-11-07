@@ -1,8 +1,10 @@
 # A.I.VOICE2 + Anki — bắt đầu sử dụng
 
-**Bản bàn giao 0.2.0 Linux x86-64, giao diện Qt mới trên nền 0.1.0 đã duyệt.**
-Người dùng đã duyệt bỏ qua nghiệm thu máy khách/loa thật và hoãn hoàn thiện
-updater/uninstall trong đợt này. Phạm vi Windows chưa được chứng nhận.
+**Bản 0.3.0 Linux x86-64, backend chung aivoice2api 0.1.0.**
+Chạy start-setup.sh dùng backend mới ngay: WAV cho Anki, PCM streaming và
+prepare/cache quota cho vntext. Không cần compose hoặc tải runtime riêng.
+Phạm vi nghiệm thu máy khách/loa thật và updater/uninstall vẫn theo giới
+hạn được ghi nhận; không coi nâng backend là hoàn thành các kiểm tra đó.
 Bộ cài gốc, Lang và giọng được cung cấp
 riêng; bộ tích hợp không mang license cá nhân hoặc Wine prefix của tác giả.
 
@@ -81,9 +83,9 @@ Trong Hỗ trợ, bấm **Lưu báo cáo hỗ trợ…**. ZIP chứa metadata v�
 kiểm tra file/config, đường dẫn chính được ẩn. Không tự gửi file ra ngoài.
 Không chứa collection Anki, audio/câu học, raw license, activation hay log thô.
 
-Dev hỗ trợ bắt đầu tại [DEV_HANDOVER_INDEX_VI.md](developer-kit/docs/DEV_HANDOVER_INDEX_VI.md),
-sau đó dùng [SUPPORT_RUNBOOK_VI.md](developer-kit/docs/SUPPORT_RUNBOOK_VI.md).
-vntext là kế hoạch sau; phiên bản này tập trung pipeline Anki.
+Dev hỗ trợ bắt đầu tại [chỉ mục hiện hành](docs/README.md),
+sau đó dùng [SUPPORT_VI](docs/SUPPORT_VI.md).
+vntext là client độc lập dùng chung URL backend; xem [hướng dẫn hiện hành](docs/README.md).
 
 Quyết định nghiệm thu nằm trong `release/user-acceptance.json`. Các mục đã
 duyệt bỏ qua không được tính là test đã pass hoặc chức năng đã triển khai.

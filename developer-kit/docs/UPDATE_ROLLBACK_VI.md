@@ -1,5 +1,7 @@
 # Cập nhật, khôi phục và phạm vi hiện tại
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Đợt 0.1.0 được duyệt bàn giao với phạm vi bên dưới. Người dùng đã cho qua
 phần hoàn thiện updater/uninstall; không coi các phần chưa có là đã triển khai.
 

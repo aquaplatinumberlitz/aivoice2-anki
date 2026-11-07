@@ -70,6 +70,8 @@ int main(int argc, char **argv) {
             if (strlen(fields[i]) != lengths[i]) { valid = 0; break; }
         }
         if (!valid) { for (unsigned i = 0; i < 7; i++) free(fields[i]); break; }
+        ULONGLONG began = GetTickCount64();
+        int warm = strcmp(fields[4], "@warm") == 0;
         status = 0;
         if (strlen(fields[2]) >= sizeof(selected_package)
                 || strlen(fields[6]) >= sizeof(selected_language)) status = -3;
@@ -90,30 +92,40 @@ int main(int argc, char **argv) {
             if (status == 0) strcpy(selected_package, fields[2]);
         }
         audio_output *out = calloc(1, sizeof(*out));
+        ULONGLONG loaded = GetTickCount64();
         void *sink = NULL;
         int fs = status == 0 ? get_fs(talker) : 0;
         if (status == 0 && (!out || fs <= 0 || fs > 192000)) status = -1;
-        if (status == 0) {
+        if (status == 0 && !warm) {
             out->file = fopen(fields[4], "wb+");
             if (!out->file || !wav_header(out->file, (unsigned)fs, 0)) status = -7;
         }
-        if (status == 0) {
+        if (status == 0 && !warm) {
+            out->started = GetTickCount64();
             sink = sink_new(on_event, out);
             status = sink ? set_sink(talker, sink) : -1;
         }
         // Encoding 0 is UTF-8; 1 is CP932. Passing UTF-8 with 1 reads mojibake.
-        if (status == 0) status = talk(talker, fields[0], 0);
+        if (status == 0 && !warm) status = talk(talker, fields[0], 0);
         if (sink) { set_sink(talker, NULL); sink_delete(sink); }
         uint32_t bytes = out ? out->bytes : 0;
-        if (status == 0 && (!bytes || out->failed)) status = -12;
+        if (status == 0 && !warm && (!bytes || out->failed)) status = -12;
         if (out && out->file) {
             if (!wav_header(out->file, (unsigned)fs, bytes)) status = -7;
             if (fclose(out->file) != 0) status = -7;
         }
+        ULONGLONG done = GetTickCount64();
+        uint32_t times[4] = {(uint32_t)(loaded - began),
+            out && out->first_pcm ? (uint32_t)(out->first_pcm - began) : 0,
+            (uint32_t)(done - loaded), (uint32_t)(done - began)};
         free(out);
-        if (status != 0) remove(fields[4]);
+        if (status != 0 && !warm) remove(fields[4]);
         for (unsigned i = 0; i < 7; i++) free(fields[i]);
         reply(status, bytes);
+        if (getenv("AIVOICE2_WORKER_METRICS")) {
+            fwrite(times, sizeof(times), 1, stdout);
+            fflush(stdout);
+        }
     }
     talker_delete(talker);
     terminate(); FreeLibrary(engine);

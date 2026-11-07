@@ -1,5 +1,7 @@
 # Giao diện quản lý 0.2.0
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Giao diện mới dùng Qt 6 (ưu tiên PySide6, hỗ trợ PyQt6), thay phần Tkinter.
 Source ở `src/setup/desktop_ui.py`, binding adapter ở `qt_compat.py`; nghiệp
 vụ cài đặt/quản lý giọng vẫn ở install_core/voice_manager/integrations.

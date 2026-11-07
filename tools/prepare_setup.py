@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Compose the preserved installer and a checksum-pinned aivoice2api release."""
+"""Package the current installer with a checksum-pinned aivoice2api release."""
 import argparse
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import shutil
+import subprocess
+import sys
 import tarfile
 import tempfile
 
@@ -51,24 +53,14 @@ def prepare(archive, output):
             if not path.resolve().is_relative_to(backend) or sha(path) != expected:
                 raise ValueError('Backend file hash mismatch: ' + relative)
         stage = temporary / 'setup'
-        for name in ['src/setup', 'build/payload', 'release', 'anki']:
+        for name in ['src/setup', 'build/payload', 'release', 'anki', 'docs', 'developer-kit', 'tools', 'tests']:
             shutil.copytree(ROOT / name, stage / name,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
         shutil.copy2(ROOT / 'start-setup.sh', stage / 'start-setup.sh')
         shutil.copy2(ROOT / 'aivoice2api.lock.json', stage / 'aivoice2api.lock.json')
-        # Keep the original bundle immutable; adapt its two Python call sites here.
-        edits = {
-            'install_core.py': ("wav,_=engine.speak('こんにちは。',voice_id)",
-                                "wav=engine.speak('こんにちは。',voice_id)[0]"),
-            'desktop_ui.py': ('output,_=engine.speak(text,voice)', 'output=engine.speak(text,voice)[0]'),
-        }
-        for name, (old, new) in edits.items():
-            path = stage / 'src/setup' / name
-            content = path.read_text()
-            if content.count(old) != 1:
-                raise ValueError('Installer adapter needs review: ' + name)
-            path.write_text(content.replace(old, new))
-        shutil.copytree(backend / 'runtime', stage / 'src/daemon')
+        shutil.copy2(ROOT / 'VERSION', stage / 'VERSION')
+        shutil.copy2(ROOT / 'START_HERE_VI.md', stage / 'START_HERE_VI.md')
+        shutil.copy2(ROOT / 'CHANGELOG.md', stage / 'CHANGELOG.md')
         runtime = stage / 'build/payload/runtime'
         shutil.rmtree(runtime)
         shutil.copytree(backend / 'runtime', runtime)
@@ -86,6 +78,7 @@ def prepare(archive, output):
             '.\nRun `bash start-setup.sh` to install into a new managed root.\n'
             'This directory is generated; edit source in the owning repositories.\n'
             'See https://github.com/aquaplatinumberlitz/aivoice2-anki/tree/main/docs\n')
+        subprocess.run([sys.executable, str(stage / 'tools/build_release.py'), '--refresh'], check=True)
         stage.rename(output)
     print('Prepared setup:', output)
     print('Run: bash ' + repr(str(output / 'start-setup.sh')))

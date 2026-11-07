@@ -1,4 +1,4 @@
-# Keep the release's build/payload: it contains the shipped runtime.
+# Track the pinned runtime distribution; source of truth remains aivoice2api.
 __pycache__/
 *.py[cod]
 .venv/
@@ -16,3 +16,5 @@ logs/
 .DS_Store
 /build/setup-*/
 /build/backend-download/
+
+/dist/

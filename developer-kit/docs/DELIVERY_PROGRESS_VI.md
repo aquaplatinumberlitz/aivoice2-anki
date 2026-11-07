@@ -1,5 +1,7 @@
 # Tiến độ bàn giao — 2026-11-06
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 ## Giao diện 0.2.0
 
 Đã chuyển manager sang Qt 6 với điều hướng bên trái, bảng giọng có tìm

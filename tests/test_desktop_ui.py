@@ -29,7 +29,7 @@ class DesktopUITests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name)
-        self.window=ManagerWindow(ROOT/'cache/voice-discovery/payload',ROOT/'release/release-inputs.json')
+        self.window=ManagerWindow(ROOT/'build/payload',ROOT/'release/release-inputs.json')
         self.addCleanup(self.window.close)
 
     def wait_until(self,condition,seconds=3):
@@ -107,7 +107,7 @@ class DesktopUITests(unittest.TestCase):
             def play(self,path):plays.append(path)
         class FakeEngine:
             def __init__(self,config):pass
-            def speak(self,*args):started.set();release.wait(2);return root/'fixture.wav',False
+            def speak(self,*args):started.set();release.wait(2);return root/'fixture.wav',False,{}
             def stop(self):pass
         with patch('desktop_ui.Playback',FakePlayback),patch('server.Engine',FakeEngine), \
              patch('desktop_ui.urllib.request.urlopen',side_effect=OSError('offline')):

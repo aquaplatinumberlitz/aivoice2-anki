@@ -1,5 +1,7 @@
 # Cấu hình chung — bước P0/P1
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Đây là nền tảng đang triển khai, chưa phải wizard hoặc bản phát hành khách.
 GUI/backend đọc một `runtime.json`; `app_dir` chứa đúng `Voice/`, `Lang/`,
 engine và các file GUI. Đường dẫn tương đối tính từ **file config**, không

@@ -1,5 +1,7 @@
 # Runbook cho dev hỗ trợ mới
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Đọc [ARCHITECTURE_VI.md](ARCHITECTURE_VI.md) trước. Làm trên bản cài được
 quản lý hoặc bản thử; không sửa prefix/collection cá nhân để đoán lỗi.
 

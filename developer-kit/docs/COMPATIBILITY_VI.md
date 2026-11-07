@@ -1,5 +1,7 @@
 # Phạm vi tương thích đã kiểm chứng
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 | Thành phần | Phiên bản/input | Trạng thái |
 | --- | --- | --- |
 | Editor | MSI 2.14.1, hash theo release-inputs.json | Baseline bắt buộc, không áp patch sang bản khác |

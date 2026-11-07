@@ -1,19 +1,49 @@
 {
   "schema_version": 1,
-  "version": "0.2.0",
-  "status": "approved-for-handover",
+  "version": "0.3.0",
+  "status": "backend-upgraded",
+  "backend": {
+    "schema_version": 1,
+    "repository": "https://github.com/aquaplatinumberlitz/aivoice2api",
+    "version": "0.1.0",
+    "source_commit": "b009c791f2b24b8b1fa75359dcfbb338fe495959",
+    "release_tag": "v0.1.0",
+    "artifact": "aivoice2api-0.1.0.tar.gz",
+    "artifact_sha256": "c748a2c9bc0d0c0bcdf8d01991767d2c90cc43db9780635b814de09ad37dc2c1"
+  },
   "external_inputs": [
     "Original MSI 2.14.1",
     "Company-supplied Lang/voicebanks"
   ],
+  "scope": "Pinned backend and installer checks; no new independent-machine or speaker QA claim",
   "files": {
+    ".gitattributes": {
+      "bytes": 74,
+      "sha256": "c764ccef28c30ebfc532fd047255bb2ec96e12bc0d1b79a21c8408dd3149d534"
+    },
+    ".gitignore": {
+      "bytes": 252,
+      "sha256": "ad8f90c2cf4bc77ef92fa0414510819600645d67ea5e140d033676fd5ff190fa"
+    },
     "CHANGELOG.md": {
-      "bytes": 2305,
-      "sha256": "c1f892bcdbad5ec27c988043e00b14f728226ab96405e735c370097ab159e49b"
+      "bytes": 2925,
+      "sha256": "6e19fb6ddf2a91b25c25df0a7656d2e87723afebe051db6b92f3205c996292e0"
+    },
+    "README.md": {
+      "bytes": 1589,
+      "sha256": "af73365c42e1d1917189d544edd487101fa4b0197cf8819e0fd5a30ed3cad3d3"
     },
     "START_HERE_VI.md": {
-      "bytes": 6047,
-      "sha256": "edfecc2d29e5c2f661a084c35e573701dcffe293c8abca04a93264dbb8ebbee6"
+      "bytes": 6144,
+      "sha256": "4df30dd7ae74a0834171a37bcc029b7ee55fa37a0f53a89f3846b631865401fd"
+    },
+    "VERSION": {
+      "bytes": 6,
+      "sha256": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0"
+    },
+    "aivoice2api.lock.json": {
+      "bytes": 339,
+      "sha256": "62ad965fcaa7d83c49c5d03bf20366e38bb941989afbaf7300e87dcc8881bcd5"
     },
     "anki/aivoice2-local.ankiaddon": {
       "bytes": 8929,
@@ -40,16 +70,32 @@
       "sha256": "913273903d027d22ff9f5610c854d3b4e955691ea083f1c4e3a6e96d447e8f03"
     },
     "build/payload/payload-manifest.json": {
-      "bytes": 1272,
-      "sha256": "5a80e127342c68af7b1c8c8c0e79a606b4ec082b145a821b8cee23fde36308ac"
+      "bytes": 2233,
+      "sha256": "25825639e4aa3dad855fb461c8dbee84e90025f884889a0ab25293c429c12e7a"
+    },
+    "build/payload/runtime/aivoice2api-manifest.json": {
+      "bytes": 1340,
+      "sha256": "b06acc217f33c1c25ef305b4d0333083228c7f6b00bd9bee1505fc852daab98a"
+    },
+    "build/payload/runtime/auth_probe.c": {
+      "bytes": 4952,
+      "sha256": "82825333e666c3ada01e627b96cca17c51d59fad80d335b398454d9a1777c45f"
+    },
+    "build/payload/runtime/engine_api.h": {
+      "bytes": 3677,
+      "sha256": "61d91ec7d354a8b6739f7ad678e1ca8da7de896e905924c2b5281ea2e0b64c00"
+    },
+    "build/payload/runtime/engine_worker.c": {
+      "bytes": 6480,
+      "sha256": "b508f942451699c7313ab852d1970be1c17d3470af2651eb4ab1c1e5c9adfb41"
     },
     "build/payload/runtime/engine_worker.exe": {
-      "bytes": 152638,
-      "sha256": "9c3a1c2b3e28a33b4caf93d93c7e66599bd0bcd2c28be44e6db29b5966be30c4"
+      "bytes": 153348,
+      "sha256": "8d390a6c661facc77c9861c7407cc22b4c3124743ff7e70928dccb8529e609c4"
     },
     "build/payload/runtime/run_auth_probe.py": {
-      "bytes": 5133,
-      "sha256": "49bb495b0216150e20c69eb931fdeacdb70efa588c6827801fdca606fa33f4e4"
+      "bytes": 5141,
+      "sha256": "ce0ae94a94664de4eda9a5891036ca84077a6f67bef8caf46bab2ec5c9022f32"
     },
     "build/payload/runtime/runtime_cli.py": {
       "bytes": 8230,
@@ -59,89 +105,97 @@
       "bytes": 7765,
       "sha256": "f53a6a805cf2aa7f0f63a86090be344ac162a4f7938f64e1012f058df5ae23c2"
     },
+    "build/payload/runtime/scheduler.py": {
+      "bytes": 4547,
+      "sha256": "d5af00d6a039362dd18f63cf86baa20a400c2a898a567f714a0ca88ccd921511"
+    },
     "build/payload/runtime/server.py": {
-      "bytes": 11598,
-      "sha256": "57bc288e566fbad961488ea21d93e643ac3cb1ec3b07a348fb0eafd276cdca87"
+      "bytes": 18986,
+      "sha256": "105b7bd32a05d5c30abe8bcd04db40867a74e7710aa9a030488269f5a04a3104"
     },
     "build/payload/runtime/voice_registry.json": {
       "bytes": 1755,
       "sha256": "c791e9067f10089feaeb5dbb8b3b73f74d25bce7577d916490aa182eb5c52498"
     },
+    "build/payload/runtime/wav_cache.py": {
+      "bytes": 3526,
+      "sha256": "b9246ea5dcf40d0b1c96350527cdde010bee8b34c9f5a54348eaf9925eba714f"
+    },
     "build/payload/runtime/worker-manifest.json": {
-      "bytes": 386,
-      "sha256": "b0edd5f6d21a9777c6c29a6ce47abe4845b86863bde0e8067f0128f3c0f270a8"
+      "bytes": 521,
+      "sha256": "78c460f84f1c066d0fda3778d943d9e4d8325ab97bd3906e26411482d97ffab0"
     },
     "developer-kit/PLAN.md": {
       "bytes": 160,
       "sha256": "acb0868d5ed46ed089d69df01e5954eed755c49d30c016d37d27bb0f5b7565cb"
     },
     "developer-kit/README.md": {
-      "bytes": 364,
-      "sha256": "750d7ef7337332be8959fae47fc2fd65733909cfc9862143db1ab1485a72eced"
+      "bytes": 685,
+      "sha256": "dffac939ed865a8afc5c1ebb723b1dda58d7991423f37855507992bb559bb174"
     },
     "developer-kit/WORKSPACE_README.md": {
       "bytes": 5623,
       "sha256": "47251be62e8bc25d07a9ca85432269867e75e2174e8f4f4374ff2f005964116d"
     },
     "developer-kit/docs/ARCHITECTURE_VI.md": {
-      "bytes": 3195,
-      "sha256": "abd5370a1cf42836909b68cb794595d906f32cb4b27fe1e1c7069672b8daa2c7"
+      "bytes": 3363,
+      "sha256": "5fae33300be5f8ec89c95faaabda274a7666e7ffd905c6932d944824578cb60b"
     },
     "developer-kit/docs/BUILD_AND_REPRODUCE_VI.md": {
-      "bytes": 3315,
-      "sha256": "b5ba466892b61fb8a54453698ba8c48599b06933ef362a006e4a8597a47f83b5"
+      "bytes": 3483,
+      "sha256": "c644da81e241d2bf346663db4c936817725b9b47c4eaeb2ac7c4e75da37d84ad"
     },
     "developer-kit/docs/COMPATIBILITY_VI.md": {
-      "bytes": 2172,
-      "sha256": "3b247687a7d336093c75f8a385fea6959415cf5b77ddb1ee722d4fb0c1dc3b50"
+      "bytes": 2340,
+      "sha256": "4caa1b61907020716420c13a3a06af70930336aa2556a4c396a8fb64a9458516"
     },
     "developer-kit/docs/DELIVERY_PLAN_VI.md": {
-      "bytes": 23447,
-      "sha256": "c3bf1fa4f0f6228e38187c7d885d9f40ee403f975e1d41e7008de6cf4b700bd9"
+      "bytes": 23615,
+      "sha256": "45604e5c4a2ba3550d9225699f2cd7c4d003faa3a82d36e87230d4b410d38a3d"
     },
     "developer-kit/docs/DELIVERY_PROGRESS_VI.md": {
-      "bytes": 6584,
-      "sha256": "bd39e348280f454162639c7d4d436833d6d1409a28003037811bf763c4c254f1"
+      "bytes": 6752,
+      "sha256": "330950903b67a04bcf1364199dfb3a705d1ac612290311dfcef6bb873381df98"
     },
     "developer-kit/docs/DEV_HANDOVER_INDEX_VI.md": {
-      "bytes": 8202,
-      "sha256": "c2b6cac3fec465febb84ca2b18e4ce597b52ae3cdd54810927527ec18b5b708f"
+      "bytes": 8750,
+      "sha256": "92d0cb3f1496b983ddaf8c95d416eba8735b7b762d1c85bad3a01eafdc0e5047"
     },
     "developer-kit/docs/DEV_LAB_VI.md": {
-      "bytes": 2787,
-      "sha256": "4d419391436281fdd1ac5aea49fffa0154e92ca3f9e60c0b89146dd576097145"
+      "bytes": 2955,
+      "sha256": "f3f44ff720bee9c47ed36f19354519d0d9b6a9fecca36b47af106ec150fc9e2d"
     },
     "developer-kit/docs/MODERN_UI_VI.md": {
-      "bytes": 4458,
-      "sha256": "d5e0b6135c346449fbfff3d03d1cbae1137463b52d866048fc1ae20459104225"
+      "bytes": 4626,
+      "sha256": "23ad9571fc63da568924dd72ad4c4ba96b3f65724c547d88d69ea1f920f5ff5c"
     },
     "developer-kit/docs/QA_CANDIDATE_VI.md": {
-      "bytes": 2842,
-      "sha256": "be412d7c44fc7262ff138aec52ae8dedcf62affe6cc4980c538d5bef1fe9c778"
+      "bytes": 3010,
+      "sha256": "360a2af4b9685c9b9c08e783c0edb05208fc28a8e125b50c67ea587f80bc5855"
     },
     "developer-kit/docs/RE_FINDINGS_INDEX_VI.md": {
-      "bytes": 3387,
-      "sha256": "1605b6198c0d515d2ea824fd1e6300e9702e29c60ab4a9c0cfe0381940d5f745"
+      "bytes": 3555,
+      "sha256": "2eedcf50b4c2754c546bb04d002bf23270c5d5963821b04ddd9eff7950bed0b2"
     },
     "developer-kit/docs/RUNTIME_CONFIG_VI.md": {
-      "bytes": 4508,
-      "sha256": "0aaf28c42014fe33855b6225179cf06be014ae4928406342cad9102c61e6daeb"
+      "bytes": 4676,
+      "sha256": "f776c29fb7432064b900b64b4678bb87647f42aa9ea2a873497e18e550722f7e"
     },
     "developer-kit/docs/START_HERE_VI.md": {
-      "bytes": 6009,
-      "sha256": "d959354bc3b20a041e1a0697ee479bf5d28a2f34ccb51a267a7b67c8d69ca73d"
+      "bytes": 6177,
+      "sha256": "6468af484a8b1ec74c7e7c148f2e9feb181cab58218bd4fe3b09840be26c9f1b"
     },
     "developer-kit/docs/SUPPORT_RUNBOOK_VI.md": {
-      "bytes": 4987,
-      "sha256": "df149a6828757a3180f5a60fd3be4927aa3ac8fc0a881b2e6abc806bdf0b924f"
+      "bytes": 5155,
+      "sha256": "91ea7fdcccec7a88a3f70b44ed4e876676c3be5d9724bbbf533f28cac935b075"
     },
     "developer-kit/docs/TTS_CLIENTS_ROADMAP_VI.md": {
-      "bytes": 6470,
-      "sha256": "93fc87bde62e669a8653f97bc0d709c1ab81f529b56585334a4c01b5128d9dc3"
+      "bytes": 6638,
+      "sha256": "40aed4578a000a3594f5da5b3530220772c4f2ca17778d80d9c69967fd60f7a8"
     },
     "developer-kit/docs/UPDATE_ROLLBACK_VI.md": {
-      "bytes": 3201,
-      "sha256": "b3ae7e5ae14d9c435e6b00ea301b8b82cc3e348b3ad18cf605d2fcb4d704d07f"
+      "bytes": 3369,
+      "sha256": "c9c3822f65d098f798f691cf49d44e8da787f29ac6a0143d761f4e2678bbffc1"
     },
     "developer-kit/notes/ARCHIVE_COVERAGE.md": {
       "bytes": 11183,
@@ -243,6 +297,10 @@
       "bytes": 3151,
       "sha256": "fa5401a21e95130396ee4393195bf8811c23f4d6dd2b0d4fc72fe6ef85b8be6c"
     },
+    "developer-kit/notes/evidence/clean-runtime/gui-headless-rea.json": {
+      "bytes": 1783847,
+      "sha256": "2ebdbe53c920935485642c4e79789b82bbc7c37000df08941898edd5b8186f50"
+    },
     "developer-kit/notes/evidence/clean-runtime/gui-headless/gui-no-lic/headless-matrix.json": {
       "bytes": 2,
       "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
@@ -286,10 +344,6 @@
     "developer-kit/notes/evidence/clean-runtime/gui-headless/summary.json": {
       "bytes": 2146,
       "sha256": "9881e0eaad80cb2241e0cb72d694ed677fa95cfc1cf42efb6416f445cd853cfc"
-    },
-    "developer-kit/notes/evidence/clean-runtime/gui-headless-rea.json": {
-      "bytes": 1783847,
-      "sha256": "2ebdbe53c920935485642c4e79789b82bbc7c37000df08941898edd5b8186f50"
     },
     "developer-kit/notes/evidence/clean-runtime/installed-assets/audit.json": {
       "bytes": 3190,
@@ -359,26 +413,6 @@
       "bytes": 289,
       "sha256": "c0ce84e798f07022e6a5bd0d551088accbba27d965ce6e745a63a6fd0baf4fc2"
     },
-    "developer-kit/notes/evidence/free-client/deactivation/adapter-calls.jsonl": {
-      "bytes": 212,
-      "sha256": "19e44aa289012cbf72ea3513fea7cf0edbadb4d4709e6f7a0d1fb8f0d06dbe4b"
-    },
-    "developer-kit/notes/evidence/free-client/deactivation/isolation-command.json": {
-      "bytes": 1021,
-      "sha256": "909c4b314ba993fdd63c515e78ea43d7fb5c865666a9301321df6dcacaab2856"
-    },
-    "developer-kit/notes/evidence/free-client/deactivation/manifest.json": {
-      "bytes": 54636,
-      "sha256": "9b1fc3c4aa26854ccddb0a271150b6681733109999694e9c771077afe778a453"
-    },
-    "developer-kit/notes/evidence/free-client/deactivation/rea-investigation.json": {
-      "bytes": 1771202,
-      "sha256": "d54c4b6e7ad80fabc507e064244c9af59a9964048803e9975a9e9318c2e70306"
-    },
-    "developer-kit/notes/evidence/free-client/deactivation/result.json": {
-      "bytes": 471,
-      "sha256": "25e9d5196545901d7096e884d064ffa89d8adce2df81170fa680d82a7d4c46d3"
-    },
     "developer-kit/notes/evidence/free-client/deactivation-ui/app.patch.json": {
       "bytes": 944,
       "sha256": "896ed5c7ba09d15052cf7a662d1ced8ec84ca242948cae8d93f127e2a7186f19"
@@ -434,6 +468,26 @@
     "developer-kit/notes/evidence/free-client/deactivation-ui/result.json": {
       "bytes": 1572,
       "sha256": "e9185d346af265ade7512fb345d8441728f44c9f8aaf58bf49aba1f3e0f0d9cb"
+    },
+    "developer-kit/notes/evidence/free-client/deactivation/adapter-calls.jsonl": {
+      "bytes": 212,
+      "sha256": "19e44aa289012cbf72ea3513fea7cf0edbadb4d4709e6f7a0d1fb8f0d06dbe4b"
+    },
+    "developer-kit/notes/evidence/free-client/deactivation/isolation-command.json": {
+      "bytes": 1021,
+      "sha256": "909c4b314ba993fdd63c515e78ea43d7fb5c865666a9301321df6dcacaab2856"
+    },
+    "developer-kit/notes/evidence/free-client/deactivation/manifest.json": {
+      "bytes": 54636,
+      "sha256": "9b1fc3c4aa26854ccddb0a271150b6681733109999694e9c771077afe778a453"
+    },
+    "developer-kit/notes/evidence/free-client/deactivation/rea-investigation.json": {
+      "bytes": 1771202,
+      "sha256": "d54c4b6e7ad80fabc507e064244c9af59a9964048803e9975a9e9318c2e70306"
+    },
+    "developer-kit/notes/evidence/free-client/deactivation/result.json": {
+      "bytes": 471,
+      "sha256": "25e9d5196545901d7096e884d064ffa89d8adce2df81170fa680d82a7d4c46d3"
     },
     "developer-kit/notes/evidence/free-client/free-helper/headless-matrix.json": {
       "bytes": 2,
@@ -799,46 +853,6 @@
       "bytes": 2620,
       "sha256": "5965df71ca60dd95b5f5d99ce5ee5e5efbc63a5a8bec6fa97886ed73c0a1943b"
     },
-    "developer-kit/src/daemon/aivoice2-tts.service": {
-      "bytes": 488,
-      "sha256": "d25f5dc9c9967d09cb59a51d72e5999e8c14c0dba7d40876d4488d852f4ca466"
-    },
-    "developer-kit/src/daemon/auth_probe.c": {
-      "bytes": 4952,
-      "sha256": "82825333e666c3ada01e627b96cca17c51d59fad80d335b398454d9a1777c45f"
-    },
-    "developer-kit/src/daemon/engine_api.h": {
-      "bytes": 3237,
-      "sha256": "2464d92347e2d5ad21e88e0aca3078109d95a4be8809a875c58230a4edb1a0c1"
-    },
-    "developer-kit/src/daemon/engine_worker.c": {
-      "bytes": 5867,
-      "sha256": "1d380aea11adbc32be88b31bf4e673dbfb503e8ee2cbebe434ba4c04383a2bc2"
-    },
-    "developer-kit/src/daemon/poc.c": {
-      "bytes": 4843,
-      "sha256": "b835da530c8c9bb675dcda336ec921504e133fde97a114b13ef2505e5926dc13"
-    },
-    "developer-kit/src/daemon/run_auth_probe.py": {
-      "bytes": 5133,
-      "sha256": "49bb495b0216150e20c69eb931fdeacdb70efa588c6827801fdca606fa33f4e4"
-    },
-    "developer-kit/src/daemon/runtime_cli.py": {
-      "bytes": 8230,
-      "sha256": "61d0befc5a2cfdce12a13f379a07501660059fea21a02fe28d073a433f7ff24a"
-    },
-    "developer-kit/src/daemon/runtime_config.py": {
-      "bytes": 7765,
-      "sha256": "f53a6a805cf2aa7f0f63a86090be344ac162a4f7938f64e1012f058df5ae23c2"
-    },
-    "developer-kit/src/daemon/server.py": {
-      "bytes": 11598,
-      "sha256": "57bc288e566fbad961488ea21d93e643ac3cb1ec3b07a348fb0eafd276cdca87"
-    },
-    "developer-kit/src/daemon/voice_registry.json": {
-      "bytes": 1755,
-      "sha256": "c791e9067f10089feaeb5dbb8b3b73f74d25bce7577d916490aa182eb5c52498"
-    },
     "developer-kit/src/free-client/LicenseAdapter.cs": {
       "bytes": 5404,
       "sha256": "9881b34bef8369d664743bc590c5abcc42661c9559f79cd00504821016496b4b"
@@ -879,34 +893,6 @@
       "bytes": 6089,
       "sha256": "b71954088141282e03cb5d8e0afddf15f387b6e8140febf86e21f9c305a4c046"
     },
-    "developer-kit/src/setup/desktop_ui.py": {
-      "bytes": 46779,
-      "sha256": "08880110dfa3f35b910c3fefacae961bfbc5f221e1b93f3256f9b3aee388899d"
-    },
-    "developer-kit/src/setup/install_core.py": {
-      "bytes": 15192,
-      "sha256": "a66b7aa44d8f9caab537d36e4ce1f301b0b94826697391973f61b345ae9d1b53"
-    },
-    "developer-kit/src/setup/integrations.py": {
-      "bytes": 9723,
-      "sha256": "6fecb093c63a147dfcfbdcd4a829bf01bc0d13d2730ef6a4d832392068fb81b1"
-    },
-    "developer-kit/src/setup/manager.py": {
-      "bytes": 5049,
-      "sha256": "a8f89da86fc60e93f10457af23847d58d083ff4470034579e01946b4a438122b"
-    },
-    "developer-kit/src/setup/qt_compat.py": {
-      "bytes": 316,
-      "sha256": "760d67e4587bfcca4194902d43432b29889d722cf18990664590a9caeb0f4ff8"
-    },
-    "developer-kit/src/setup/voice_manager.py": {
-      "bytes": 10292,
-      "sha256": "4bdfcaf276ee2fdbe7543e1298d5dd88f47c5d1dd7cc5572365ff51401da0f48"
-    },
-    "developer-kit/src/setup/voice_sources.py": {
-      "bytes": 4895,
-      "sha256": "42b6f584f264f9da5c268c8491df5b450baabd17a28a9da9d7eb8ca91bf3a016"
-    },
     "developer-kit/tests/anki_gui_smoke.py": {
       "bytes": 14447,
       "sha256": "6ccaa7f577b9cef551fa76cd728a23d650cf2cc47bdcabceaccf904254d17ae6"
@@ -939,30 +925,6 @@
       "bytes": 17310,
       "sha256": "77703a9658a08f9eff60110bb956a0c2490e40e0ee2f55d351e334f53f7e0507"
     },
-    "developer-kit/tests/test_desktop_ui.py": {
-      "bytes": 6507,
-      "sha256": "45baff79ee953848fdc3c42586ecf050852418da853a513380e9afc67f64f103"
-    },
-    "developer-kit/tests/test_install_core.py": {
-      "bytes": 4181,
-      "sha256": "371661f45c10b1bdd7fa1bfc49b3a42cad7d17fc1da4f24d26278d01938eab59"
-    },
-    "developer-kit/tests/test_integrations.py": {
-      "bytes": 3822,
-      "sha256": "72f071d3efe88725889fdaa4741173960a51e4156839c94dcbc62bbc54ce5876"
-    },
-    "developer-kit/tests/test_runtime_config.py": {
-      "bytes": 5693,
-      "sha256": "486b78f037580e862826ff3c5722879dd165fe2baa68b3c083b8f1352096080f"
-    },
-    "developer-kit/tests/test_voice_manager.py": {
-      "bytes": 5868,
-      "sha256": "17892aa84ca9383134271cb720c8a4ab4ab1d661697b8ae9c858a5f98ba8af20"
-    },
-    "developer-kit/tests/test_voice_sources.py": {
-      "bytes": 3143,
-      "sha256": "b06ba0758693e88efa55dd6c46753cbc27c1c493e18fd36825a049f9e707af80"
-    },
     "developer-kit/tests/voice_dialect_regression.py": {
       "bytes": 3435,
       "sha256": "430d9f5dc63a30b61298f84ab5242430389c2c13e241052290455afd8b179fa0"
@@ -975,25 +937,41 @@
       "bytes": 1721,
       "sha256": "efbbb211618474d082d198cec6ef6365db8e3be552e59126dbfb7a20736dad26"
     },
-    "developer-kit/tools/build_handover.py": {
-      "bytes": 9924,
-      "sha256": "c56abc426ff391a685241ec24ee6be5efb04e460c00fabcf4c094b82fc4ff2b3"
-    },
-    "developer-kit/tools/build_payload.py": {
-      "bytes": 2268,
-      "sha256": "10c28b2c5764ce5c6c2fd2f23228bc2ca9ad42761e362aa44fc7e42bbfde6795"
-    },
-    "developer-kit/tools/build_worker.py": {
-      "bytes": 1339,
-      "sha256": "6f72acd859cf68625f7745c57b5b269eba86e1b112d96b93b86abd19f904dca6"
-    },
     "developer-kit/tools/release_baseline.py": {
       "bytes": 5611,
       "sha256": "aa74722349b1b82ce776ffcb08cc351b59329919c8d2b15ca65b3613220747d6"
     },
-    "developer-kit/tools/verify_handover.py": {
-      "bytes": 1614,
-      "sha256": "84df47708e74cfd428548c7e79b092b57a5c0ebf4d9b657f12b9895f7477b785"
+    "docs/ADDON_VI.md": {
+      "bytes": 2528,
+      "sha256": "cef0e97cf9bcc77f3debdb968b487207e415700ea6eae11acc72d8b6c253251a"
+    },
+    "docs/AIVOICE2_CONNECT_VI.md": {
+      "bytes": 584,
+      "sha256": "0c0b788283d3992c9250f1832b5985997aa2fd34730e4a0bfd6055b84e15b943"
+    },
+    "docs/ARCHITECTURE_VI.md": {
+      "bytes": 2173,
+      "sha256": "874ae41db5648dc68a1f0104557076827e995435b61c439afddfed3a420f9368"
+    },
+    "docs/ARCHIVE_INDEX_VI.md": {
+      "bytes": 7390,
+      "sha256": "51012e7578c7f0b9d2c9c18c92dcc0b30ea2d170e038b7b62f64058a06ee3275"
+    },
+    "docs/INSTALLER_VI.md": {
+      "bytes": 3126,
+      "sha256": "207f6ac003be17e2b503e8d8dc87a29d0b28dbdd20384330c7db62c06f0066db"
+    },
+    "docs/README.md": {
+      "bytes": 1375,
+      "sha256": "9e515f73e5fe374bd4894e3b010d4fd6bf702ad1a7d6d239ec1d9dabb81559e2"
+    },
+    "docs/SUPPORT_VI.md": {
+      "bytes": 2447,
+      "sha256": "900c874ebb9b1e7eabb8a801b16553998998df2c29d76998cbe1829db4edfbb1"
+    },
+    "release/backend-upgrade-0.3.0.qa.json": {
+      "bytes": 492,
+      "sha256": "c9ee4134bc316ede2adac8acd5d1e948daf7002ce4d1c1d436549ab57889b4a7"
     },
     "release/release-inputs.json": {
       "bytes": 71955,
@@ -1015,33 +993,13 @@
       "bytes": 926,
       "sha256": "573d4755b6531fd5bde3350c1b50ceea96e619b9f1d2e4a2bb86a5c660b04e26"
     },
-    "src/daemon/run_auth_probe.py": {
-      "bytes": 5133,
-      "sha256": "49bb495b0216150e20c69eb931fdeacdb70efa588c6827801fdca606fa33f4e4"
-    },
-    "src/daemon/runtime_cli.py": {
-      "bytes": 8230,
-      "sha256": "61d0befc5a2cfdce12a13f379a07501660059fea21a02fe28d073a433f7ff24a"
-    },
-    "src/daemon/runtime_config.py": {
-      "bytes": 7765,
-      "sha256": "f53a6a805cf2aa7f0f63a86090be344ac162a4f7938f64e1012f058df5ae23c2"
-    },
-    "src/daemon/server.py": {
-      "bytes": 11598,
-      "sha256": "57bc288e566fbad961488ea21d93e643ac3cb1ec3b07a348fb0eafd276cdca87"
-    },
-    "src/daemon/voice_registry.json": {
-      "bytes": 1755,
-      "sha256": "c791e9067f10089feaeb5dbb8b3b73f74d25bce7577d916490aa182eb5c52498"
-    },
     "src/setup/desktop_ui.py": {
-      "bytes": 46779,
-      "sha256": "08880110dfa3f35b910c3fefacae961bfbc5f221e1b93f3256f9b3aee388899d"
+      "bytes": 46781,
+      "sha256": "b655d3946ec3cb5988a9dcc2ce2586b6e99a4d02f372eaf77adfb8f3fa58acb9"
     },
     "src/setup/install_core.py": {
-      "bytes": 15192,
-      "sha256": "a66b7aa44d8f9caab537d36e4ce1f301b0b94826697391973f61b345ae9d1b53"
+      "bytes": 16169,
+      "sha256": "cb0a484f0ee2db5484919ffd5477b2dcfdbe988aad85204b13a28998717ac425"
     },
     "src/setup/integrations.py": {
       "bytes": 9723,
@@ -1049,7 +1007,7 @@
     },
     "src/setup/manager.py": {
       "bytes": 5049,
-      "sha256": "a8f89da86fc60e93f10457af23847d58d083ff4470034579e01946b4a438122b"
+      "sha256": "16c5f40f29b6119aa619c30f2bebf938aa1536d1744e686a5cf9b5e3ae2a8736"
     },
     "src/setup/qt_compat.py": {
       "bytes": 316,
@@ -1066,33 +1024,38 @@
     "start-setup.sh": {
       "bytes": 207,
       "sha256": "cba70f1eb056c86d32b2dbb7d50df183bcf70d91bb6d66ca9a9411405db3d6b8"
+    },
+    "tests/test_backend_dependency.py": {
+      "bytes": 4090,
+      "sha256": "ef7ad7ba48d012731c2ba6b94d0875102d0bec86343fd955f5a250a90a353693"
+    },
+    "tests/test_desktop_ui.py": {
+      "bytes": 6494,
+      "sha256": "d98c67cca20967cb84554db27721f58cf576bf17e85b4c5b868adc184cb5d48d"
+    },
+    "tests/test_install_core.py": {
+      "bytes": 4181,
+      "sha256": "371661f45c10b1bdd7fa1bfc49b3a42cad7d17fc1da4f24d26278d01938eab59"
+    },
+    "tests/test_integrations.py": {
+      "bytes": 3822,
+      "sha256": "72f071d3efe88725889fdaa4741173960a51e4156839c94dcbc62bbc54ce5876"
+    },
+    "tests/test_voice_manager.py": {
+      "bytes": 5868,
+      "sha256": "17892aa84ca9383134271cb720c8a4ab4ab1d661697b8ae9c858a5f98ba8af20"
+    },
+    "tests/test_voice_sources.py": {
+      "bytes": 3143,
+      "sha256": "b06ba0758693e88efa55dd6c46753cbc27c1c493e18fd36825a049f9e707af80"
+    },
+    "tools/build_release.py": {
+      "bytes": 5270,
+      "sha256": "48b6353c17ce127eea1ff580997b861e825ae89ec288c2542a33015a6565b787"
+    },
+    "tools/prepare_setup.py": {
+      "bytes": 4745,
+      "sha256": "cfb1c04b92027b8d113cb10a2a7448557c2defff873621fc6f4db8a2ec68d805"
     }
-  },
-  "derived_evidence_exports": 45,
-  "omitted_research_artifacts": 202,
-  "user_acceptance": {
-    "schema_version": 1,
-    "date": "2026-11-06",
-    "release_version": "0.2.0",
-    "original_approval_version": "0.1.0",
-    "patch_scope": "0.2.0 modernizes the manager UI and adds direct playback/application launch; original acceptance waivers remain recorded.",
-    "status": "approved-for-handover",
-    "authorization": "User explicitly approved proceeding without the remaining customer-machine/speaker tests and update/uninstall completion for this handover.",
-    "waived_acceptance_checks": [
-      "Independent customer machine or VM qualification",
-      "Physical speaker playback confirmation"
-    ],
-    "deferred_features": [
-      "Complete in-place MSI/runtime updater",
-      "Complete integration uninstaller"
-    ],
-    "recording_rule": "Approval is a scope and acceptance decision, not evidence that waived tests passed or deferred features were implemented.",
-    "vntext": "Deferred until after the Anki handover; roadmap only"
-  },
-  "known_limits": [
-    "Full update/uninstall not included in this handover",
-    "Full power-loss matrix not qualified",
-    "Windows native/other distributions not certified"
-  ],
-  "vntext": "roadmap only; deferred until Anki pipeline completion"
+  }
 }

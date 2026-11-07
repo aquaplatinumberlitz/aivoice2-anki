@@ -1,5 +1,7 @@
 # A.I.VOICE2 + Anki — bắt đầu sử dụng
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 **Bản bàn giao 0.2.0 Linux x86-64, giao diện Qt mới trên nền 0.1.0 đã duyệt.**
 Người dùng đã duyệt bỏ qua nghiệm thu máy khách/loa thật và hoãn hoàn thiện
 updater/uninstall trong đợt này. Phạm vi Windows chưa được chứng nhận.

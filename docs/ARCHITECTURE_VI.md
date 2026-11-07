@@ -1,29 +1,31 @@
 # Kiến trúc và source trong repo Anki
 
 Quyết định chung tại [aivoice2api/ARCHITECTURE_VI](https://github.com/aquaplatinumberlitz/aivoice2api/blob/main/docs/ARCHITECTURE_VI.md).
-Repo này tiếp tục giữ cả addon và bộ cài/quản lý; backend/API thuộc aivoice2api.
+Repo này giữ addon và bộ cài/quản lý; backend/API thuộc aivoice2api.
+Từ 0.3.0, entry point gốc dùng backend mới; không giữ daemon WAV cũ trên main.
 
-| Đường dẫn | Vai trò và trạng thái |
+| Đường dẫn | Vai trò |
 |---|---|
-| `tools/prepare_setup.py` | Compose setup dùng artifact backend theo lock; entry point build hiện hành |
-| `aivoice2api.lock.json` | Version/commit/checksum backend đã chọn để đóng gói và QA |
-| `developer-kit/src/anki-addon/` | Source addon hiện có: dialog, selection/editor compatibility, card model; sửa addon tại đây và build lại artifact khi phát hành |
-| `src/setup/` | Template manager Qt/installer từ bundle 0.2.0; compose có adapter cho kết quả Engine.speak mới |
-| `developer-kit/src/free-client/` | Source/tool helper và GUI patch gắn đúng baseline; không chuyển vào backend |
-| `build/payload/`, `anki/` | Artifact 0.2.0 gốc; không sửa để nâng backend |
-| `src/daemon/`, `developer-kit/src/daemon/` | Snapshot backend lịch sử; không phát triển backend ở đây |
-| `release/`, SHA256SUMS, release-manifest.json | Baseline/phạm vi/hash bundle gốc |
-| `developer-kit/docs/`, `notes/`, `tests/` | Hồ sơ kỹ thuật, RE, evidence và tool theo thời điểm bàn giao; xem ARCHIVE_INDEX |
-| `build/setup-aivoice2api-*/` | Output compose bị gitignore; chứa template đã thích nghi và runtime chính từ artifact |
+| `start-setup.sh`, `src/setup/` | Wizard/CLI installer và manager hiện hành |
+| `build/payload/runtime/` | Artifact aivoice2api đúng lock, không phải một fork source để sửa tại đây |
+| `aivoice2api.lock.json` | Version/commit/checksum artifact được đóng gói |
+| `developer-kit/src/anki-addon/` | Source addon: dialog, selection/editor, card model |
+| `developer-kit/src/free-client/` | Source/tool GUI helper và patch theo baseline |
+| `build/payload/gui/`, `build/payload/anki/`, `anki/` | Helper/patch và addon đã đóng gói |
+| `tests/` | Test installer, UI, tích hợp, giọng và phiên bản backend |
+| `tools/prepare_setup.py` | Đóng gói setup vào output mới từ artifact theo lock |
+| `tools/build_release.py` | Kiểm kê/checksum hiện tại, tạo archive bàn giao |
+| `developer-kit/docs/`, `notes/`, `tests/` | Hồ sơ RE và tool nghiên cứu theo mốc lịch sử |
 
-Compose không download ngầm hoặc dùng backend trên máy dev. Nó kiểm archive
-với lock, kiểm manifest từng file, ghép runtime vào payload mới và tạo lại
-payload manifest. Các file trong bundle gốc vẫn còn kiểm checksum được.
+Manager đã cài import support từ `<root>/runtime` giống service; checkout
+import từ `build/payload/runtime`. Không giữ support/backend riêng dưới
+manager/src/daemon hoặc src/daemon. Backend cần sửa thì sửa/test/release
+ở aivoice2api, cập nhật lock và toàn bộ runtime artifact cùng manifest.
 
-Thay backend: sửa/test/release trong aivoice2api rồi cập nhật lock và compose.
-Thay addon: sửa source addon, build .ankiaddon bằng tool đã ghi trong dev-kit,
-kiểm preview/chèn media/editor và tạo bản phát hành Anki mới. Không coi việc
-sửa source là addon trong payload hoặc máy khách đã được thay tự động.
+`src/daemon`, `developer-kit/src/daemon`, bản sao `developer-kit/src/setup`
+và tool build backend cũ đã gỡ. Tái hiện 0.2.0 bằng tag v0.2.0 trong checkout
+riêng; các finding/evidence giữ lại trên main để dev tra cứu.
 
-Đổi MSI, GUI patch hoặc Lang/voicebank baseline là công việc khác với nâng
-backend. Giữ dữ liệu khách, backup và bằng chứng đúng version khi xử lý.
+Sửa addon chưa tự rebuild artifact; phát hành addon mới cần build .ankiaddon
+và cập nhật payload/manifest có chủ đích. Đổi MSI/GUI patch/Lang/Voice baseline
+là việc khác với nâng backend. Không nhân bản prefix hay activation cá nhân.

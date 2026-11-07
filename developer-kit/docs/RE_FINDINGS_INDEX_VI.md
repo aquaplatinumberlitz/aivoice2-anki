@@ -1,5 +1,7 @@
 # Chỉ mục kết quả RE có thể dùng khi hỗ trợ
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Ngày đối chiếu: 2026-11-06. Offset/prototype chỉ có ý nghĩa với binary hash
 đã ghi; không suy rộng sang bản khác. Đây là phân tích shipped artifact và
 runtime đã quan sát, không phải source gốc thất lạc.

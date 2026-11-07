@@ -1,5 +1,7 @@
 # Build và tái tạo cho dev
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 Runtime khách không cần compiler. Dev build dùng Linux x86-64, Python 3,
 MinGW x86_64, .NET 8 SDK và msitools. Phiên bản đã quan sát ghi trong
 `release/toolchain-observed.json`; distro/Wine khác cần chạy lại QA.

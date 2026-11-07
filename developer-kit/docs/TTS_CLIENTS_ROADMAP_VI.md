@@ -1,5 +1,7 @@
 # Backend TTS dùng cho Anki và vntext
 
+> Hồ sơ lịch sử trước 0.3.0. Source/backend và tool cũ được tra tại tag v0.2.0; hướng dẫn hiện hành ở [docs/README](../../docs/README.md).
+
 2026-11-06. Định hướng bổ sung từ yêu cầu người dùng; **chưa triển khai
 connector vntext hoặc async jobs**. vntext là tool extract text visual novel
 đã có trên máy; chưa khảo sát interface nên không giả định API/plugin cụ thể.

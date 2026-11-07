@@ -1,6 +1,12 @@
-# Dev-kit cùng phiên bản runtime
+# Developer kit và finding RE
 
-Đọc [chỉ mục dev](docs/DEV_HANDOVER_INDEX_VI.md), [build](docs/BUILD_AND_REPRODUCE_VI.md), [runbook](docs/SUPPORT_RUNBOOK_VI.md).
+Hướng dẫn hiện hành: [chỉ mục tài liệu](../docs/README.md).
+Backend/source/test chính ở [aivoice2api](https://github.com/aquaplatinumberlitz/aivoice2api).
 
-WORKSPACE_README.md và PLAN.md mô tả nghiên cứu cũ; không phải bố trí cài của khách.
-Source/tool nghiên cứu trong src/research không được tự cài vào runtime.
+Giữ source addon, GUI helper/patch, research tool và finding/evidence.
+Docs/plan trong thư mục này phản ánh các mốc nghiên cứu/bàn giao trước đó;
+[ARCHIVE_INDEX_VI](../docs/ARCHIVE_INDEX_VI.md) chỉ rõ phạm vi.
+
+Đã gỡ daemon WAV và bản sao setup cũ. Installer hiện hành ở ../src/setup,
+test ở ../tests; không chạy tool nghiên cứu lên prefix khách. Muốn tái
+hiện bộ source/tool 0.2.0 dùng tag v0.2.0 trong checkout riêng.
