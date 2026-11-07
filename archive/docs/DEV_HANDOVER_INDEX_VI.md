@@ -39,13 +39,13 @@ tại; `src/daemon/poc.c` là PoC lỗi lịch sử, không phải entry point c
 | [engine_worker.c](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/engine_worker.c) | Process Wine giữ engine, chọn giọng/Lang, nhận text, ghi WAV | Không thread-safe tùy tiện; server tuần tự hóa tổng hợp |
 | [engine_api.h](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/engine_api.h) | Khai báo API/prototype đã dùng | Gắn với engine đã kiểm chứng, không suy rộng ABI |
 | [run_auth_probe.py](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/run_auth_probe.py), [auth_probe.c](https://github.com/aquaplatinumberlitz/aivoice2-anki/blob/v0.2.0/developer-kit/src/daemon/auth_probe.c) | Probe init/auth/load/synthesize và kiểm tra input | Tool dev, không thay cho setup khách; không in credential |
-| [LicenseAdapter.cs](../src/free-client/LicenseAdapter.cs) | Helper chạy qua ailm.exe, chọn FreeLicenseManager | Giữ framework stock; caption Full version không phải key |
-| [gui_patch.py](../src/free-client/gui_patch.py) | Patch UI snapshot đúng hash | Không sửa native engine; bản khác phải nghiên cứu lại |
-| [build.py](../src/free-client/build.py) | Build helper và patch GUI cùng manifest | CLI input/output và tự tìm .NET 8; xem hướng dẫn build |
-| [addon](../src/anki-addon/__init__.py) | Dialog, phát thử, chọn voice/field, chèn khi đồng ý | Không tự sinh romaji/dịch; cần backend độc lập |
-| [editor_compat.py](../src/anki-addon/editor_compat.py), [selection.js](../src/anki-addon/selection.js) | Tương thích editor và lấy phần chọn | Khi đổi Anki phải test cả editor cũ/mới |
-| [card_model.py](../src/anki-addon/card_model.py) | Note type Nhật–Việt và template | Không thay template cũ của khách |
-| [install.py](../src/anki-addon/install.py) | Cài addon local, tạo .ankiaddon | Tool dev build/install addon; setup manager có đường dẫn chọn |
+| [LicenseAdapter.cs](../../src/free-client/LicenseAdapter.cs) | Helper chạy qua ailm.exe, chọn FreeLicenseManager | Giữ framework stock; caption Full version không phải key |
+| [gui_patch.py](../../src/free-client/gui_patch.py) | Patch UI snapshot đúng hash | Không sửa native engine; bản khác phải nghiên cứu lại |
+| [build.py](../../src/free-client/build.py) | Build helper và patch GUI cùng manifest | CLI input/output và tự tìm .NET 8; xem hướng dẫn build |
+| [addon](../../src/anki-addon/__init__.py) | Dialog, phát thử, chọn voice/field, chèn khi đồng ý | Không tự sinh romaji/dịch; cần backend độc lập |
+| [editor_compat.py](../../src/anki-addon/editor_compat.py), [selection.js](../../src/anki-addon/selection.js) | Tương thích editor và lấy phần chọn | Khi đổi Anki phải test cả editor cũ/mới |
+| [card_model.py](../../src/anki-addon/card_model.py) | Note type Nhật–Việt và template | Không thay template cũ của khách |
+| [install.py](../../src/anki-addon/install.py) | Cài addon local, tạo .ankiaddon | Tool dev build/install addon; setup manager có đường dẫn chọn |
 
 Layout khách sẽ dùng app/Voice và app/Lang làm nguồn chung. Hai bản app
 trong workspace hiện tại chỉ là môi trường nghiên cứu/review; không nhân

@@ -18,9 +18,9 @@ Hướng dẫn cơ chế và thao tác cho người mới:
 
 Client thử dùng MSI 2.14.1 nguyên bản và Lang/bốn NV công ty cấp.
 Thay **ailm.dll** bằng helper có source tại
-[LicenseAdapter.cs](../src/free-client/LicenseAdapter.cs); giữ nguyên
+[LicenseAdapter.cs](../../src/free-client/LicenseAdapter.cs); giữ nguyên
 `AI.Framework.License.dll`, ailm.exe, engine và license runtime. Thêm
-patch giao diện `data/app.so`, source [gui_patch.py](../src/free-client/gui_patch.py);
+patch giao diện `data/app.so`, source [gui_patch.py](../../src/free-client/gui_patch.py);
 patch này chỉ xử lý trang Deactivate, không cấp quyền engine.
 
 Hiểu đơn giản: `ailm.exe` giữ nhiệm vụ khởi chạy, còn `ailm.dll` mới chọn
@@ -71,7 +71,7 @@ restart/preset persistence và bộ cài tự động vẫn cần kiểm tra ti�
 
 - Shortcut: `~/.local/share/applications/aivoice2-free-test.desktop`, tên
   **A.I.VOICE2 Free — Test**.
-- Launcher: [open-test-gui.sh](../src/free-client/open-test-gui.sh).
+- Launcher: [open-test-gui.sh](../tools/open-test-gui.sh).
 - App riêng: `cache/free-client-review/app/`.
 - Prefix tự tạo mới: `cache/free-client-review/prefix/`.
 - Config chung: `cache/free-client-review/runtime.json`.

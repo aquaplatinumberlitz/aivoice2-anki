@@ -41,7 +41,7 @@ Không thay/xóa lic hoặc gọi mạng trong lượt test này.
 Trong client miễn phí/vĩnh viễn, không có activation cá nhân để thu hồi.
 Nên vô hiệu hóa/ẩn nút Deactivate và sửa lời hướng dẫn trang tương ứng,
 vẫn giữ danh sách giọng và caption Full version. Source
-[gui_patch.py](../src/free-client/gui_patch.py) ghi patch lên bản sao của
+[gui_patch.py](../../src/free-client/gui_patch.py) ghi patch lên bản sao của
 snapshot Dart AOT `data/app.so`. Không tạo activation key giả để qua độ
 dài; helper `.3` không thay đổi trong lượt sửa này.
 

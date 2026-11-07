@@ -1,3 +1,11 @@
+# 0.3.1 — hướng dẫn cài từ đầu và phân chia source
+
+- Một Quickstart A–Z: tải đúng gói, dependency theo distro, ảnh wizard,
+  kiểm URL qua Anki/browser, nghe Anki và vntext; không build backend.
+- README ba repo dẫn thẳng về cùng Quickstart; tài liệu kỹ thuật đọc riêng.
+- Chuyển source addon/helper về src; chuyển developer-kit lịch sử về archive.
+- Runtime/backend và addon được đóng gói giữ nguyên phiên bản đã kiểm chứng.
+
 # 0.3.0 — backend chung mặc định
 
 - start-setup.sh và payload dùng aivoice2api 0.1.0 theo lock: WAV/PCM stream,

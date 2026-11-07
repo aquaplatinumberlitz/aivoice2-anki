@@ -60,7 +60,7 @@ Helper trả một dòng kết quả qua đầu ra văn bản của process. GUI
 và tên chương trình mà GUI vốn sử dụng; mình thay phần logic phía sau.
 
 Source helper mới ở
-[src/free-client/LicenseAdapter.cs](../src/free-client/LicenseAdapter.cs).
+[src/free-client/LicenseAdapter.cs](../../src/free-client/LicenseAdapter.cs).
 Biên dịch source này tạo ra `src/free-client/build/ailm.dll`, rồi chép file
 đó vào **thư mục app thử** để thay `ailm.dll` ở đó.
 
@@ -166,7 +166,7 @@ Shortcut nằm ở:
 ~/.local/share/applications/aivoice2-free-test.desktop
 ```
 
-Nó gọi [open-test-gui.sh](../src/free-client/open-test-gui.sh), dùng:
+Nó gọi [open-test-gui.sh](../tools/open-test-gui.sh), dùng:
 
 ```text
 [WORKSPACE]/cache/free-client-review/app/       ← app thử

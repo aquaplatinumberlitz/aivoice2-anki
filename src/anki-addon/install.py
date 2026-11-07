@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--package-only', action='store_true', help='Build without writing any Anki profile/addon')
     parser.add_argument('--target', type=Path, default=TARGET, help='Explicit addon directory when installing locally')
-    parser.add_argument('--output', type=Path, default=SOURCE.parents[1] / 'cache/aivoice2-local.ankiaddon')
+    parser.add_argument('--output', type=Path, default=SOURCE.parents[1] / 'build/aivoice2-local.ankiaddon')
     args = parser.parse_args()
     if not args.package_only:
         target = args.target.expanduser()

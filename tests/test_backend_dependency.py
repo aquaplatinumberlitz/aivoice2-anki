@@ -22,7 +22,7 @@ class BackendDependencyTests(unittest.TestCase):
         worker = json.loads((ROOT / 'build/payload/runtime/worker-manifest.json').read_text())
         self.assertEqual(worker['worker_protocol'], 'vntext-pcm-metrics-v1')
         self.assertFalse((ROOT / 'src/daemon').exists())
-        self.assertFalse((ROOT / 'developer-kit/src/daemon').exists())
+        self.assertFalse((ROOT / 'archive/src/daemon').exists())
 
     def test_rehashed_foreign_backend_is_still_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

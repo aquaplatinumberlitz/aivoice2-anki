@@ -21,9 +21,9 @@ Không gửi raw license, activation, collection, log hàng loạt thoại hoặ
 
 ## Quản lý và rollback
 
-Manager 0.3.0 mặc định tương thích backend mới; snapshot manager 0.2.0
+Manager từ 0.3.0 mặc định tương thích backend mới; snapshot manager 0.2.0
 có chỗ giả định Engine.speak chỉ trả 2 phần tử. Nếu gặp lỗi unpack khi demo
-hoặc initialize, dùng manager 0.3.0, không patch worker để chữa UI.
+hoặc initialize, dùng manager 0.3.1 hiện hành, không patch worker để chữa UI.
 Giữ nguyên API WAV giúp addon 0.2.0 tiếp tục dùng được backend mới.
 
 Nâng backend có backup đồng bộ server/worker/support/manifest và receipt;

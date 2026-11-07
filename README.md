@@ -1,34 +1,50 @@
-# aivoice2-anki 0.3.0
+# aivoice2-anki
 
-Addon Anki và bộ cài/quản lý A.I.VOICE2 trên Linux x86-64. Bộ cài mặc định
-đã dùng runtime [aivoice2api 0.1.0](https://github.com/aquaplatinumberlitz/aivoice2api/releases/tag/v0.1.0),
-có WAV, PCM streaming, warm/prepare/cancel và quota cache. Version, commit
-và checksum backend được ghim trong `aivoice2api.lock.json`.
+Bộ cài A.I.VOICE2 trên Linux và addon phát tiếng Nhật trong Anki.
+Đã kèm **backend mới aivoice2api 0.1.0**, dùng chung được với vntext.
+
+**[Bắt đầu A–Z: cài backend → Anki → vntext](docs/QUICKSTART_VI.md)**
+
+**[Tải bộ cài 0.3.1](https://github.com/aquaplatinumberlitz/aivoice2-anki/releases/tag/v0.3.1)**
+→ Assets → `aivoice2-anki-0.3.1.tar.gz` → giải nén → mở thư mục → chạy:
 
 ```bash
 bash start-setup.sh
 ```
 
-Không cần tải hoặc compose backend trước khi dùng. `build/payload/runtime`
-là artifact backend mới đã đóng gói; source chính chỉ ở repo aivoice2api.
-Anki dùng API WAV; vntext dùng cùng service và thương lượng PCM streaming.
+Nhận riêng MSI Editor 2.14.1, Lang và voicebanks từ bên bàn giao; chúng
+không nằm trong repo. [Chuẩn bị môi trường](docs/ENVIRONMENT_VI.md) nếu máy
+chưa có Wine/Qt/msitools. Anki native cần cài và mở ít nhất một lần.
+Repo/Release là private: nếu 404, cần quyền đọc hoặc nhận gói trực tiếp.
 
-- Bắt đầu: [START_HERE_VI](START_HERE_VI.md), [chỉ mục tài liệu](docs/README.md).
-- Bộ cài/build/checksum: [INSTALLER_VI](docs/INSTALLER_VI.md).
-- Dùng/sửa addon: [ADDON_VI](docs/ADDON_VI.md).
-- Source và trách nhiệm: [kiến trúc](docs/ARCHITECTURE_VI.md).
-- Hỗ trợ/RE: [runbook](docs/SUPPORT_VI.md), [chỉ mục lịch sử](docs/ARCHIVE_INDEX_VI.md).
+## Chọn đúng tài liệu
 
-MSI Editor 2.14.1, Lang và voicebanks cung cấp riêng. Repo không mang
-activation cá nhân, Wine prefix hoặc bộ cài ứng dụng gốc.
+| Bạn cần | Đọc |
+|---|---|
+| Cài và nối hai app từ đầu | [Quickstart chung](docs/QUICKSTART_VI.md) |
+| Dùng mic, chọn field và chèn media | [Addon](docs/ADDON_VI.md) |
+| Thêm/gỡ/khôi phục giọng | [Quản lý giọng](docs/VOICES_VI.md) |
+| Xử lý lỗi sau cài | [Hỗ trợ](docs/SUPPORT_VI.md) |
+| Dev sửa/build/đóng gói | [Hướng dẫn dev](docs/DEVELOPMENT_VI.md), [bộ cài](docs/INSTALLER_VI.md) |
+| Tìm toàn bộ docs hoặc nghiên cứu cũ | [Chỉ mục](docs/README.md) |
 
-Các bản fork backend WAV cũ đã gỡ khỏi main; bản 0.2.0 còn trong lịch sử
-Git/tag `v0.2.0`. Checksum hiện tại áp dụng cho 0.3.0:
+## Bố trí repo
 
-```bash
-python3 tools/build_release.py
-sha256sum -c SHA256SUMS
+```text
+src/anki-addon/     source addon đang dùng
+src/setup/          wizard và quản lý bản cài
+src/free-client/    source helper và patch GUI theo baseline
+build/payload/      runtime aivoice2api + GUI/addon đã đóng gói
+anki/               addon .ankiaddon để cài thủ công
+docs/               hướng dẫn hiện hành
+archive/            finding RE, evidence và kế hoạch lịch sử
+tests/, tools/      kiểm tra, đóng gói và manifest
 ```
 
-Cài mới dùng root mới; chạy setup không tự nâng cấp root đang tồn tại.
-Runtime đã cài được nâng có backup/receipt theo hướng dẫn backend chung.
+Source backend chính ở [aivoice2api](https://github.com/aquaplatinumberlitz/aivoice2api).
+Người cài thường không cần clone repo đó; dev cập nhật runtime theo
+`aivoice2api.lock.json`. [vntext](https://github.com/aquaplatinumberlitz/vntext)
+là client riêng; không cần mở Anki/Editor để vntext đọc tiếng Nhật.
+
+Cài mới vào root mới; setup không cài đè bản đang có. Các bản cũ giữ trong
+tag Git, hồ sơ RE ở archive không phải hướng dẫn cài hiện hành.

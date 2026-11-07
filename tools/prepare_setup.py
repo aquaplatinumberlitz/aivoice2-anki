@@ -53,9 +53,9 @@ def prepare(archive, output):
             if not path.resolve().is_relative_to(backend) or sha(path) != expected:
                 raise ValueError('Backend file hash mismatch: ' + relative)
         stage = temporary / 'setup'
-        for name in ['src/setup', 'build/payload', 'release', 'anki', 'docs', 'developer-kit', 'tools', 'tests']:
+        for name in ['src', 'build/payload', 'release', 'anki', 'docs', 'archive', 'tools', 'tests']:
             shutil.copytree(ROOT / name, stage / name,
-                            ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+                            ignore=shutil.ignore_patterns('__pycache__', '*.pyc', 'build'))
         shutil.copy2(ROOT / 'start-setup.sh', stage / 'start-setup.sh')
         shutil.copy2(ROOT / 'aivoice2api.lock.json', stage / 'aivoice2api.lock.json')
         shutil.copy2(ROOT / 'VERSION', stage / 'VERSION')

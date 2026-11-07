@@ -93,4 +93,4 @@ lang/voicebanks công ty cấp: Akane NV, Aoi NV, Meika Hime NV và Meika Mikoto
 **GUI Free:** bản review thay helper `ailm.dll`, dùng `FreeLicenseManager`
 trong framework gốc. Hướng dẫn cơ chế và cách dùng cho người mới:
 [notes/FREE_CLIENT_GUIDE_VI.md](notes/FREE_CLIENT_GUIDE_VI.md).
-Source: [LicenseAdapter.cs](src/free-client/LicenseAdapter.cs).
+Source: [LicenseAdapter.cs](../src/free-client/LicenseAdapter.cs).

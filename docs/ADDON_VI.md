@@ -20,7 +20,7 @@ voicebank không xóa audio đã chèn. Mở Editor GUI không bắt buộc.
 
 ## Bản đồ source
 
-| File trong developer-kit/src/anki-addon | Sửa gì |
+| File trong src/anki-addon | Sửa gì |
 |---|---|
 | `__init__.py` | HTTP, dialog, preview/chèn media, danh sách giọng và hooks |
 | `editor_compat.py`, `selection.js` | Editor cũ/mới, note id và phần chọn |
@@ -29,7 +29,8 @@ voicebank không xóa audio đã chèn. Mở Editor GUI không bắt buộc.
 | `install.py` | Build/cài .ankiaddon; xem --help trước khi dùng profile thật |
 
 `anki/aivoice2-local.ankiaddon` và bản trong build/payload vẫn là addon
-đã kiểm chứng từ 0.2.0; bộ cài 0.3.0 nâng backend, không đổi addon. Sửa source chưa tự rebuild hai file này hoặc addon trên máy khách.
+đã kiểm chứng từ 0.2.0; các bộ cài 0.3.x nâng backend/tài liệu, không đổi addon.
+Sửa source chưa tự rebuild hai file này hoặc addon trên máy khách.
 Khi release addon mới cần tạo artifact và manifest mới thay vì sửa checksum
 bản cũ. Hồ sơ editor/UTF-8 và smoke test ở [chỉ mục RE](ARCHIVE_INDEX_VI.md).
 

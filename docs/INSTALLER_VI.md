@@ -1,4 +1,7 @@
-# Bộ cài 0.3.0 dùng aivoice2api mặc định
+# Dev: kiểm và phát hành bộ cài
+
+Cài lần đầu và nối hai client: [Quickstart A–Z](QUICKSTART_VI.md).
+Trang này dành cho dev đóng gói; khách không cần chạy unit test/build.
 
 Tại gốc repo hoặc thư mục giải nén bộ bàn giao:
 
@@ -28,14 +31,14 @@ python3 tools/build_release.py
 python3 tools/build_release.py --output ./dist
 ```
 
-Lệnh cuối tạo aivoice2-anki-0.3.0.tar.gz và checksum. Gói gồm addon/setup,
+Lệnh cuối tạo aivoice2-anki-0.3.1.tar.gz và checksum. Gói gồm addon/setup,
 runtime mới đã build, docs và dev-kit/RE; không mang MSI, dữ liệu giọng,
 license cá nhân hoặc prefix. Output có sẵn thì dùng thư mục mới.
 
 Sau thay đổi source/artifact có chủ đích, chạy `python3 tools/build_release.py
 --refresh` để tạo lại payload/release manifest và SHA256SUMS của **phiên bản
 mới** rồi kiểm tra. Không dùng refresh để che corruption. Tag v0.2.0 giữ
-nguyên checksum cũ; SHA256SUMS trên main nay thuộc 0.3.0.
+nguyên checksum cũ; SHA256SUMS trên main nay thuộc 0.3.1.
 
 ## Dev cập nhật dependency backend
 
